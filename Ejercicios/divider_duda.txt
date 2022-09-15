@@ -1,0 +1,113 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 12.09.2022 21:56:58
+// Design Name: 
+// Module Name: module_clock_mux_divider
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module module_clock_mux_divider(
+
+    input   logic               clk_10Mhz_i,
+                                reset_i,
+                    [1 : 0]     periodos_i,
+    output  logic               clock_o,
+                                clk_act1,
+                                clk_act2 
+    
+    );
+    
+    //CLOCK DIVIDER DE PULSO
+    
+    parameter  real     S0_5    = 0.5,
+                        S1      = 1.0,
+                        S2      = 2.0,
+                        S3      = 3.0;
+    
+    //variables internas 
+    int                 divider;   
+    real                frecuencia,
+                        periodo;
+    
+    logic   [31 : 0]    counter;
+    
+    logic               clk_out,
+                        flag_counter;
+    
+    //logica de seleccion 
+    always @(periodos_i) begin
+        
+        case(periodos_i)
+        
+            0: periododivider = S0_5;
+            1: periodo = S1;
+            2: periodo = S2;
+            3: periodo = S3;   
+            default: periodo = S1;
+        
+        endcase
+        
+        frecuencia  = 1.0 / periodo ;
+        divider     = 10e6 / frecuencia;
+
+    end
+    
+    
+    //logica contador
+    always_ff @(posedge clk_10Mhz_i)
+        
+        if(reset_i) begin
+        
+            counter         <= 0;
+            clk_out         <= 0;  
+            flag_counter    <= 0;
+            
+        end else begin
+            
+            if(counter  == (divider - 1)) begin //esto genera un flanco reloj, que se va a dar justo en el counter         
+                
+                counter <= 0;
+                clk_out <= 1;                 
+                  
+                if(!flag_counter) begin
+                    clk_act1        <= 1;
+                    flag_counter    <= 1;      
+                end else begin
+                    clk_act2        <= 1;
+                    flag_counter    <= 0; 
+                end  
+                                
+            end else if(counter  > (divider - 1)) begin
+                                        
+                    counter         <= 1;
+                    clk_out         <= 0;
+                    clk_act1        <= 0;
+                    clk_act2        <= 0;
+            
+            end else begin
+                    
+                    counter         <= counter + 1;
+                    clk_out         <= 0;
+                    clk_act1        <= 0;
+                    clk_act2        <= 0;
+            end 
+                
+        end
+        
+            
+    assign clock_o = clk_out;
+endmodule

@@ -64,8 +64,8 @@ module top_module_7seg_v3(
         .reset_i                (reset_pi),
         .periodos_i             (periodos_pi),
         .clock_o                (clk_en),
-        .clk_act1               (clk_en1),
-        .clk_act2               (clk_en2) 
+        .clk_en1                (clk_en1),
+        .clk_en2                (clk_en2) 
     
     );
     
@@ -75,8 +75,8 @@ module top_module_7seg_v3(
         .clk_en1_i              (clk_en1),
         .clk_en2_i              (clk_en2),
         .pause_i                (control_pi),
-        .entrada_r1_i           (display1),
-        .entrada_r2_i           (display2)
+        .salida_view1_o         (display1),
+        .salida_view2_o         (display2)
     );
     
     module_registros registros(

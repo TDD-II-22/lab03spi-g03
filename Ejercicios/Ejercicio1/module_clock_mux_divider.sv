@@ -26,8 +26,8 @@ module module_clock_mux_divider(
                                 reset_i,
                     [1 : 0]     periodos_i,
     output  logic               clock_o,
-                                clk_act1,
-                                clk_act2 
+                                clk_en1,
+                                clk_en2 
     
     );
     
@@ -71,22 +71,22 @@ module module_clock_mux_divider(
                 counter <= 0;
                 clk_out <= ~clk_out;                 
                 if(!clk_out) begin
-                    clk_act1        <= 1;     
+                    clk_en1        <= 1;     
                 end else begin
-                    clk_act2        <= 1;
+                    clk_en2        <= 1;
                 end     
                   
             end else if(counter  > (divider - 1)) begin
                                         
                     counter         <= 1;
-                    clk_act1        <= 0;
-                    clk_act2        <= 0;
+                    clk_en1         <= 0;
+                    clk_en2         <= 0;
             
             end else begin
                     
                     counter         <= counter + 1;
-                    clk_act1        <= 0;
-                    clk_act2        <= 0;
+                    clk_en1         <= 0;
+                    clk_en2         <= 0;
             end 
                 
         end

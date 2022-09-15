@@ -26,8 +26,8 @@ module module_view_display(
                                         clk_en1_i,
                                         clk_en2_i,
                                         pause_i,
-        output  logic   [31 : 0]        entrada_r1_i,
-                                        entrada_r2_i
+        output  logic   [31 : 0]        salida_view1_o,
+                                        salida_view2_o
     );
     
     //parametros
@@ -40,7 +40,7 @@ module module_view_display(
         .i_Rst                  (rst_i),
         .i_Enable               (clk_en1_i),
         .pause_i                (pause_i),
-        .o_LFSR_Data            (entrada_r1_i)
+        .o_LFSR_Data            (salida_view1_o)
     );
     
     //contador en forma de bebe
@@ -50,7 +50,7 @@ module module_view_display(
         .clk_en_i               (clk_en2_i),
         .rst_i                  (rst_i),
         .pause_i                (pause_i),                     
-        .bebe_sweept_o          (entrada_r2_i)
+        .bebe_sweept_o          (salida_view2_o)
     
     );
     

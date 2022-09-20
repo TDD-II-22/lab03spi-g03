@@ -1,0 +1,26 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
+"../../../../../../scr/xci/WCLK/WCLK_clk_wiz.v" \
+"../../../../../../scr/xci/WCLK/WCLK.v" \
+
+sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
+"../../../../../../Ejercicio2/module_clk_divider_spi.sv" \
+"../../../../../../Ejercicio2/pkg_global.sv" \
+"../../../../../../Ejercicio2/module_control_spi.sv" \
+"../../../../../../Ejercicio2/module_memoria.sv" \
+"../../../../../../Ejercicio2/module_mux_salida.sv" \
+"../../../../../../Ejercicio2/module_mux_we.sv" \
+"../../../../../../Ejercicio2/module_reg_control.sv" \
+"../../../../../../Ejercicio2/module_reg_datos.sv" \
+"../../../../../../Ejercicio2/module_reg_miso.sv" \
+"../../../../../../Ejercicio2/module_reg_mosi.sv" \
+"../../../../../../Ejercicio2/module_state_machine_spi.sv" \
+"../../../../../../Ejercicio2/top_interface_spi.sv" \
+"../../../../../../Ejercicio2/top_master_race_spi.sv" \
+"../../../../../../Ejercicio2/tb_master_race_spi.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

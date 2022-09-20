@@ -1,0 +1,27 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_clk_divider_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/pkg_global.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_control_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_memoria
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_mux_salida
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_mux_we
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_datos
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_miso
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_mosi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_state_machine_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_interface_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_master_race_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_master_race_spi

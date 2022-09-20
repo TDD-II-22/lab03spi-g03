@@ -1,0 +1,671 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Sep 20 02:13:47 2022
+# Process ID: 2120
+# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1
+# Command line: vivado.exe -log top_tactico.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_tactico.tcl
+# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/top_tactico.vds
+# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/carlo/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source top_tactico.tcl -notrace
+Command: synth_design -top top_tactico -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6500 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 702.367 ; gain = 177.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_tactico' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/new/top_tactico.sv:23]
+	Parameter PERIODO bound to: 0.001000 - type: float 
+INFO: [Synth 8-6157] synthesizing module 'WCLK' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/.Xil/Vivado-2120-Andrey-PC/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'WCLK' (1#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/.Xil/Vivado-2120-Andrey-PC/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_interface_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_mux_we' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'module_mux_we' (2#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'top_master_race_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_clk_divider_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_clk_divider_spi' (3#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_state_machine_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv:23]
+	Parameter WAIT_SEND bound to: 2'b00 
+	Parameter LOAD bound to: 2'b01 
+	Parameter TRANSMISSION bound to: 2'b10 
+	Parameter DOWNLOAD bound to: 2'b11 
+	Parameter CTR_SEND bound to: 3'b000 
+	Parameter CTR_PRELOAD1 bound to: 3'b001 
+	Parameter CTR_LOAD bound to: 3'b010 
+	Parameter CTR_TRANSFER bound to: 3'b011 
+	Parameter CTR_CHECK bound to: 3'b100 
+	Parameter CTR_PRELOAD2 bound to: 3'b101 
+	Parameter CTR_DOWN bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'module_state_machine_spi' (4#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_control_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv:1]
+	Parameter CTR_SEND bound to: 3'b000 
+	Parameter CTR_PRELOAD1 bound to: 3'b001 
+	Parameter CTR_LOAD bound to: 3'b010 
+	Parameter CTR_TRANSFER bound to: 3'b011 
+	Parameter CTR_CHECK bound to: 3'b100 
+	Parameter CTR_PRELOAD2 bound to: 3'b101 
+	Parameter CTR_DOWN bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'module_control_spi' (5#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_mosi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_mosi' (6#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_miso' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_miso' (7#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_master_race_spi' (8#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_control' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_control' (9#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_datos' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_memoria' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_memoria' (10#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv:23]
+WARNING: [Synth 8-689] width (8) of port connection 'rs1_o' does not match port width (32) of module 'module_memoria' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_datos' (11#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_mux_salida' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_mux_salida' (12#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_interface_spi' (13#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_seg7_control' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:23]
+	Parameter PERIODO bound to: 0.001000 - type: float 
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:69]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:115]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:88]
+INFO: [Synth 8-6155] done synthesizing module 'module_seg7_control' (14#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio1/module_seg7_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_tactico' (15#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/new/top_tactico.sv:23]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[11]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[10]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[9]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[8]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][5]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][4]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][3]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][2]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][1]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][0]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_rx_end][9]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_rx_end][8]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_rx_end][7]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][2]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][1]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][0]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_tx_end][8]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_tx_end][7]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[cs_ctrl]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 849.852 ; gain = 324.613
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 849.852 ; gain = 324.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 849.852 ; gain = 324.613
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc] for cell 'generate_clock_10Mhz'
+Finished Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc] for cell 'generate_clock_10Mhz'
+Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc]
+WARNING: [Vivado 12-508] No pins matched 'generate_clock_10Mhz/clk_10Mhz'. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:695]
+WARNING: [Vivado 12-627] No clocks matched 'pllclk'. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:696]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:696]
+Finished Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_tactico_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_tactico_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_tactico_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1071.727 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.210 . Memory (MB): peak = 1071.727 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz_pi. (constraint file  c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz_pi. (constraint file  c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for generate_clock_10Mhz. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |module_memoria__GB0    |           1|     34656|
+|2     |module_memoria__GB1    |           1|      8672|
+|3     |module_memoria__GB2    |           1|     10848|
+|4     |module_memoria__GB3    |           1|     14254|
+|5     |module_memoria__GB4    |           1|     21908|
+|6     |module_reg_datos__GC0  |           1|        16|
+|7     |top_interface_spi__GC0 |           1|      4091|
+|8     |top_tactico__GC0       |           1|      1082|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1028  
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	   3 Input     26 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   8 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 34    
+	   8 Input      1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module module_memoria 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 10    
+Module module_reg_datos 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module module_mux_we 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module module_clk_divider_spi 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module module_state_machine_spi 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module module_control_spi 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   8 Input      1 Bit        Muxes := 15    
+Module module_reg_mosi 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module module_reg_miso 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module module_reg_control 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   3 Input     26 Bit        Muxes := 1     
+Module module_mux_salida 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module module_seg7_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[13]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[14]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[15]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[23]' (FDRE) to 'interface_spii_7/registro_control/state_reg[25]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[24]' (FDRE) to 'interface_spii_7/registro_control/state_reg[25]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (interface_spii_7/\registro_control/state_reg[25] )
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[26]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[27]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[28]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[29]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/registro_control/state_reg[30]' (FDRE) to 'interface_spii_7/registro_control/state_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (interface_spii_7/\registro_control/state_reg[31] )
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/master_race_spi/state_machine/next_state_reg[1]' (FD) to 'interface_spii_7/master_race_spi/state_machine/state_reg[1]'
+INFO: [Synth 8-3886] merging instance 'interface_spii_7/master_race_spi/state_machine/next_state_reg[0]' (FD) to 'interface_spii_7/master_race_spi/state_machine/state_reg[0]'
+INFO: [Synth 8-3886] merging instance 'memoria_1i_3/memoria_reg[0][0]' (FDR) to 'memoria_1i_3/memoria_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'memoria_1i_3/memoria_reg[0][1]' (FDR) to 'memoria_1i_3/memoria_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'memoria_1i_3/memoria_reg[0][2]' (FDR) to 'memoria_1i_3/memoria_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'memoria_1i_3/memoria_reg[0][3]' (FDR) to 'memoria_1i_3/memoria_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'memoria_1i_3/memoria_reg[0][4]' (FDR) to 'memoria_1i_3/memoria_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'memoria_1i_3/memoria_reg[0][5]' (FDR) to 'memoria_1i_3/memoria_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'memoria_1i_3/memoria_reg[0][6]' (FDR) to 'memoria_1i_3/memoria_reg[0][7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memoria_1i_3/\memoria_reg[0][7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |module_memoria__GB0    |           1|      1016|
+|2     |module_memoria__GB1    |           1|        16|
+|3     |module_memoria__GB2    |           1|       760|
+|4     |module_memoria__GB3    |           1|       297|
+|5     |module_memoria__GB4    |           1|       138|
+|6     |module_reg_datos__GC0  |           1|        32|
+|7     |top_interface_spi__GC0 |           1|       603|
+|8     |top_tactico__GC0       |           1|       290|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'generate_clock_10Mhz/CLK_10MHZ' to pin 'generate_clock_10Mhz/bbstub_CLK_10MHZ/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:25 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_disable_timing interface_spii_7/i_11/i_130 -from I1 -to O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_disable_timing interface_spii_7/i_11/i_131 -from I0 -to O'
+      : interface_spii_4/i_12/p_0_in[3]
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_disable_timing interface_spii_4/i_12/i_130 -from I1 -to O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_disable_timing interface_spii_4/i_12/i_131 -from I0 -to O'
+      : interface_spii_1/i_0/p_0_in[3]
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_disable_timing interface_spii_1/i_0/i_130 -from I1 -to O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_disable_timing interface_spii_1/i_0/i_131 -from I0 -to O'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:29 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |module_memoria__GB1 |           1|        16|
+|2     |module_memoria__GB2 |           1|       760|
+|3     |top_tactico__GC0    |           1|       290|
+|4     |top_tactico_GT0     |           1|      2093|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_78/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_76/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_78/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_87/O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-3886] merging instance 'interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[6]' (FDRE) to 'interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/all_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/all_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/rx_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/rx_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/rx_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/rx_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/rx_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/rx_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/rx_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/we_rx_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/control_spi/progress_reg )
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[127][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[126][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[125][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[124][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[123][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[122][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[121][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[120][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[119][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[118][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[117][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[116][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[115][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[114][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[113][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[112][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[111][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[110][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[109][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[108][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[107][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[106][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[105][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[104][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[103][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[102][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[101][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[100][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[99][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[98][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[97][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[96][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[95][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[94][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[93][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[92][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[91][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[90][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[89][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[88][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[87][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[86][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[85][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[84][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[83][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[82][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[81][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[80][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[79][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[78][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[77][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[76][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[75][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[74][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[73][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[72][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[71][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[70][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[69][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[68][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[67][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[66][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[65][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[64][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[63][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[62][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[61][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[60][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[59][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[58][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[57][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[56][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[55][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[54][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[53][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[52][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[51][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[50][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[49][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'interface_spi/memoria_ram/memoria_1/memoria_reg[48][4]' (FDRE) to 'interface_spi/memoria_ram/memoria_1/memoria_reg[7][4]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/memoria_ram/memoria_1/memoria_reg[4][3] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\interface_spi/master_race_spi/reg_mosi/reg_shift_mosi_reg[7] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_87' with timing assertions on output pin 'O'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:26 ; elapsed = 00:01:32 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:26 ; elapsed = 00:01:32 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |WCLK          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |WCLK   |     1|
+|2     |CARRY4 |    32|
+|3     |LUT1   |     2|
+|4     |LUT2   |    42|
+|5     |LUT3   |    57|
+|6     |LUT4   |    24|
+|7     |LUT5   |    11|
+|8     |LUT6   |    75|
+|9     |FDRE   |   180|
+|10    |FDSE   |     1|
+|11    |IBUF   |    19|
+|12    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+-----------------------+------+
+|      |Instance              |Module                 |Cells |
++------+----------------------+-----------------------+------+
+|1     |top                   |                       |   461|
+|2     |  interface_spi       |top_interface_spi      |   352|
+|3     |    master_race_spi   |top_master_race_spi    |   272|
+|4     |      clk_divider_spi |module_clk_divider_spi |   250|
+|5     |      control_spi     |module_control_spi     |     6|
+|6     |      reg_miso        |module_reg_miso        |    16|
+|7     |    memoria_ram       |module_reg_datos       |    52|
+|8     |      memoria_1       |module_memoria         |    52|
+|9     |    registro_control  |module_reg_control     |    28|
+|10    |  seg7_control        |module_seg7_control    |    72|
++------+----------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 1071.727 ; gain = 546.488
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:24 . Memory (MB): peak = 1071.727 ; gain = 324.613
+Synthesis Optimization Complete : Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 1071.727 ; gain = 546.488
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1071.727 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+206 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:39 . Memory (MB): peak = 1071.727 ; gain = 779.914
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1071.727 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/top_tactico.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_tactico_utilization_synth.rpt -pb top_tactico_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 20 02:15:29 2022...

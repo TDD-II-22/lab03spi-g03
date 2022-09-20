@@ -32,9 +32,12 @@ module tb_master_race_spi;
                         sw_we_pi,
                         reg_sel_pi,
                         selec_entra_pi;
-    logic    [11 : 0]   sw_entrada_pi;
+    logic   [11 : 0]    sw_entrada_pi;
     
     logic   [1:0]       sw_addr_in_pi;
+    
+    logic   [6 : 0]     display_po;
+    logic   [7 : 0]     display_select_po;
                         
     //DATOS TEMPORALES                            
                                
@@ -42,7 +45,8 @@ module tb_master_race_spi;
     logic   [31 : 0 ]   salida_po;
    
 
- top_interface_spi interface_spi1(
+
+ top_tactico top_tactico1(
 
     .clk_100Mhz_pi(clk_100Mhz_pi),
     .rst_pi(rst_i),
@@ -50,15 +54,14 @@ module tb_master_race_spi;
     .btn_send_pi(btn_send_pi),
     .sw_we_pi(sw_we_pi),
     .reg_sel_pi(reg_sel_pi),
-    .selec_entra_pi(selec_entra_pi),
     .sw_addr_in_pi(sw_addr_in_pi),
     .sw_entrada_pi(sw_entrada_pi),
     .locked(locked),
     .mosi_po(mosi),
-    .salida_po(salida_po) 
+    .display_po(display_po),
+    .display_select_po(display_select_po) 
 );   
-                                                                          
-    
+                                                                             
     initial begin
         rst_i = 1;
         miso=0;
@@ -77,6 +80,16 @@ module tb_master_race_spi;
         #50;
         rst_i <= 0;
         #1000;
+        reg_sel_pi = 1;
+        sw_we_pi = 1;
+        #200;
+        sw_addr_in_pi=2'b01;
+        sw_entrada_pi = 8'haa;
+        #200;
+        
+        
+        
+        /*
         reg_sel_pi =1;
         sw_we_pi = 1;
         #200;
@@ -113,6 +126,7 @@ module tb_master_race_spi;
         sw_addr_in_pi=0;
         #1000;
         sw_addr_in_pi=1;
+        */
     end
     always @(*) begin
        miso = ~mosi;    

@@ -14,9 +14,11 @@ sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 "../../../../../../Ejercicio2/module_reg_datos.sv" \
 "../../../../../../Ejercicio2/module_reg_miso.sv" \
 "../../../../../../Ejercicio2/module_reg_mosi.sv" \
+"../../../../../../Ejercicio1/module_seg7_control.sv" \
 "../../../../../../Ejercicio2/module_state_machine_spi.sv" \
 "../../../../../../Ejercicio2/top_interface_spi.sv" \
 "../../../../../../Ejercicio2/top_master_race_spi.sv" \
+"../../../../vivado_project.srcs/sources_1/new/top_tactico.sv" \
 "../../../../../../Ejercicio2/tb_master_race_spi.sv" \
 
 # compile glbl module

@@ -3,10 +3,9 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:131]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dato_in' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:80]
 WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_in_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:77]
 WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'rs1_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:78]
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'salidas_control_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:137]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -29,6 +28,8 @@ Compiling module xil_defaultlib.module_memoria
 Compiling module xil_defaultlib.module_reg_datos
 Compiling module xil_defaultlib.module_mux_salida
 Compiling module xil_defaultlib.top_interface_spi
+Compiling module xil_defaultlib.module_seg7_control
+Compiling module xil_defaultlib.top_tactico
 Compiling module xil_defaultlib.tb_master_race_spi
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_master_race_spi_behav

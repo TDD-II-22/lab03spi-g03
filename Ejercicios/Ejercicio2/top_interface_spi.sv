@@ -22,27 +22,23 @@
 
 module top_interface_spi(
 
-    input   logic               clk_100Mhz_pi,
+    input   logic               clk_i,
                                 rst_pi,
                                 miso_pi,
                                 btn_send_pi,
                                 sw_we_pi,
                                 reg_sel_pi,
-                                selec_entra_pi,
                      [1 : 0]    sw_addr_in_pi,
                      [11 : 0]   sw_entrada_pi,                   
     
-    output logic                locked,
-                                mosi_po,
-    pkg_global::bits_width      salida_po                           
-                                
-                     
+    output logic                mosi_po,
+    pkg_global::bits_width      salida_po                    
 );   
     
-        
+    
     //IMPORTAR DATOS
     import pkg_global::*;
-    
+     
     //variables internas
     logic                       clk,
                                 we_rx, 
@@ -58,30 +54,20 @@ module top_interface_spi(
                                 we_ex2;
     
     bits_n                      addr1,
-                                addr2,
-                                add_addr1;                           
+                                addr2;                          
     
     struct_reg_control          cntr_str;
     
-    logic [7 : 0]               dato_ram;
+    logic [31 : 0]               dato_ram;
     
-    //generar clock 10M
-    WCLK generate_clock_10Mhz(
-        // Clock out ports
-        .CLK_10MHZ              (clk),                  // output CLK_10MHZ
-        // Status and control signals
-        .locked                 (locked),                     // output locked
-       // Clock in ports
-        .CLK_100MHZ             (clk_100Mhz_pi)         // input CLK_100MHZ
-    ); 
+    assign clk = clk_i;
     
     //demux we
     module_mux_we mux_we(
         .we_i                   (sw_we_pi),
         .reg_sel_i              (reg_sel_pi),
         .wr1_o                  (we_ex1),
-        .wr2_o                  (we_ex2)
-        
+        .wr2_o                  (we_ex2)       
     );
     
     
@@ -132,11 +118,10 @@ module top_interface_spi(
     );
     
     module_mux_salida mux_salida(
-        .selec_salida_i         (sw_we_pi),
-        .salida_datos_o         (cntr_str),
-        .salidas_control_o      (dato_ram),
+        .selec_salida_i         (reg_sel_pi),
+        .salida_datos_o         (dato_ram),
+        .salidas_control_o      (cntr_str),
         .salida_i               (salida_po)            
     );
-    
 
 endmodule

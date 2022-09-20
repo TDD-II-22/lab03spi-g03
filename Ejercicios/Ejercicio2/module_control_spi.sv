@@ -166,13 +166,10 @@ module module_control_spi(
                         all                     <= 0;
                         progress                <= 0;
                     end
-            
             endcase    
-        
         
         end
 
-    
     end//end always
     
     //SALIDA

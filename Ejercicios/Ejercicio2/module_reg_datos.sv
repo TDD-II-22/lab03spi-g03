@@ -27,7 +27,7 @@ module module_reg_datos(
     input  [1 : 0]                      addr1_i,
     input  pkg_global::bits_n           addr2_i,
     input  [11 : 0]                     in1_i,
-    input  [7 : 0]                     in2_i,
+    input  [7 : 0]                      in2_i,
     input  logic                        wr1_i,
     input  logic                        wr2_i,
     output pkg_global::bits_width       data_o

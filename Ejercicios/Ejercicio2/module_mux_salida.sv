@@ -22,18 +22,18 @@
 
 module module_mux_salida(
     input   logic                       selec_salida_i,
-    input   pkg_global::bits_width      salida_datos_o,
+    input   logic   [31 : 0]            salida_datos_o,
                                         salidas_control_o,
-    output  pkg_global::bits_width      salida_i            
+    output  logic   [31 : 0]            salida_i            
     );
     
     always@(*) begin
     
         case(selec_salida_i)
         
-            0: salida_i = salida_datos_o;
+            0: salida_i = salidas_control_o;
             
-            1: salida_i = salidas_control_o;
+            1: salida_i = salida_datos_o;
             
         endcase
 

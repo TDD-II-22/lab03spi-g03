@@ -11,7 +11,7 @@ module top_master_race_spi(
                                         we_rx_o,                                      
                                         proccess_o,
                                         hold_ctrl_o,
-                                        we_ram2_o,           
+                                        we_ram2_o,          
                     [7 : 0]             dato_recibido_r,
                     [9 : 0]             rx_o,
     pkg_global::bits_n                  addr2_o

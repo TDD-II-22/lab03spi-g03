@@ -12,8 +12,11 @@
 
 
 ### 3.1 Ejercicio 1. Display de 7 segmentos Extendido
+Este ejercicio se basa en un control de dos registor para los displays de 7 segmentos de l placa Nexys 4.
+
 #### 3.1.1 Módulo top
-##### Encabezado del módulo
+Módulo más general del ejercicio el cual contiene e interconecta a todos los submódulos necesarios para el funcionamiento de la implementación requerida
+##### Encabezado del módulo.
 
 ```SystemVerilog
 module top_module_7seg_v3(
@@ -44,9 +47,63 @@ module top_module_7seg_v3(
 Este módulo es el módulo rpincipal en el cual se llaman a los demás submódulos y se interconectan tal y como lo muestra la figura a continuación:
 <img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/Esquematico%201.png" >
 
+#### 3.1.2 Módulo WCLK.xci
+El archivo WCLL.xci crea un archivo verilog que contiene un circuito de reloj personalizado según los requisitos del reloj del usuario.
+
+##### Encabezado del módulo
+
+```SystemVerilog
+
+module WCLK (
+  // Clock out ports
+  output        CLK_10MHZ,
+  // Status and control signals
+  output        locked,
+  // Clock in ports
+  input         CLK_100MHZ
+ );
+	
+```
+
+##### Parámetros
+El módulo no posee parámetros.
+
+##### Entradas y salidas:
+- `CLK_100MHZ`: Entrada de reloj del módulo
+- `locked`: Salida del módulo. Presenta un pulso una vez que el bloque WCLK se estabiliza.
+- `CLK_10MHZ`: Salida del módulo. Genera un reloj con un periodo de 100ns.
+
+
+#### 3.1.3 Módulo clock_mux_divider
+##### Encabezado del módulo
+```SystemVerilog
+module module_clock_mux_divider(
+
+    input   logic               clk_10Mhz_i,
+                                reset_i,
+                    [1 : 0]     periodos_i,
+    output  logic               clock_o,
+                                clk_en1,
+                                clk_en2 
+    
+    );
+```
+##### Parámetros
+- Lista de parámetros
+
+##### Entradas y salidas:
+- `entrada_i`: descripción de la entrada
+- `salida_i`: descripción de la salida
+
+##### Criterios de diseño
+Diagramas, texto explicativo...
+
+
+
+
+
 #### 3.1.X Testbench
 Descripción y resultados de las pruebas hechas
-
 
 #### 3.1.X Puertos Utilizados
 

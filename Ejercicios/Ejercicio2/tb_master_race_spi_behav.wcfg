@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="175737090001fs"></ZoomEndTime>
+      <ZoomStartTime time="602470077534fs"></ZoomStartTime>
+      <ZoomEndTime time="622371491507fs"></ZoomEndTime>
       <Cursor1Time time="31939628000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="215"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <ValueColumnWidth column_width="86"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="9" />
    <wvobject fp_name="/tb_master_race_spi/clk_100Mhz_pi" type="logic">
       <obj_property name="ElementShortName">clk_100Mhz_pi</obj_property>
       <obj_property name="ObjectShortName">clk_100Mhz_pi</obj_property>
@@ -45,5 +45,17 @@
       <obj_property name="ElementShortName">all_i[1:0]</obj_property>
       <obj_property name="ObjectShortName">all_i[1:0]</obj_property>
       <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_master_race_spi/top_tactico1/salida" type="array">
+      <obj_property name="ElementShortName">salida[31:0]</obj_property>
+      <obj_property name="ObjectShortName">salida[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_master_race_spi/top_tactico1/sw_addr_in_pi" type="array">
+      <obj_property name="ElementShortName">sw_addr_in_pi[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sw_addr_in_pi[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_master_race_spi/autoverificacion" type="logic">
+      <obj_property name="ElementShortName">autoverificacion</obj_property>
+      <obj_property name="ObjectShortName">autoverificacion</obj_property>
    </wvobject>
 </wave_config>

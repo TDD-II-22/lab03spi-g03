@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module module_mux_we (
     input logic         we_i,
                         reg_sel_i,

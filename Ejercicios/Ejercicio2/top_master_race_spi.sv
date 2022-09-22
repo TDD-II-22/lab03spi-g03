@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module top_master_race_spi(
 
     input   logic                       clk_i,

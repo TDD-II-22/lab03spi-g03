@@ -67,18 +67,17 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.cache/wt [current_project]
-  set_property parent.project_path C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr [current_project]
-  set_property ip_output_repo C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Documentos/GitHub/lab02-g03/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.cache/wt [current_project]
+  set_property parent.project_path D:/Documentos/GitHub/lab02-g03/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr [current_project]
+  set_property ip_output_repo D:/Documentos/GitHub/lab02-g03/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/top_tactico.dcp
-  read_ip -quiet C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci
-  read_xdc C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc
+  add_files -quiet D:/Documentos/GitHub/lab02-g03/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/top_tactico.dcp
+  read_ip -quiet D:/Documentos/GitHub/lab02-g03/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci
+  read_xdc D:/Documentos/GitHub/lab02-g03/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc
   link_design -top top_tactico -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -151,25 +150,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
-  catch { write_mem_info -force top_tactico.mmi }
-  write_bitstream -force top_tactico.bit 
-  catch {write_debug_probes -quiet -force top_tactico}
-  catch {file copy -force top_tactico.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

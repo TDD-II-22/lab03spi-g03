@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Sep 21 22:16:22 2022
-| Host         : Andrey-PC running 64-bit major release  (build 9200)
+| Date         : Wed Sep 21 23:25:40 2022
+| Host         : LAPTOP-UOLPLFOP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_tactico_methodology_drc_routed.rpt -pb top_tactico_methodology_drc_routed.pb -rpx top_tactico_methodology_drc_routed.rpx
 | Design       : top_tactico
 | Device       : xc7a100tcsg324-1

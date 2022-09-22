@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module module_control_spi(
 
     input  logic                        clk_i,

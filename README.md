@@ -1,3 +1,4 @@
+
 # Lab 3. Interfaces con periféricos
 
 ## 1. Abreviaturas y definiciones
@@ -5,7 +6,7 @@
 - **SPI**: Serial Peripheral Interface
 
 ## 2. Referencias
-[0] David Harris y Sarah Harris. *Digital Design and Computer Architecture. RISC-V Edition.* Morgan Kaufmann, 2022. ISBN: 978-0-12-820064-3
+[1] David Harris y Sarah Harris. *Digital Design and Computer Architecture. RISC-V Edition.* Morgan Kaufmann, 2022. ISBN: 978-0-12-820064-3
 
 ## 3. Desarrollo
 
@@ -13,26 +14,42 @@
 ### 3.1 Ejercicio 1. Display de 7 segmentos Extendido
 #### 3.1.1 Módulo top
 ##### Encabezado del módulo
+
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
+module top_module_7seg_v3(
+    
+    input     logic               clk_100Mhz_pi,
+                                  reset_pi,
+                                  control_pi,
+                       [1 : 0]    periodos_pi,
+    output    logic    [2 : 0]    rgb_po,
+                       [6 : 0]    display_po,
+                       [7 : 0]    display_select_po
     );
 ```
+
 ##### Parámetros
-- Lista de parámetros
+- `PERIODO_ANODO`: El periodo de la frecuecia de refresco para los ánodos de los displays
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk:100Mhz_pi`: Entrada del clock de la FPGA.
+- `reset_pi`: Entrada del botón de reset.
+- `control_pi`: Entrada del switch de control para pausar la generación de nuevos valores a mostrar en el display.
+- `periodos_pi`: Entradas de los switches que determinan la frecuencia a la que se cambian los registros.
+- `rgb_po`: Salida para el LED RGB
+- `display_po`: Salida de los ánodos de los displays.
+- `display_select_po` Salida de los cátodos de los displays. 
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+Este módulo es el módulo rpincipal en el cual se llaman a los demás submódulos y se interconectan tal y como lo muestra la figura 
 
 #### 3.1.X Testbench
 Descripción y resultados de las pruebas hechas
 
 
+#### 3.1.X Puertos Utilizados
+
+#### 3.1.X Constraints
 
 
 
@@ -270,4 +287,3 @@ Descripción y resultados de las pruebas hechas
 ## Apendices:
 ### Apendice 1:
 texto, imágen, etc
-

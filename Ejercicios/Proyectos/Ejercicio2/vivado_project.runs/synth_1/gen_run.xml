@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1663661624">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1663819920">
   <File Type="PA-TCL" Name="top_tactico.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_tactico_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_tactico_reports.tcl"/>
@@ -19,6 +19,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../Ejercicio2/module_clk_divider_spi.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Compartido/module_clock_divider.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

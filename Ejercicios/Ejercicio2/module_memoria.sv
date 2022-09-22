@@ -21,13 +21,13 @@
 
 
 module module_memoria(
-                        input                             clk_i,
-                        input                             rst_i,
-                        input                             we_i,
-                        input  pkg_global:: bitsh_t       addr_rs1_i,
-                        input  pkg_global:: bitsh_t       addr_rd_i,
-                        input  pkg_global:: bits_width    data_in_i,
-                        output pkg_global:: bits_width    rs1_o
+    input   logic                           clk_i,
+    input   logic                           rst_i,
+    input   logic                           we_i,
+    input  pkg_global:: bitsh_t             addr_rs1_i,
+    input  pkg_global:: bitsh_t             addr_rd_i,
+    input  pkg_global:: bits_width          data_in_i,
+    output pkg_global:: bits_width          rs1_o
                      );
     
     import                 pkg_global::*;
@@ -38,11 +38,8 @@ module module_memoria(
     always @ ( posedge clk_i ) begin
      if   ( rst_i )  memoria <=          '0;
      else begin 
-            memoria [ 0 ] <= '0;
             if ( we_i ) begin
-                if ( addr_rd_i != 0 ) begin
-                    memoria [ addr_rd_i ] <= data_in_i; 
-                end
+                memoria [ addr_rd_i ] <= data_in_i; 
             end
      end
     end

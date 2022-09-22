@@ -31,44 +31,54 @@ module top_tactico(
                     [1 : 0]     sw_addr_in_pi,//selecciona la direcccion
                     [11 : 0]    sw_entrada_pi,                    
     output logic                mosi_po,
+                                locked_po,
+                                cs_ctrl_po,
                     [6 : 0]     display_po,
-                    [7 : 0]     display_select_po
-                   
-    /*output logic                locked*/
+                    [7 : 0]     display_select_po                     
     );
     
-    parameter real PERIODO = 1e-3;
+    parameter real PERIODO      = 1e-3,
+                   PERIODO_send = 1;
     
     import pkg_global::*;
     
     bits_width      salida;       
     
-    logic           clk;
+    logic           clk, 
+                    send_pulso;
     
         //generar clock 10M
     WCLK generate_clock_10Mhz(
         // Clock out ports
         .CLK_10MHZ              (clk),                  // output CLK_10MHZ
         // Status and control signals
-        .locked                 (locked),                     // output locked
+        .locked                 (locked_po),            // output locked
        // Clock in ports
         .CLK_100MHZ             (clk_100Mhz_pi)         // input CLK_100MHZ
     ); 
     
+    module_clock_divider #(.PERIODO(PERIODO_send)) envio_pulso_send (
+
+        .clk_10Mhz_i            (clk),
+        .reset_i                (rst_pi),
+        .btn_send_i             (btn_send_pi),
+        .send_pulso_i           (send_pulso) 
     
+    );
+
     top_interface_spi interface_spi(
 
-        .clk_i                  (clk),
-        .rst_pi                 (rst_pi),
-        .miso_pi                (miso_pi),
-        .btn_send_pi            (btn_send_pi),
-        .sw_we_pi               (sw_we_pi),
-        .reg_sel_pi             (reg_sel_pi),
-        .sw_addr_in_pi          (sw_addr_in_pi),
-        .sw_entrada_pi          (sw_entrada_pi),                   
-        .mosi_po                (mosi_po),
-        .salida_po              (salida)
-    /*output logic                locked*/
+        .clk_i                 (clk),
+        .rst_i                 (rst_pi),
+        .miso_i                (miso_pi),
+        .btn_send_i            (send_pulso),
+        .sw_we_i               (sw_we_pi),
+        .reg_sel_i             (reg_sel_pi),
+        .sw_addr_in_i          (sw_addr_in_pi),
+        .sw_entrada_i          (sw_entrada_pi),                   
+        .mosi_o                (mosi_po),
+        .salida_o              (salida),
+        .cs_ctrl_o             (cs_ctrl_po)
                            
     );
     

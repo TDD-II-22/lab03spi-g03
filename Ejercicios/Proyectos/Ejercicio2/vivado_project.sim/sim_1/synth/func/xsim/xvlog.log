@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/synth/func/xsim/tb_master_race_spi_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WCLK
+INFO: [VRFC 10-311] analyzing module WCLK__WCLK_clk_wiz
+INFO: [VRFC 10-311] analyzing module module_clk_divider_spi
+INFO: [VRFC 10-311] analyzing module module_clock_divider
+INFO: [VRFC 10-311] analyzing module module_control_spi
+INFO: [VRFC 10-311] analyzing module module_memoria
+INFO: [VRFC 10-311] analyzing module module_reg_control
+INFO: [VRFC 10-311] analyzing module module_reg_datos
+INFO: [VRFC 10-311] analyzing module module_reg_miso
+INFO: [VRFC 10-311] analyzing module module_reg_mosi
+INFO: [VRFC 10-311] analyzing module module_seg7_control
+INFO: [VRFC 10-311] analyzing module module_state_machine_spi
+INFO: [VRFC 10-311] analyzing module top_interface_spi
+INFO: [VRFC 10-311] analyzing module top_master_race_spi
+INFO: [VRFC 10-311] analyzing module top_tactico
+INFO: [VRFC 10-311] analyzing module glbl

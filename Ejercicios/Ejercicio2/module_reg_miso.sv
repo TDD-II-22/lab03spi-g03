@@ -25,7 +25,7 @@ module module_reg_miso(
                                             rst_i,
                                             clk_fn_i,
                                             miso_i,
-    output              [7 : 0]             dato_recibido_o
+    output  logic           [7 : 0]         dato_recibido_o
                                             
     );
     
@@ -49,7 +49,7 @@ module module_reg_miso(
         end else begin
         
            if(clk_fn) begin
-                reg_shift_miso             <= {miso, reg_shift_miso [7 : 1]};  
+                reg_shift_miso             <= {reg_shift_miso [6 : 0], miso};  
             end
 
         end

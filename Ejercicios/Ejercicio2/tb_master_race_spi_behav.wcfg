@@ -13,14 +13,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="594851862001fs"></ZoomEndTime>
-      <Cursor1Time time="594851862000fs"></Cursor1Time>
+      <ZoomEndTime time="175737090001fs"></ZoomEndTime>
+      <Cursor1Time time="31939628000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="227"></NameColumnWidth>
+      <NameColumnWidth column_width="215"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="6" />
    <wvobject fp_name="/tb_master_race_spi/clk_100Mhz_pi" type="logic">
       <obj_property name="ElementShortName">clk_100Mhz_pi</obj_property>
       <obj_property name="ObjectShortName">clk_100Mhz_pi</obj_property>
@@ -33,28 +33,17 @@
       <obj_property name="ElementShortName">sw_we_pi</obj_property>
       <obj_property name="ObjectShortName">sw_we_pi</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_master_race_spi/top_tactico1/salida" type="array">
-      <obj_property name="ElementShortName">salida[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_master_race_spi/sw_entrada_pi" type="array">
       <obj_property name="ElementShortName">sw_entrada_pi[11:0]</obj_property>
       <obj_property name="ObjectShortName">sw_entrada_pi[11:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_master_race_spi/top_tactico1/interface_spi/mux_salida/selec_salida_i" type="logic">
-      <obj_property name="ElementShortName">selec_salida_i</obj_property>
-      <obj_property name="ObjectShortName">selec_salida_i</obj_property>
+   <wvobject fp_name="/tb_master_race_spi/top_tactico1/interface_spi/master_race_spi/reg_mosi/dato_in" type="array">
+      <obj_property name="ElementShortName">dato_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato_in[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_master_race_spi/top_tactico1/interface_spi/mux_salida/salida_datos_o" type="array">
-      <obj_property name="ElementShortName">salida_datos_o[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida_datos_o[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_master_race_spi/top_tactico1/interface_spi/mux_salida/salidas_control_o" type="array">
-      <obj_property name="ElementShortName">salidas_control_o[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salidas_control_o[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_master_race_spi/top_tactico1/interface_spi/mux_salida/salida_i" type="array">
-      <obj_property name="ElementShortName">salida_i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida_i[31:0]</obj_property>
+   <wvobject fp_name="/tb_master_race_spi/top_tactico1/interface_spi/master_race_spi/reg_mosi/all_i" type="array">
+      <obj_property name="ElementShortName">all_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">all_i[1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

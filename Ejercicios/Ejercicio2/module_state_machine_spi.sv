@@ -65,10 +65,9 @@ module module_state_machine_spi(
 
    //MEMORIA              
     always_ff @ ( posedge clk_i ) begin
-        if( rst_i )  begin
+        if( rst_i ) 
             state <= WAIT_SEND;
-            next_state <= WAIT_SEND;
-        end else        
+        else        
             state <= next_state;
     end 
     

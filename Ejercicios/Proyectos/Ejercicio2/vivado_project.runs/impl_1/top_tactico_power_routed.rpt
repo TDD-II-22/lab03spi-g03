@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Sep 20 02:16:48 2022
+| Date             : Wed Sep 21 22:16:23 2022
 | Host             : Andrey-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file top_tactico_power_routed.rpt -pb top_tactico_power_summary_routed.pb -rpx top_tactico_power_routed.rpx
 | Design           : top_tactico
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.195        |
+| Total On-Chip Power (W)  | 0.196        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.098        |
@@ -53,16 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      434 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      163 |     63400 |            0.26 |
-|   CARRY4       |    <0.001 |       32 |     15850 |            0.20 |
-|   Register     |    <0.001 |      181 |    126800 |            0.14 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |      428 |       --- |             --- |
+| Slice Logic    |    <0.001 |     2245 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      594 |     63400 |            0.94 |
+|   CARRY4       |    <0.001 |       41 |     15850 |            0.26 |
+|   Register     |    <0.001 |     1256 |    126800 |            0.99 |
+|   F7/F8 Muxes  |    <0.001 |      207 |     63400 |            0.33 |
+|   Others       |     0.000 |       14 |       --- |             --- |
+| Signals        |    <0.001 |     1789 |       --- |             --- |
 | PLL            |     0.097 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       36 |       210 |           17.14 |
+| I/O            |    <0.001 |       38 |       210 |           18.10 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.195 |          |           |                 |
+| Total          |     0.196 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.024 |       0.009 |      0.015 |
+| Vccint    |       1.000 |     0.025 |       0.009 |      0.015 |
 | Vccaux    |       1.800 |     0.067 |       0.049 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

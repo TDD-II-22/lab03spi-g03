@@ -56,7 +56,7 @@ module tb_master_race_spi;
     .reg_sel_pi(reg_sel_pi),
     .sw_addr_in_pi(sw_addr_in_pi),
     .sw_entrada_pi(sw_entrada_pi),
-    .locked(locked),
+    .locked_po(locked),
     .mosi_po(mosi),
     .display_po(display_po),
     .display_select_po(display_select_po) 
@@ -86,10 +86,8 @@ module tb_master_race_spi;
         sw_addr_in_pi=2'b01;
         sw_entrada_pi = 8'haa;
         #200;
-        
-        
-        
-        /*
+       
+       /*
         reg_sel_pi =1;
         sw_we_pi = 1;
         #200;
@@ -101,10 +99,11 @@ module tb_master_race_spi;
         #200;
         sw_addr_in_pi=2'b11;
         sw_entrada_pi = 8'hff;
+        */
         #500; 
         sw_we_pi = 0;
         reg_sel_pi =0; 
-        sw_entrada_pi = 12'b0000_0010_001; 
+        sw_entrada_pi = 12'b0000_0000_011; 
         
         //entrada a registro control
         #500;
@@ -116,6 +115,8 @@ module tb_master_race_spi;
         btn_send_pi = 1;
         #200;
         btn_send_pi = 0;
+        
+        /*
         #600000;
         sw_addr_in_pi=1;
         #200

@@ -25,8 +25,7 @@ module module_clk_divider_spi(
     input   logic       clk_i,
                         rst_i,
                         start_i,
-    output  logic       clock_o,
-                        clk_fp_o,
+    output  logic       clk_fp_o,
                         clk_fn_o
     );   
         
@@ -117,7 +116,6 @@ module module_clk_divider_spi(
         
     //salidas
     always_comb begin
-        clock_o     = clk_out;
         clk_fp_o    = clk_fp;
         clk_fn_o    = clk_fn;
     end

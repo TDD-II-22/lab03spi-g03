@@ -28,30 +28,31 @@ module module_reg_mosi(
                         [1 : 0]             all_i,
                         [7 : 0]             dato_in_i,
     
-    output                                  mosi_o
+    output  logic                           mosi_o
     
     );
     
     //variables internas
     logic  [7 : 0]                          reg_shift_mosi,
                                             dato_in;
-    logic                                   mosi;
-    logic                                   clk_fp,
+                                            
+    logic                                   mosi,
+                                            clk_fp,
                                             we;
     //asignaturas
     
     assign clk_fp                           = clk_fp_i;
     assign we                               = we_i;
     
-    always @(*) begin
+    always_comb begin
     
         case(all_i)
         
             2'b00: dato_in = dato_in_i;
-            2'b01: dato_in = 0;
-            2'b11: dato_in = 1;
-            
-            default: dato_in = 0;
+            2'b01: dato_in = 8'b1111_1111;
+            2'b10: dato_in = 8'b0000_0000;
+            2'b11: dato_in = 8'b1111_1111;
+            default: dato_in = dato_in_i;
         
         endcase      
          
@@ -71,10 +72,10 @@ module module_reg_mosi(
             end else begin
             
                if(clk_fp) begin
-                    mosi             <= reg_shift_mosi[0];
-                    reg_shift_mosi   <= {1'b0, reg_shift_mosi[7 : 1]};  
+                    mosi             <= reg_shift_mosi[7];
+                    reg_shift_mosi   <= {reg_shift_mosi[6 : 0], 1'b0 };  
                end
-    
+                    
             end
         end
     end

@@ -13,6 +13,7 @@ module module_control_spi(
                                         we_rx_o,
                                         hold_ctrl_o,
                                         we_ram2_o,
+                                        cs_ctrl_o,
                        [1 : 0]          all_o,
                        [9 : 0]          rx_o,
     pkg_global::bits_n                  addr2_o   
@@ -40,9 +41,7 @@ module module_control_spi(
                                         send;
     
     logic   [3 : 0]                     contador,
-                                        control;
-                                        
-    logic   [1 : 0]                     all;
+                                        control;                                
     
     logic                               hold_ctrl,
                                         clk_fn,
@@ -50,7 +49,8 @@ module module_control_spi(
                                         progress,
                                         en_conta,
                                         we_rx,
-                                        we_ram2;
+                                        we_ram2,
+                                        cs_ctrl;
 
 
     //ASIGNACIONES INCIALEs
@@ -61,6 +61,7 @@ module module_control_spi(
     assign n_tx_end                        = cntr_str_i.n_tx_end;
     assign all_1s                          = cntr_str_i.all_1s;
     assign all_0s                          = cntr_str_i.all_0s;
+    assign cs_ctrl                         = cntr_str_i.cs_ctrl;
     
     always @(*) begin
    
@@ -75,10 +76,9 @@ module module_control_spi(
         if(rst_i) begin
         
              hold_ctrl           <= 0; 
-             addr2               <= 1;
+             addr2               <= 0;
              contador            <= 0;
              we_reg              <= 0;
-             all                 <= 0;
              progress            <= 0;
              en_conta            <= 0;
              we_rx               <= 0;
@@ -91,27 +91,20 @@ module module_control_spi(
                 CTR_SEND: //0
                     begin        
                         hold_ctrl           <= 0;
-                        we_ram2              <= 0;  
+                        we_ram2             <= 0;  
                     end
                 
                 CTR_PRELOAD1: //1
                     begin            
                         hold_ctrl           <= 1; 
-                        addr2               <= 1;                                     
+                        addr2               <= 0;                                     
                     end
                         
                 CTR_LOAD: //2
                     begin
                         contador            <= 0;             
                         we_reg              <= 1;
-                        we_ram2              <= 0; 
-                        //condicion de dato entrada        
-                        if(all_1s == 1)                
-                            all <= 2'b11;
-                        else if(all_0s == 1)           
-                            all <= 2'b01;
-                        else                            
-                            all <= 2'b00;    
+                        we_ram2             <= 0; 
                         
                     end
                        
@@ -132,8 +125,8 @@ module module_control_spi(
                 
                 CTR_CHECK: //4
                     begin 
-                        en_conta            <= 0;
-                        we_ram2             <= 0;      
+                        en_conta                <= 0;
+                        we_ram2                 <= 0;      
                         if(n_rx_end < n_tx_end) begin
                             progress            <= 0;
                             addr2               <= addr2 + 1;
@@ -163,7 +156,6 @@ module module_control_spi(
                         addr2                   <= 0;
                         contador                <= 0;
                         we_reg                  <= 0;
-                        all                     <= 0;
                         progress                <= 0;
                     end
             endcase    
@@ -176,7 +168,7 @@ module module_control_spi(
     always_comb begin
         send_o                      = send;
         contador_o                  = en_conta;
-        all_o                       = all;
+        all_o                       = {all_0s, all_1s};
         we_reg_o                    = we_reg;
         progress_o                  = progress;    
         rx_o                        = rx;
@@ -184,6 +176,7 @@ module module_control_spi(
         hold_ctrl_o                 = hold_ctrl;
         addr2_o                     = addr2;
         we_ram2_o                   = we_ram2;
+        cs_ctrl_o                   = ~cs_ctrl;
     end
     
 endmodule  

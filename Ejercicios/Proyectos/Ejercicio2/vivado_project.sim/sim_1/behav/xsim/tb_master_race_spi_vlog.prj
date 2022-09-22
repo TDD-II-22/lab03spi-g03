@@ -5,6 +5,7 @@ verilog xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 
 sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 "../../../../../../Ejercicio2/module_clk_divider_spi.sv" \
+"../../../../../../Compartido/module_clock_divider.sv" \
 "../../../../../../Ejercicio2/pkg_global.sv" \
 "../../../../../../Ejercicio2/module_control_spi.sv" \
 "../../../../../../Ejercicio2/module_memoria.sv" \

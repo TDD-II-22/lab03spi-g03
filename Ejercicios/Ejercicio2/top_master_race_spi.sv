@@ -11,7 +11,8 @@ module top_master_race_spi(
                                         we_rx_o,                                      
                                         proccess_o,
                                         hold_ctrl_o,
-                                        we_ram2_o,          
+                                        we_ram2_o,
+                                        cs_ctrl_o,          
                     [7 : 0]             dato_recibido_r,
                     [9 : 0]             rx_o,
     pkg_global::bits_n                  addr2_o
@@ -27,7 +28,6 @@ module top_master_race_spi(
     logic           [2 : 0]     control;
     
     logic                       clk,
-                                clk_o,
                                 clk_fp,
                                 clk_fn,
                                 contador,
@@ -42,7 +42,6 @@ module top_master_race_spi(
         .clk_i                  (clk),
         .rst_i                  (rst_i),
         .start_i                (hold_ctrl_o),
-        .clock_o                (clk_o),
         .clk_fp_o               (clk_fp),
         .clk_fn_o               (clk_fn)
     
@@ -75,7 +74,8 @@ module top_master_race_spi(
         .we_ram2_o              (we_ram2_o),
         .all_o                  (all),
         .rx_o                   (rx_o),
-        .addr2_o                (addr2_o)   
+        .addr2_o                (addr2_o),
+        .cs_ctrl_o              (cs_ctrl_o)   
     );
     
     //MOSI

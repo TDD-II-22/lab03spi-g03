@@ -41,7 +41,8 @@ module top_module_7seg_v3(
 - `display_select_po` Salida de los cátodos de los displays. 
 
 ##### Criterios de diseño
-Este módulo es el módulo rpincipal en el cual se llaman a los demás submódulos y se interconectan tal y como lo muestra la figura 
+Este módulo es el módulo rpincipal en el cual se llaman a los demás submódulos y se interconectan tal y como lo muestra la figura a continuación:
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/Esquematico%201.png" >
 
 #### 3.1.X Testbench
 Descripción y resultados de las pruebas hechas

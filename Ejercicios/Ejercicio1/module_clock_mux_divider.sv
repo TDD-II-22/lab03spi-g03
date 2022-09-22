@@ -46,7 +46,7 @@ module module_clock_mux_divider(
         
         case(periodos_i)
         
-            0: divider = 10;//cambiar para fpga
+            0: divider = 5e6;//cambiar para fpga
             1: divider = 10e6;
             2: divider = 20e6;
             3: divider = 30e6;   

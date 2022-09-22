@@ -28,8 +28,8 @@ module top_module_7seg_v3(
                     [1 : 0]     periodos_pi,
     output  logic   [2 : 0]     rgb_po,
                     [6 : 0]     display_po,
-                    [7 : 0]     display_select_po,
-                    output  logic locked
+                    [7 : 0]     display_select_po
+     //               output  logic locked
     );
     
     parameter       real        PERIODO_ANODO   = 1e-3;   
@@ -51,7 +51,7 @@ module top_module_7seg_v3(
         // Clock out ports
         .CLK_10MHZ              (clk_10Mhz),            // output CLK_10MHZ
         // Status and control signals
-        .locked                 (locked),                     // output locked
+        //.locked                 (locked),                     // output locked
        // Clock in ports
         .CLK_100MHZ             (clk_100Mhz_pi)         // input CLK_100MHZ
     

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Sep 14 19:32:15 2022
+# Process ID: 22520
+# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22416 C:\Users\carlo\Andrey\TEC\Semestre_II_2022\Taller_Digitales\Laboratorios\Lab3\Respaldo\Ejercicios_13_9_2022\Proyectos\Ejercicio1\vivado_project.xpr
+# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/vivado.log
+# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/vivado_project.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/prueba_behav.wcfg
+source prueba.tcl
+run all
+save_wave_config {C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/prueba_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/prueba_behav.wcfg
+source prueba.tcl
+run all
+close_sim

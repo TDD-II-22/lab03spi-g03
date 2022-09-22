@@ -2,24 +2,24 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Sep 14 19:32:15 2022
-# Process ID: 22520
-# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22416 C:\Users\carlo\Andrey\TEC\Semestre_II_2022\Taller_Digitales\Laboratorios\Lab3\Respaldo\Ejercicios_13_9_2022\Proyectos\Ejercicio1\vivado_project.xpr
-# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/vivado.log
-# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1\vivado.jou
+# Start of session at: Thu Sep 22 01:38:27 2022
+# Process ID: 2232
+# Current directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14308 C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio1\vivado_project.xpr
+# Log file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio1/vivado.log
+# Journal file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/vivado_project.xpr
+open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.xpr
 update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/prueba_behav.wcfg
-source prueba.tcl
-run all
-save_wave_config {C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/prueba_behav.wcfg}
-close_sim
-launch_simulation
-open_wave_config C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_13_9_2022/Proyectos/Ejercicio1/prueba_behav.wcfg
-source prueba.tcl
-run all
-close_sim
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci]
+synth_design -rtl -name rtl_1
+write_schematic -format pdf -orientation landscape C:/Users/rjesu/Desktop/esq1.pdf
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci]
+refresh_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci]
+refresh_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci]
+refresh_design
+write_schematic -format pdf -orientation landscape C:/Users/rjesu/Desktop/schematic.pdf
+write_schematic -format pdf -orientation portrait -force C:/Users/rjesu/Desktop/schematic.pdf

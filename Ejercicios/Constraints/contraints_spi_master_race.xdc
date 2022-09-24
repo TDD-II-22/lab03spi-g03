@@ -56,8 +56,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {sw_entrada_pi[9]}]
 set_property PACKAGE_PIN P3 [get_ports {sw_entrada_pi[10]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {sw_entrada_pi[10]}]
 ##Bank = 34, Pin name = IO_L14P_T2_SRCC_34,					Sch name = SW15
-set_property PACKAGE_PIN P4 [get_ports {sw_entrada_pi[11]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {sw_entrada_pi[11]}]
+#set_property PACKAGE_PIN P4 [get_ports {sw_entrada_pi[11]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw_entrada_pi[11]}]
 
 
 

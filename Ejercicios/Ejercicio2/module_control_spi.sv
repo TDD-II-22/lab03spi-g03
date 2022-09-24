@@ -148,7 +148,8 @@ module module_control_spi(
                     begin
                         progress                <= 0;
                         rx                      <= 0;
-                        we_reg                  <= 0;  
+                        we_reg                  <= 0;
+                        hold_ctrl               <= 0; 
                     end
                 
                 default: 

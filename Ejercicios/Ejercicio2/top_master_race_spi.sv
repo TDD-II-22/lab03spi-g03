@@ -12,7 +12,8 @@ module top_master_race_spi(
                                         proccess_o,
                                         hold_ctrl_o,
                                         we_ram2_o,
-                                        cs_ctrl_o,          
+                                        cs_ctrl_o,
+                                        sck_o,      
                     [7 : 0]             dato_recibido_r,
                     [9 : 0]             rx_o,
     pkg_global::bits_n                  addr2_o
@@ -43,8 +44,8 @@ module top_master_race_spi(
         .rst_i                  (rst_i),
         .start_i                (hold_ctrl_o),
         .clk_fp_o               (clk_fp),
-        .clk_fn_o               (clk_fn)
-    
+        .clk_fn_o               (clk_fn),
+        .clk_sck_o              (sck_o)
     );   
       
     

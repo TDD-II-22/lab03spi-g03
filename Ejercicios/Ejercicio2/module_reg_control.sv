@@ -29,7 +29,7 @@ module module_reg_control(
                                                 we_rx_i,
                                                 we_ex_i,
                      [9 : 0]                    in_rx_i,
-                     [11 : 0]                   in_ex_i,
+                     [10 : 0]                   in_ex_i,
     output  pkg_global:: struct_reg_control     cntr_str_o   
     
     );
@@ -48,7 +48,7 @@ module module_reg_control(
         
         if(send_i && !state[0]) begin
                     
-            next_state = {state[31 : 1], 1'b1};
+            next_state = {state[31 : 2], 2'b11};
             
         end else begin
 
@@ -62,12 +62,12 @@ module module_reg_control(
                         next_state   = state;   
                 
                 end else 
-                    next_state = {state[31 : 26], 10'b0, state[15 : 1], 1'b0}; 
+                    next_state = {state[31 : 26], 10'b0, state[15 : 2], 2'b00}; 
                 
             end else begin  
                 
                 if(we_ex_i) begin
-                    next_state = {19'b0, in_ex_i, 1'b0};
+                    next_state = {19'b0, in_ex_i, 2'b00};
                 end else begin
                     next_state = state;
                 end

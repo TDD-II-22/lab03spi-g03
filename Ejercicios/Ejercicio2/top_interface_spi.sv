@@ -28,11 +28,13 @@ module top_interface_spi(
                                 btn_send_i,
                                 sw_we_i,
                                 reg_sel_i,
-                     [1 : 0]    sw_addr_in_i,
-                     [11 : 0]   sw_entrada_i,                   
+    pkg_global::bits_n          sw_addr_in_i,
+                     [10 : 0]   sw_entrada_i,                   
     
     output logic                mosi_o,
                                 cs_ctrl_o,
+                                proccess_o,
+                                sck_o,
     pkg_global::bits_width      salida_o                    
 );   
     
@@ -88,7 +90,8 @@ module top_interface_spi(
         .dato_recibido_r        (dato_recibido),
         .rx_o                   (rx_o),
         .addr2_o                (addr2),
-        .cs_ctrl_o              (cs_ctrl_o)
+        .cs_ctrl_o              (cs_ctrl_o),
+        .sck_o                  (sck_o)
         
     ); 
     
@@ -126,4 +129,6 @@ module top_interface_spi(
         .salida_i               (salida_o)            
     );
 
+    assign proccess_o = proccess;
+    
 endmodule

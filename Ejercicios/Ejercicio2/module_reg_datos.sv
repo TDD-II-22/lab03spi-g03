@@ -24,9 +24,9 @@ module module_reg_datos(
     input  logic                        clk_i,  
     input  logic                        rst_i, 
     input  logic                        hold_ctrl_i,
-    input  [1 : 0]                      addr1_i,
+    input  pkg_global::bits_n           addr1_i,//temporal
     input  pkg_global::bits_n           addr2_i,
-    input  [11 : 0]                     in1_i,
+    input  [10 : 0]                     in1_i,
     input  [7 : 0]                      in2_i,
     input  logic                        wr1_i,
     input  logic                        wr2_i,

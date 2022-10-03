@@ -3,16 +3,10 @@ verilog xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 "../../../../../../scr/xci/WCLK/WCLK_sim_netlist.v" \
 
 sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
-"../../../../../../Ejercicio1/module_bebe_sweept.sv" \
-"../../../../../../Ejercicio1/module_clock_mux_divider.sv" \
-"../../../../../../Ejercicio1/module_control_led_rgb.sv" \
-"../../../../../../Ejercicio1/module_leds_rgb.sv" \
-"../../../../vivado_project.srcs/sources_1/new/module_pseudo_random.sv" \
 "../../../../../../Ejercicio1/module_register_pp.sv" \
 "../../../../../../Ejercicio1/module_registros.sv" \
-"../../../../../../Ejercicio1/module_seg7_control.sv" \
-"../../../../../../Ejercicio1/module_view_display.sv" \
-"../../../../../../Ejercicio1/top_module_7seg_v3.sv" \
+"../../../../../../Compartido/module_seg7_control.sv" \
+"../../../../../../Ejercicio1/top_simulate_7seg_v3.sv" \
 "../../../../../../Ejercicio1/prueba.sv" \
 
 # compile glbl module

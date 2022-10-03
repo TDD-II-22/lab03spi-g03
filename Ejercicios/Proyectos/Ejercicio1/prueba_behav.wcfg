@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5950000000fs"></ZoomStartTime>
-      <ZoomEndTime time="11850000001fs"></ZoomEndTime>
-      <Cursor1Time time="8395000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6160120242fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="216"></NameColumnWidth>
-      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="19" />
    <wave_markers>
@@ -26,6 +26,10 @@
    <wvobject fp_name="/prueba/clk_100Mhz_pi" type="logic">
       <obj_property name="ElementShortName">clk_100Mhz_pi</obj_property>
       <obj_property name="ObjectShortName">clk_100Mhz_pi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba/clk_10Mhz" type="logic">
+      <obj_property name="ElementShortName">clk_10Mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_10Mhz</obj_property>
    </wvobject>
    <wvobject fp_name="/prueba/reset_pi" type="logic">
       <obj_property name="ElementShortName">reset_pi</obj_property>
@@ -39,64 +43,60 @@
       <obj_property name="ElementShortName">locked</obj_property>
       <obj_property name="ObjectShortName">locked</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/periodos_pi" type="array">
-      <obj_property name="ElementShortName">periodos_pi[1:0]</obj_property>
-      <obj_property name="ObjectShortName">periodos_pi[1:0]</obj_property>
+   <wvobject fp_name="/prueba/clk_en1" type="logic">
+      <obj_property name="ElementShortName">clk_en1</obj_property>
+      <obj_property name="ObjectShortName">clk_en1</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/rgb_po" type="array">
-      <obj_property name="ElementShortName">rgb_po[2:0]</obj_property>
-      <obj_property name="ObjectShortName">rgb_po[2:0]</obj_property>
+   <wvobject fp_name="/prueba/clk_en2" type="logic">
+      <obj_property name="ElementShortName">clk_en2</obj_property>
+      <obj_property name="ObjectShortName">clk_en2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba/clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba/flanco" type="logic">
+      <obj_property name="ElementShortName">flanco</obj_property>
+      <obj_property name="ObjectShortName">flanco</obj_property>
    </wvobject>
    <wvobject fp_name="/prueba/display_po" type="array">
       <obj_property name="ElementShortName">display_po[6:0]</obj_property>
       <obj_property name="ObjectShortName">display_po[6:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/prueba/display_ver" type="array">
+      <obj_property name="ElementShortName">display_ver[6:0]</obj_property>
+      <obj_property name="ObjectShortName">display_ver[6:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/prueba/display_select_po" type="array">
       <obj_property name="ElementShortName">display_select_po[7:0]</obj_property>
       <obj_property name="ObjectShortName">display_select_po[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/registros/entrada_r1_i" type="array">
-      <obj_property name="ElementShortName">entrada_r1_i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">entrada_r1_i[31:0]</obj_property>
+   <wvobject fp_name="/prueba/display_select_ver" type="array">
+      <obj_property name="ElementShortName">display_select_ver[7:0]</obj_property>
+      <obj_property name="ObjectShortName">display_select_ver[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/registros/entrada_r2_i" type="array">
-      <obj_property name="ElementShortName">entrada_r2_i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">entrada_r2_i[31:0]</obj_property>
+   <wvobject fp_name="/prueba/display_1" type="array">
+      <obj_property name="ElementShortName">display_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">display_1[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/clock_divider/clock_o" type="logic">
-      <obj_property name="ElementShortName">clock_o</obj_property>
-      <obj_property name="ObjectShortName">clock_o</obj_property>
+   <wvobject fp_name="/prueba/display_2" type="array">
+      <obj_property name="ElementShortName">display_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">display_2[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/clock_divider/clk_act1" type="logic">
-      <obj_property name="ElementShortName">clk_act1</obj_property>
-      <obj_property name="ObjectShortName">clk_act1</obj_property>
+   <wvobject fp_name="/prueba/display_o" type="array">
+      <obj_property name="ElementShortName">display_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">display_o[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/clock_divider/clk_act2" type="logic">
-      <obj_property name="ElementShortName">clk_act2</obj_property>
-      <obj_property name="ObjectShortName">clk_act2</obj_property>
+   <wvobject fp_name="/prueba/count" type="array">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/registros/seleccion_reg" type="logic">
-      <obj_property name="ElementShortName">seleccion_reg</obj_property>
-      <obj_property name="ObjectShortName">seleccion_reg</obj_property>
+   <wvobject fp_name="/prueba/counter" type="array">
+      <obj_property name="ElementShortName">counter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/registros/salida_r1" type="array">
-      <obj_property name="ElementShortName">salida_r1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida_r1[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/registros/salida_r2" type="array">
-      <obj_property name="ElementShortName">salida_r2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida_r2[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/registros/salida_ro" type="array">
-      <obj_property name="ElementShortName">salida_ro[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida_ro[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/clock_divider/clk_out" type="logic">
-      <obj_property name="ElementShortName">clk_out</obj_property>
-      <obj_property name="ObjectShortName">clk_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba/top_module_7seg_v3/clock_divider/flag_counter" type="logic">
-      <obj_property name="ElementShortName">flag_counter</obj_property>
-      <obj_property name="ObjectShortName">flag_counter</obj_property>
+   <wvobject fp_name="/prueba/counter_digito" type="array">
+      <obj_property name="ElementShortName">counter_digito[2:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_digito[2:0]</obj_property>
    </wvobject>
 </wave_config>

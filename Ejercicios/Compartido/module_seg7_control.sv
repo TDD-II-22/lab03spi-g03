@@ -43,7 +43,7 @@ module module_seg7_control #(parameter real PERIODO = 1e-3)(
     always_comb begin
     
         frecuencia  = 1.0 / PERIODO ;
-        divider     = 10e6 / frecuencia;
+        divider     = 10e3 / frecuencia;
     
     end
     

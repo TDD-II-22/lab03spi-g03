@@ -12,7 +12,7 @@
 
 
 ### 3.1 Ejercicio 1. Display de 7 segmentos Extendido
-Este ejercicio se basa en un control de dos registor para los displays de 7 segmentos de l placa Nexys 4.
+Este ejercicio se basa en un control de dos registros para los displays de 7 segmentos de l placa Nexys 4.
 
 #### 3.1.1 Módulo top
 Módulo más general del ejercicio el cual contiene e interconecta a todos los submódulos necesarios para el funcionamiento de la implementación requerida
@@ -75,6 +75,8 @@ El módulo no posee parámetros.
 
 
 #### 3.1.3 Módulo clock_mux_divider
+Este módulo es el encargando de generar distintos clock enables para poder controlar el cambio de los registros a mostrar en los displays, así como también el clock enable principal.
+
 ##### Encabezado del módulo
 ```SystemVerilog
 module module_clock_mux_divider(
@@ -89,26 +91,229 @@ module module_clock_mux_divider(
     );
 ```
 ##### Parámetros
-- Lista de parámetros
+- Este módulo no posee parámetros.
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk_10Mhz_i`: Clock de la FPGA.
+- `reset_i`: Botón de reset.
+- `periodos_i`: Switches que van a controlar la frecuencia de los eneables de los registros.
+- `clock_o`: Salida de clock enable para funcionamiento de los módulos.
+- `clk_en1`: Salida de clock enable para el registro 1.
+- `clk_en2`: Salida de clock enable para el registro 2.
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+
+Este módulo se basa en tomar como entrada la señal de reloj de la FPGA y con ella generar 3 distintos clock enables, uno a 10 MHz para el funcionamiento de toda la lógica secuencial, y los enables de los registros lo cuales cambian de frecuencia según sea la combinación de la entrada `periodos_i` por medio de un case tal que sigue la combinación:
+
+| `periodos_i[1]` 		| `periodos_i[0]` | Periodo de refresco de los registros    |
+| :----------------------:|:---------------:| :---------------------------------------:|
+| 0        	| 0    | 0.5 segundos     |
+| 0        		| 1  | 1 segundo          |
+| 1       	| 0    | 2 segundos   |
+| 1        		| 1  | 3 segundos          |
+
+
+
+
+#### 3.1.4 Módulo module_view_display 
+
+Este módulo es el encargando de generar los datos que se van a guardar en cada uno de los registros para posteriormente mostrarse en los displays. Se basa en llamar a dos submódulos: `module_pseudo_random` y `module_bebe_sweept` los cuales son quienes generan datos para los registros.
+
+##### Encabezado del módulo
+```SystemVerilog
+module module_view_display(
+        input   logic                   clk_i,
+                                        rst_i,
+                                        clk_en1_i,
+                                        clk_en2_i,
+                                        pause_i,
+        output  logic   [31 : 0]        salida_view1_o,
+                                        salida_view2_o
+    );
+```
+##### Parámetros
+
+- `NUM_BITS` Setea el número de bits a la salida, se configura en 32.
+
+##### Entradas y salidas:
+
+- `clk_i`: Clock de 10 MHz.
+- `rst_i`: Botón de reset.
+- `clk_en1_i`: Entrada de clock enable para el registro 1.
+- `clk_en2_i`: Entrada de clock enable para el registro 2.
+- `pause_i`: Entrada del switch que activa o no el Write Enable de los registros.
+- `salida_view1_o`: Salida de los datos del registro 1.
+- `salida_view2_o`: Salida de los datos del registro 2.
+
+
+##### Criterios de diseño
+
+Este módulo funciona como un tipo de top module para los generadores de datos `module_pseudo_random` y `module_bebe_sweept`.
+
+El módulo de `module_pseudo_random` es un módulo para generar números pseudoaleatorios de una cantidad determinada de bits, en este caso esa cantidad de bits es la del parámetro `NUM_BITS`. Se generan nuevos valores cada que `clk_en1_i` se pone en 1.
+
+El módulo de `module_bebe_sweept` es un módulo para generar un barrido de una palabra en específico. Se pinta un nuevo valor de la palabra cada que `clk_en2_i` se pone en 1.
+
+
+
+#### 3.1.5 Módulo module_registros 
+
+Este módulo es el encargando de recibir los datos generados por el módulo `module_view_display` y enviarlos a cada uno de los registros, además de encargarse de enviarlos al módulo de control del display de 7 segmentos `module_seg7_control`.
+
+##### Encabezado del módulo
+```SystemVerilog
+module module_registros(
+    input   logic                   clk_i,
+                                    rst_i,
+                                    write_en_i,
+                                    clk_en_i,
+                    [31 : 0]        entrada_r1_i,
+                                    entrada_r2_i,
+    output  logic   [31 : 0]        salida_ro    
+    );
+```
+##### Parámetros
+
+Este módulo no tiene parámetros.
+
+##### Entradas y salidas:
+
+- `clk_i`: Clock de 10 MHz.
+- `rst_i`: Botón de reset.
+- `write_en_i`: Write Enable de los registros.
+- `clk_en_i`: Entrada de clock enable.
+- `entrada_r1_i`: Datos para el registro 1.
+- `entrada_r2_i`: Datos para el registro 2.
+- `salida_ro`: Salida de los datos a pintar en los displays.
+
+
+##### Criterios de diseño
+
+sdfsdfsdfsdfsdf
 
 
 
 
 
-#### 3.1.X Testbench
+#### 3.1.6 Módulo module_seg7_control 
+
+Este módulo es el encargando de recibir los datos de los registros y pintar los datos en los displayse seleccionando de manera adecuada los cátodos y los ánodos.
+
+##### Encabezado del módulo
+```SystemVerilog
+
+module module_seg7_control #(parameter real PERIODO = 1e-3)(
+    
+    input   logic               clk_10Mhz_i,
+                                reset_i,
+                    [31 : 0]    display_i,
+    output  logic   [6 : 0]     display_o,
+                    [7 : 0]     display_select_o
+    
+    );
+
+```
+##### Parámetros
+
+- `PERIODO`: Define el periodo para la frecuecncia de refresco de los los displays.
+
+##### Entradas y salidas:
+
+- `clk_10MHz_i`: Clock de 10 MHz.
+- `reset_i`: Botón de reset.
+- `display_i`: Entrada de datos a pintar en los displays.
+- `display_o`: Ánodos del display.
+- `display_select_o`: Cátodos de los displays.
+
+
+##### Criterios de diseño
+
+Este módulo toma como entrada un dato de 32 bits que es el que se pintaría en los displays. Según se requiera, se activan los cátodos y ánodos correspondientes.
+
+
+#### 3.1.7 Módulo module_control_led_rgb 
+
+Este módulo es el encargando de controlar el LED RGB enviando los valores a necesarios a un submódulo de control `module_leds_rgb`. El funcionamiento para este caso en específico es que se encienda de un color cuando se muestra el registro 1 y de otro color cuando se muestra el registro 2.
+
+##### Encabezado del módulo
+```SystemVerilog
+module module_control_led_rgb(
+    
+    input   logic               clk_i,
+                                rst_i,
+                                clk_en1,
+                                clk_en2,                   
+    output  logic   [2 : 0]     rgb_o
+    
+    );
+
+```
+##### Parámetros
+
+- `PERIODO` = 1e-3
+
+##### Entradas y salidas:
+
+- `clk_i`: Clock de 10 MHz.
+- `rst_i`: Botón de reset.
+- `clk_en1`: Entrada de clock enable del registro 1.
+- `clk_en2`: Entrada de clock enable del registro 2.
+- `rgb_o`: Datos para la intesidad de cada led del RGB.
+
+
+##### Criterios de diseño
+
+Este módulo en particular se encarga únicamente de enviar datos a un submódulo de control para los rgb el cual se encarga de de toda la lógica para encender o apagar los LED's según se le indica a las entradas.
+
+
+
+#### 3.1.8 Módulo module_leds_rgb 
+
+Este módulo es el módulo de control para los LED's RGB
+
+##### Encabezado del módulo
+```SystemVerilog
+module module_leds_rgb #(parameter real PERIODO = 1e-3)(
+    
+    input   logic               clk_i,
+                                rst_i,
+                    [2 : 0]     color_i,
+    output  logic   [2 : 0]     rgb_o
+    
+    );
+
+```
+##### Parámetros
+
+- `OFF`             = 0,
+- `ROJO`            = 1,
+- `VERDE`           = 2,
+- `AZUL`            = 3,
+- `AMARILLO`        = 4,
+- `CIAN`            = 5,
+- `MAGENTA`         = 6,
+- `BLANCO`          = 7;
+
+##### Entradas y salidas:
+
+- `clk_i`: Clock de 10 MHz.
+- `rst_i`: Botón de reset.
+- `color_i`: Entrada de clock enable.
+- `rgb_o`: Datos para la intesidad de cada led del RGB.
+
+
+##### Criterios de diseño
+
+Este módulo establece mediante un case la combinación necesaria para encender de cirto color el RGB, además de establecer la frecuencia de refresco.
+
+
+#### 3.1.9 Testbench
 Descripción y resultados de las pruebas hechas
 
-#### 3.1.X Puertos Utilizados
+#### 3.1.10 Puertos Utilizados
 
 | Señal         		| Pin   | En tarjeta    |
-| ----------------------|:-----:| -------------:|
+| :----------------------:|:-----:| :-------------:|
 | clk_100Mhz_pi        	| E3    | CLK100MHZ     |
 | reset_pi        		| E16   | BTNC          |
 | periodos_pi[0]        | U9    | SW0           |
@@ -134,7 +339,7 @@ Descripción y resultados de las pruebas hechas
 | display_select_po[6]  | L1	| AN6           |
 | display_select_po[7]  | M1	| AN7           |
 
-#### 3.1.X Constraints
+#### 3.1.11 Constraints
 
 ```sdc
 set_property PACKAGE_PIN E3 [get_ports clk_100Mhz_pi]
@@ -206,46 +411,6 @@ set_output_delay -clock [get_clocks pllclk] 0.000 [get_ports -filter { NAME =~  
 
 
 
-### 3.1 Ejercicio 1. Display de 7 segmentos Extendido
-#### 3.1.1 Módulo top
-##### Encabezado del módulo
-```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
-    );
-```
-##### Parámetros
-- Lista de parámetros
-
-##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
-
-##### Criterios de diseño
-Diagramas, texto explicativo...
-
-
-#### 3.1.2 Módulo _________
-##### Encabezado del módulo
-```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
-    );
-```
-##### Parámetros
-- Lista de parámetros
-
-##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
-
-##### Criterios de diseño
-Diagramas, texto explicativo...
-
-#### 3.1.X Testbench
-Descripción y resultados de las pruebas hechas
 
 
 

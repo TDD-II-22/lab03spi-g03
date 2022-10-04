@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+<<<<<<< Updated upstream
+# Start of session at: Tue Oct  4 16:43:10 2022
+# Process ID: 1184
+# Current directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4512 C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr
+# Log file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+# Journal file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci]
+synth_design -rtl -name rtl_1
+open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+add_files C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci
+export_ip_user_files -of_objects  [get_files  C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci] -lib_map_path [list {modelsim=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/modelsim} {questa=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/questa} {riviera=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/riviera} {activehdl=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/activehdl}] -force -quiet
+current_project vivado_project
+current_project vivado_project(2)
+update_compile_order -fileset sources_1
+current_project vivado_project
+current_project vivado_project(2)
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci]
+synth_design -rtl -name rtl_1
+write_schematic -format pdf -orientation portrait C:/Users/rjesu/Desktop/schematic3.pdf
+=======
+# Start of session at: Sat Sep 24 08:34:18 2022
+# Process ID: 6376
+# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6616 C:\Users\carlo\Andrey\TEC\Semestre_II_2022\Taller_Digitales\Laboratorios\Lab3\Repo\lab03spi-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr
+# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio3/vivado_project.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio3/vivado_project.xpr
+close_project
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Compartido/module_clock_divider.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Compartido/module_clock_divider.sv
+add_files -norecurse C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Compartido/module_debounce_timer.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio3/vivado_project.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Compartido/module_debounce_timer.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/top_tactico.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/top_tactico.sv
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Compartido/module_debounce_timer.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Compartido/module_debounce_timer.sv
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio1/module_seg7_control.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio1/module_seg7_control.sv
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/top_interface_spi.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/top_interface_spi.sv
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_mux_we.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_mux_we.sv
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/top_master_race_spi.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/top_master_race_spi.sv
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_control.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_control.sv
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_datos.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_datos.sv
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_mux_salida.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_mux_salida.sv
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_memoria.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_control_spi.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_clk_divider_spi.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_miso.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_mosi.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_state_machine_spi.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_memoria.sv C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_control_spi.sv C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_clk_divider_spi.sv C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_miso.sv C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_reg_mosi.sv C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/module_state_machine_spi.sv}
+export_ip_user_files -of_objects  [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/pkg_global.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/SPI/pkg_global.sv
+close_project
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr
+close_project
+>>>>>>> Stashed changes

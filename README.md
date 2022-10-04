@@ -189,7 +189,7 @@ Este módulo no tiene parámetros.
 
 ##### Criterios de diseño
 
-sdfsdfsdfsdfsdf
+Este módulo se encarg del control de los registros en donde se almacenan los datos que se pintarán en los displays según la señal de enable lo indique.
 
 
 
@@ -431,9 +431,12 @@ set_output_delay -clock [get_clocks pllclk] 0.000 [get_ports -filter { NAME =~  
 
 ### 3.2 Ejercicio 2. Interfaz SPI Maestro
 
-
+Este ejercicio se basa en el diseño de una interfaz de control para periféricos basados en el protocolo de comunicación SPI. 
 
 #### 3.2.1 Módulo top
+
+Módulo más general del ejercicio el cual contiene e interconecta a todos los submódulos necesarios para el funcionamiento de la implementación requerida.
+
 ##### Encabezado del módulo
 ```SystemVerilog
 module top_tactico(
@@ -455,14 +458,57 @@ module top_tactico(
     
 ```
 ##### Parámetros
-- Lista de parámetros
+- `PERIODO`= 1e-3
+- `PERIODO_send`=1
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk_100Mhz_pi`:  Clock de la FPGA
+- `rst_pi`: Botón de reset
+- `miso_pi`: Entrada señal MISO
+- `btn_send_pi`: Botón de send
+- `sw_we_pi`:  Habilita el WE
+- `reg_sel_pi`: Controla los demux salida y WE
+- `sw_addr_in_pi`: Selecciona la direcccion
+- `sw_entrada_pi`:                    
+- `mosi_po`: Salida señal MOSI
+- `locked_po`: LED de locked
+- `cs_ctrl_po`: LED de Chip Select
+- `display_po`: Ánodos del display.
+- `display_select_po`: Cátodos de los displays.  
+
 
 ##### Criterios de diseño
 Diagramas, texto explicativo...
+
+
+
+#### 3.1.2 Módulo WCLK.xci
+El archivo WCLL.xci crea un archivo verilog que contiene un circuito de reloj personalizado según los requisitos del reloj del usuario.
+
+##### Encabezado del módulo
+
+```SystemVerilog
+
+module WCLK (
+  // Clock out ports
+  output        CLK_10MHZ,
+  // Status and control signals
+  output        locked,
+  // Clock in ports
+  input         CLK_100MHZ
+ );
+	
+```
+
+##### Parámetros
+El módulo no posee parámetros.
+
+##### Entradas y salidas:
+- `CLK_100MHZ`: Entrada de reloj del módulo
+- `locked`: Salida del módulo. Presenta un pulso una vez que el bloque WCLK se estabiliza.
+- `CLK_10MHZ`: Salida del módulo. Genera un reloj con un periodo de 100ns.
+
+
 
 
 #### 3.2.2 Módulo ______
@@ -482,6 +528,42 @@ module mi_modulo(
 
 ##### Criterios de diseño
 Diagramas, texto explicativo...
+
+
+#### 3.1.6 Módulo module_seg7_control 
+
+Este módulo es el encargando de recibir los datos de los registros y pintar los datos en los displayse seleccionando de manera adecuada los cátodos y los ánodos.
+
+##### Encabezado del módulo
+```SystemVerilog
+
+module module_seg7_control #(parameter real PERIODO = 1e-3)(
+    
+    input   logic               clk_10Mhz_i,
+                                reset_i,
+                    [31 : 0]    display_i,
+    output  logic   [6 : 0]     display_o,
+                    [7 : 0]     display_select_o
+    
+    );
+
+```
+##### Parámetros
+
+- `PERIODO`: Define el periodo para la frecuecncia de refresco de los los displays.
+
+##### Entradas y salidas:
+
+- `clk_10MHz_i`: Clock de 10 MHz.
+- `reset_i`: Botón de reset.
+- `display_i`: Entrada de datos a pintar en los displays.
+- `display_o`: Ánodos del display.
+- `display_select_o`: Cátodos de los displays.
+
+
+##### Criterios de diseño
+
+Este módulo toma como entrada un dato de 32 bits que es el que se pintaría en los displays. Según se requiera, se activan los cátodos y ánodos correspondientes.
 
 #### 3.2.X Testbench
 Descripción y resultados de las pruebas hechas
@@ -673,6 +755,17 @@ create_generated_clock -name pllclk -source [get_ports clk_100Mhz_pi] -divide_by
 set_output_delay -clock [get_clocks pllclk] 0.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
 
 ```
+
+
+
+
+
+
+
+
+
+
+
 
 
 

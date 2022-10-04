@@ -590,7 +590,9 @@ module top_interface_spi(
 -    `salida_o`:  
 
 ##### Criterios de diseño
-Sirve como una especie de sub top module el cual se encarga propiamente del control del SPI Maestro.
+Sirve como una especie de sub top module el cual se encarga propiamente del control del SPI Maestro. Sigue el siguiente diagrama de bloques:
+
+<img src = "https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/SPI.png" >
 
 
 #### 3.2.5 Módulo module_mux_we
@@ -1028,17 +1030,33 @@ Módulo más general del ejercicio el cual contiene e interconecta a todos los s
 
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
+module top_tactico(
+    
+    input   logic               clk_100Mhz_pi,
+                                rst_pi,
+                                miso_pi,                 
+    output logic                mosi_po, //puede ser un led, no se ocupa
+                                locked_po,
+                                cs_ctrl_po,
+                                sck_po,
+                    [6 : 0]     display_po,
+                    [7 : 0]     display_select_po                     
     );
 ```
 ##### Parámetros
 - Lista de parámetros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk_100Mhz_pi` : Clock de la FPGA
+- `rst_pi` :  Botón de Reset
+- `miso_pi` : Señal MISO                  
+- `mosi_po` : Señal MOSI
+- `locked_po` : LED de locked
+- `cs_ctrl_po` : Chip Select
+- `sck_po` : 
+- `display_po` : Ánodos del diplay
+- `display_select_po` : Cátodos de los display                    
+
 
 ##### Criterios de diseño
 

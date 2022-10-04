@@ -308,7 +308,15 @@ Este módulo establece mediante un case la combinación necesaria para encender 
 
 
 #### 3.1.9 Testbench
-Descripción y resultados de las pruebas hechas
+
+Para las pruebas hechas en este ejercicio, se simuló los datos que se generan para cada uno de los registros además de generar un código autoverificable.
+
+En las imágenes mostradas a continuación se puede ver el funcionamiento del ejercicio.
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/7SEG_GEN.jpeg" >
+
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/7SEG_ZOOM.jpeg" >
+
+Es observable como en los displays se va cambiando los datos que se pintan tal que va cambiando consecutivamente entre los datos del registro 1 que son datos pseudo aleatorios y los datos del registro 2 el cual cada ciclo hace un barrido de una palara escrita en código hezadecimal.
 
 #### 3.1.10 Puertos Utilizados
 
@@ -445,11 +453,11 @@ module top_tactico(
                                 rst_pi,
                                 miso_pi,
                                 btn_send_pi,
-                                sw_we_pi,//habilita el WE
-                                reg_sel_pi,//controla los demux salida y we
-                    [1 : 0]     sw_addr_in_pi,//selecciona la direcccion
+                                sw_we_pi, //habilita el WE
+                                reg_sel_pi, //controla los demux salida y we
+                    [1 : 0]     sw_addr_in_pi, //selecciona la direcccion
                     [10 : 0]    sw_entrada_pi,                    
-    output logic                mosi_po,
+    output  logic               mosi_po,
                                 locked_po,
                                 cs_ctrl_po,
                     [6 : 0]     display_po,

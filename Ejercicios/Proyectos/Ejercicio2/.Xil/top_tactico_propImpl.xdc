@@ -1,5 +1,5 @@
 set_property SRC_FILE_INFO {cfile:c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc rfile:../../../scr/xci/WCLK/WCLK.xdc id:1 order:EARLY scoped_inst:generate_clock_10Mhz/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc rfile:../../../Constraints/contraints_spi_master_race.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_pmodALS.xdc rfile:../../../Constraints/contraints_spi_pmodALS.xdc id:2} [current_design]
 current_instance generate_clock_10Mhz/inst
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports CLK_100MHZ]] 0.1

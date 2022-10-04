@@ -13,9 +13,6 @@ vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../ipstatic" \
 vcom -work xpm -64 -93 \
 "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vlog -work xil_defaultlib -64 -incr "+incdir+../../../ipstatic" \
-"../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_clk_wiz.v" \
-"../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

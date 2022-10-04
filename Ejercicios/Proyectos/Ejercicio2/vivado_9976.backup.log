@@ -1,0 +1,175 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct  4 00:26:51 2022
+# Process ID: 9976
+# Current directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5564 C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr
+# Log file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+# Journal file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 691.078 ; gain = 64.273
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci'
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top_tactico
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1107.594 ; gain = 174.027
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_tactico' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:23]
+	Parameter PERIODO bound to: 0.001000 - type: float 
+	Parameter PERIODO_send bound to: 1.000000 - type: float 
+INFO: [Synth 8-6157] synthesizing module 'WCLK' [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-9976-DESKTOP-07VUEC3/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'WCLK' (1#1) [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-9976-DESKTOP-07VUEC3/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'module_debounce_timer' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_debounce_timer.sv:23]
+	Parameter PERIODO bound to: 1.000000 - type: float 
+INFO: [Synth 8-6155] done synthesizing module 'module_debounce_timer' (2#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_debounce_timer.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'top_interface_spi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_mux_we' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'module_mux_we' (3#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'top_master_race_spi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_clk_divider_spi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_clk_divider_spi' (4#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_state_machine_spi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv:23]
+	Parameter WAIT_SEND bound to: 2'b00 
+	Parameter LOAD bound to: 2'b01 
+	Parameter TRANSMISSION bound to: 2'b10 
+	Parameter DOWNLOAD bound to: 2'b11 
+	Parameter CTR_SEND bound to: 3'b000 
+	Parameter CTR_PRELOAD1 bound to: 3'b001 
+	Parameter CTR_LOAD bound to: 3'b010 
+	Parameter CTR_TRANSFER bound to: 3'b011 
+	Parameter CTR_CHECK bound to: 3'b100 
+	Parameter CTR_PRELOAD2 bound to: 3'b101 
+	Parameter CTR_DOWN bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'module_state_machine_spi' (5#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_control_spi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv:2]
+	Parameter CTR_SEND bound to: 3'b000 
+	Parameter CTR_PRELOAD1 bound to: 3'b001 
+	Parameter CTR_LOAD bound to: 3'b010 
+	Parameter CTR_TRANSFER bound to: 3'b011 
+	Parameter CTR_CHECK bound to: 3'b100 
+	Parameter CTR_PRELOAD2 bound to: 3'b101 
+	Parameter CTR_DOWN bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'module_control_spi' (6#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_mosi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_mosi' (7#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_miso' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_miso' (8#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_master_race_spi' (9#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_control' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_control' (10#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_datos' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_memoria' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_memoria' (11#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv:23]
+WARNING: [Synth 8-689] width (8) of port connection 'rs1_o' does not match port width (32) of module 'module_memoria' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_datos' (12#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_mux_salida' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_mux_salida' (13#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_interface_spi' (14#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:23]
+WARNING: [Synth 8-7023] instance 'interface_spi' of module 'top_interface_spi' has 13 connections declared, but only 11 given [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:69]
+INFO: [Synth 8-6157] synthesizing module 'module_seg7_control' [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:23]
+	Parameter PERIODO bound to: 0.001000 - type: float 
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:69]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:115]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-6155] done synthesizing module 'module_seg7_control' (15#1) [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_tactico' (16#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:23]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[10]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[9]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[8]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][5]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][4]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][3]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][2]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][1]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][0]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_rx_end][9]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_rx_end][8]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_rx_end][7]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][2]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][1]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][0]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_tx_end][8]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[n_tx_end][7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1234.625 ; gain = 301.059
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1253.586 ; gain = 320.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1253.586 ; gain = 320.020
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.dcp' for cell 'generate_clock_10Mhz'
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_board.xdc] for cell 'generate_clock_10Mhz/inst'
+Finished Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_board.xdc] for cell 'generate_clock_10Mhz/inst'
+Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc] for cell 'generate_clock_10Mhz/inst'
+Finished Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc] for cell 'generate_clock_10Mhz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_tactico_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_tactico_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc]
+WARNING: [Vivado 12-508] No pins matched 'generate_clock_10Mhz/clk_10Mhz'. [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:695]
+INFO: [Timing 38-2] Deriving generated clocks [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:696]
+WARNING: [Vivado 12-627] No clocks matched 'pllclk'. [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:696]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:696]
+Finished Parsing XDC File [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_tactico_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1464.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1469.730 ; gain = 536.164
+56 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:46 . Memory (MB): peak = 1469.730 ; gain = 763.785
+write_schematic -format pdf -orientation portrait C:/Users/rjesu/Desktop/schematic.pdf
+C:/Users/rjesu/Desktop/schematic.pdf
+write_schematic -format pdf -orientation portrait C:/Users/rjesu/Desktop/schematic2.pdf
+C:/Users/rjesu/Desktop/schematic2.pdf
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  4 08:40:15 2022...

@@ -16,7 +16,7 @@ set rt::rc [catch {
     set rt::cmdEcho 0
     rt::set_parameter writeXmsg true
     rt::set_parameter enableParallelHelperSpawn true
-    set ::env(RT_TMP) "C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-9976-DESKTOP-07VUEC3/realtime/tmp"
+    set ::env(RT_TMP) "C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3/realtime/tmp"
     if { [ info exists ::env(RT_TMP) ] } {
       file delete -force $::env(RT_TMP)
       file mkdir $::env(RT_TMP)
@@ -34,25 +34,29 @@ set rt::rc [catch {
     set rt::useElabCache false
     if {$rt::useElabCache == false} {
       rt::read_verilog -sv -include c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK {
+      C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_clk1s.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/pkg_global.sv
+      C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/new/module_control_pmodALS.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv
-      C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_debounce_timer.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv
+      C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_pmodALS.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv
       C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv
+      C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_state_machine_pmod.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv
       C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv
-      C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv
+      C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/top_pmodALS.sv
+      C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/top_tactico_machine.sv
       C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv
     }
-      rt::read_verilog -include c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-9976-DESKTOP-07VUEC3/realtime/WCLK_stub.v
+      rt::read_verilog -include c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3/realtime/WCLK_stub.v
       rt::read_vhdl -lib xpm C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd
       rt::filesetChecksum
     }
@@ -70,7 +74,7 @@ set rt::rc [catch {
     rt::set_parameter rstSrlDepthThreshold 4
 # MODE: 
     rt::set_parameter webTalkPath {}
-    rt::set_parameter enableSplitFlowPath "C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-9976-DESKTOP-07VUEC3/"
+    rt::set_parameter enableSplitFlowPath "C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3/"
     set ok_to_delete_rt_tmp true 
     if { [rt::get_parameter parallelDebug] } { 
        set ok_to_delete_rt_tmp false 

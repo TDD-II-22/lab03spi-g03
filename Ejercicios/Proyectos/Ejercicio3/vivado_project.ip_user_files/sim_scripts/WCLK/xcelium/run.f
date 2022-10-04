@@ -5,10 +5,6 @@
   "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_clk_wiz.v" \
-  "../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
   glbl.v
 -endlib
 

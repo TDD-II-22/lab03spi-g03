@@ -1,0 +1,728 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 1184
+License: Customer
+
+Current time: 	Tue Oct 04 16:44:08 CEST 2022
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 166 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rjesu
+User home directory: C:/Users/rjesu
+User working directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2
+User country: 	US
+User language: 	es
+User locale: 	es_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+Vivado journal file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.jou
+Engine tmp dir: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 536 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  2733 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr. Version: Vivado v2019.1 
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 539 MB. GUI used memory: 43 MB. Current time: 10/4/22, 4:44:10 PM CEST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 65 MB (+65165kb) [00:01:07]
+// [Engine Memory]: 573 MB (+449444kb) [00:01:07]
+// [GUI Memory]: 81 MB (+13935kb) [00:01:09]
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1063 ms. Increasing delay to 3000 ms.
+// WARNING: updateGUI() is taking  1151 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3939 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1014 ms.
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// WARNING: HEventQueue.dispatchEvent() is taking  1566 ms.
+// [Engine Memory]: 612 MB (+11231kb) [00:01:22]
+// HMemoryUtils.trashcanNow. Engine heap size: 612 MB. GUI used memory: 48 MB. Current time: 10/4/22, 4:44:52 PM CEST
+// WARNING: HTimer (StateMonitor Timer) is taking 2652ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6934 ms. Increasing delay to 4000 ms.
+// Project name: vivado_project; location: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2; part: xc7a100tcsg324-1
+// [GUI Memory]: 87 MB (+2403kb) [00:01:28]
+// Tcl Message: open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 635.391 ; gain = 60.984 
+dismissDialog("Open Project"); // by (cl)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 566ms to process. Increasing delay to 3000 ms.
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 106 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv)]", 1); // B (F, cl)
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// WARNING: HTimer (StateMonitor Timer) is taking 1033ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1033 ms.
+// PAPropertyPanels.initPanels (module_debounce_timer.sv) elapsed time: 0.3s
+// Elapsed time: 61 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), envio_pulso_send : module_debounce_timer (module_debounce_timer.sv)]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), envio_pulso_send : module_debounce_timer (module_debounce_timer.sv)]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+// [GUI Memory]: 94 MB (+2306kb) [00:04:18]
+selectCodeEditor("module_debounce_timer.sv", 80, 342); // cl (w, cl)
+typeControlKey((HResource) null, "module_debounce_timer.sv", 'c'); // cl (w, cl)
+// Elapsed time: 312 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cl): Elaborate Design: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 640 MB. GUI used memory: 52 MB. Current time: 10/4/22, 4:53:04 PM CEST
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cl)
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci] 
+// Tcl Message: INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci' 
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: top_tactico 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 997 MB. GUI used memory: 53 MB. Current time: 10/4/22, 4:53:19 PM CEST
+// [Engine Memory]: 1,142 MB (+523267kb) [00:10:01]
+// TclEventType: ELABORATE_FINISH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,243 MB. GUI used memory: 52 MB. Current time: 10/4/22, 4:53:44 PM CEST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,299 MB. GUI used memory: 53 MB. Current time: 10/4/22, 4:53:51 PM CEST
+// [Engine Memory]: 1,299 MB (+104964kb) [00:10:25]
+// [Engine Memory]: 1,377 MB (+13187kb) [00:10:29]
+// Xgd.load filename: C:/Xilinx/Vivado/2019.1/data/parts/xilinx/artix7/devint/artix7/xc7a100t/xc7a100t.xgd; ZipEntry: xc7a100t_detail.xgd elapsed time: 2.3s
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 6s
+// [GUI Memory]: 101 MB (+1890kb) [00:10:37]
+// Schematic: addNotify
+// [GUI Memory]: 126 MB (+21463kb) [00:10:40]
+// PAPropertyPanels.initPanels (module_debounce_timer.sv) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  10335 ms.
+// TclEventType: CURR_DESIGN_SET
+// WARNING: HEventQueue.dispatchEvent() is taking  1095 ms.
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1069.328 ; gain = 166.789 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'top_tactico' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:23] 
+// Tcl Message: 	Parameter PERIODO bound to: 0.001000 - type: float  	Parameter PERIODO_send bound to: 1.000000 - type: float  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'WCLK' [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3/realtime/WCLK_stub.v:5] INFO: [Synth 8-6155] done synthesizing module 'WCLK' (1#1) [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3/realtime/WCLK_stub.v:5] INFO: [Synth 8-6157] synthesizing module 'module_debounce_timer' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_debounce_timer.sv:23] 
+// Tcl Message: 	Parameter PERIODO bound to: 1.000000 - type: float  
+// Tcl Message: 	Parameter WAIT_SEND bound to: 2'b00  	Parameter LOAD bound to: 2'b01  	Parameter TRANSMISSION bound to: 2'b10  	Parameter DOWNLOAD bound to: 2'b11  	Parameter CTR_SEND bound to: 3'b000  	Parameter CTR_PRELOAD1 bound to: 3'b001  	Parameter CTR_LOAD bound to: 3'b010  	Parameter CTR_TRANSFER bound to: 3'b011  	Parameter CTR_CHECK bound to: 3'b100  	Parameter CTR_PRELOAD2 bound to: 3'b101  	Parameter CTR_DOWN bound to: 3'b110  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'module_state_machine_spi' (5#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv:23] INFO: [Synth 8-6157] synthesizing module 'module_control_spi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv:2] 
+// Tcl Message: 	Parameter CTR_SEND bound to: 3'b000  	Parameter CTR_PRELOAD1 bound to: 3'b001  	Parameter CTR_LOAD bound to: 3'b010  	Parameter CTR_TRANSFER bound to: 3'b011  	Parameter CTR_CHECK bound to: 3'b100  	Parameter CTR_PRELOAD2 bound to: 3'b101  	Parameter CTR_DOWN bound to: 3'b110  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'module_reg_datos' (12#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:23] INFO: [Synth 8-6157] synthesizing module 'module_mux_salida' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23] INFO: [Synth 8-6155] done synthesizing module 'module_mux_salida' (13#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23] INFO: [Synth 8-6155] done synthesizing module 'top_interface_spi' (14#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'module_seg7_control' [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:23] 
+// Tcl Message: 	Parameter PERIODO bound to: 0.001000 - type: float  
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1216.492 ; gain = 313.953 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1216.492 ; gain = 313.953 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1216.492 ; gain = 313.953 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.dcp' for cell 'generate_clock_10Mhz' INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers. 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_board.xdc] for cell 'generate_clock_10Mhz/inst' Finished Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_board.xdc] for cell 'generate_clock_10Mhz/inst' Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc] for cell 'generate_clock_10Mhz/inst' Finished Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc] for cell 'generate_clock_10Mhz/inst' 
+// Tcl Message: INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_tactico_propImpl.xdc]. Resolution: To avoid this warning, move constraints listed in [.Xil/top_tactico_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis. INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Parsing XDC File [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc] 
+// Tcl Message: INFO: [Timing 38-2] Deriving generated clocks [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:696] 
+// Tcl Message: INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc:696] 
+// Tcl Message: Finished Parsing XDC File [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_master_race.xdc] 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1414.914 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:54 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.398 ; gain = 528.859 
+// Tcl Message: 56 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1431.398 ; gain = 771.352 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,404 MB. GUI used memory: 79 MB. Current time: 10/4/22, 4:54:10 PM CEST
+// 'dR' command handler elapsed time: 67 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  2140 ms.
+// Elapsed time: 67 seconds
+dismissDialog("Open Elaborated Design"); // by (cl)
+// Elapsed time: 1312 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// [GUI Memory]: 136 MB (+3921kb) [00:32:44]
+// PAPropertyPanels.initPanels (envio_pulso_send (module_debounce_timer)) elapsed time: 0.8s
+// Elapsed time: 44 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (aH, cl)
+// Elapsed time: 18 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), registro_control : module_reg_control (module_reg_control.sv)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), registro_control : module_reg_control (module_reg_control.sv)]", 7, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("module_reg_control.sv", 92, 161); // cl (w, cl)
+selectCodeEditor("module_reg_control.sv", 180, 166); // cl (w, cl)
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), envio_pulso_send : module_debounce_timer (module_debounce_timer.sv)]", 3, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), envio_pulso_send : module_debounce_timer (module_debounce_timer.sv)]", 3, false, false, false, false, false, true); // B (F, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,404 MB. GUI used memory: 82 MB. Current time: 10/4/22, 5:24:10 PM CEST
+// Elapsed time: 585 seconds
+selectCodeEditor("module_debounce_timer.sv", 460, 481); // cl (w, cl)
+selectCodeEditor("module_debounce_timer.sv", 491, 479); // cl (w, cl)
+// Elapsed time: 257 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "module_reg_control.sv", 2); // k (j, cl)
+// Elapsed time: 274 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("top_interface_spi.sv", 14, 321); // cl (w, cl)
+typeControlKey((HResource) null, "top_interface_spi.sv", 'c'); // cl (w, cl)
+// Elapsed time: 322 seconds
+selectCodeEditor("top_interface_spi.sv", 171, 255); // cl (w, cl)
+selectCodeEditor("top_interface_spi.sv", 183, 313); // cl (w, cl)
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4); // B (F, cl)
+// Elapsed time: 88 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4); // B (F, cl)
+// Elapsed time: 111 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), mux_we : module_mux_we (module_mux_we.sv)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), mux_we : module_mux_we (module_mux_we.sv)]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("module_mux_we.sv", 59, 122); // cl (w, cl)
+typeControlKey((HResource) null, "module_mux_we.sv", 'c'); // cl (w, cl)
+// Elapsed time: 123 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("top_master_race_spi.sv", 52, 351); // cl (w, cl)
+selectCodeEditor("top_master_race_spi.sv", 213, 151, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+// Elapsed time: 79 seconds
+selectCodeEditor("top_master_race_spi.sv", 151, 163, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+// Elapsed time: 154 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), mux_we : module_mux_we (module_mux_we.sv)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), mux_we : module_mux_we (module_mux_we.sv)]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("top_master_race_spi.sv", 151, 142); // cl (w, cl)
+selectCodeEditor("top_master_race_spi.sv", 165, 212); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 12, true); // B (F, cl) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 12); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 13); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 12); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 11); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 11); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), memoria_ram : module_reg_datos (module_reg_datos.sv)]", 8); // B (F, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,404 MB. GUI used memory: 78 MB. Current time: 10/4/22, 5:54:10 PM CEST
+// Elapsed time: 153 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), master_race_spi : top_master_race_spi (top_master_race_spi.sv)]", 6); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), registro_control : module_reg_control (module_reg_control.sv)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), registro_control : module_reg_control (module_reg_control.sv)]", 7, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), registro_control : module_reg_control (module_reg_control.sv)]", 7, false); // B (F, cl)
+// Elapsed time: 105 seconds
+selectCodeEditor("module_reg_control.sv", 129, 194); // cl (w, cl)
+selectCodeEditor("module_reg_control.sv", 356, 112, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("module_reg_control.sv", 88, 244); // cl (w, cl)
+selectCodeEditor("module_reg_control.sv", 68, 259); // cl (w, cl)
+typeControlKey((HResource) null, "module_reg_control.sv", 'c'); // cl (w, cl)
+// Elapsed time: 121 seconds
+selectCodeEditor("module_reg_control.sv", 143, 416); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), memoria_ram : module_reg_datos (module_reg_datos.sv)]", 8, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), memoria_ram : module_reg_datos (module_reg_datos.sv)]", 8, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("module_reg_datos.sv", 46, 229); // cl (w, cl)
+typeControlKey((HResource) null, "module_reg_datos.sv", 'c'); // cl (w, cl)
+selectCodeEditor("module_reg_datos.sv", 200, 305, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+// Elapsed time: 92 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), mux_salida : module_mux_salida (module_mux_salida.sv)]", 9, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv), interface_spi : top_interface_spi (top_interface_spi.sv), mux_salida : module_mux_salida (module_mux_salida.sv)]", 9, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("module_mux_salida.sv", 45, 243); // cl (w, cl)
+typeControlKey((HResource) null, "module_mux_salida.sv", 'c'); // cl (w, cl)
+// Elapsed time: 63 seconds
+selectCodeEditor("module_mux_salida.sv", 194, 208); // cl (w, cl)
+// Elapsed time: 167 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // Z (q, cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // ah (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// Elapsed time: 37 seconds
+setFileChooser("C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr");
+// Opening Vivado Project: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr. Version: Vivado v2019.1 
+// by (cl):  Open Project : addNotify
+selectButton("OptionPane.button", "No"); // JButton (A, G)
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'WCLK'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  3703 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1451.793 ; gain = 11.898 
+// Tcl Message: ERROR: [Common 17-39] 'open_project' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'open_project' failed due to earlier errors.  
+// 'i' command handler elapsed time: 48 seconds
+dismissDialog("Open Project"); // by (cl)
+// a (cl): Critical Messages: addNotify
+// [GUI Memory]: 148 MB (+4789kb) [01:23:14]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cl)
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv)]", 1); // B (F, cl)
+// Elapsed time: 115 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv)]", 3); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv), machine_pmodALS : module_state_machine_pmodALS (module_state_machine_pmod.sv)]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv), machine_pmodALS : module_state_machine_pmodALS (module_state_machine_pmod.sv)]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("module_state_machine_pmod.sv", 346, 382); // cl (w, cl)
+selectCodeEditor("module_state_machine_pmod.sv", 309, 283); // cl (w, cl)
+// Elapsed time: 110 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv), control_pmodALS : module_control_pmodALS (module_control_pmodALS.sv)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv), module_clk1s : module_clk1s (module_clk1s.sv)]", 6, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv), module_clk1s : module_clk1s (module_clk1s.sv)]", 6, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv), module_pmodALS1 : module_pmodALS (module_pmodALS.sv)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv), module_pmodALS1 : module_pmodALS (module_pmodALS.sv)]", 7, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), pmodALS : top_pmodALS (top_pmodALS.sv)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), interface_spi : top_interface_spi (top_interface_spi.sv)]", 4); // B (F, cl)
+// Elapsed time: 60 seconds
+selectCodeEditor("top_pmodALS.sv", 43, 218); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("top_pmodALS.sv", 183, 225); // cl (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_pmodALS.sv", 78, 257); // cl (w, cl)
+selectCodeEditor("top_pmodALS.sv", 119, 227); // cl (w, cl)
+typeControlKey((HResource) null, "top_pmodALS.sv", 'c'); // cl (w, cl)
+selectCodeEditor("top_pmodALS.sv", 178, 221); // cl (w, cl)
+// Elapsed time: 220 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// al (cl): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// by (cl):  Save Constraints : addNotify
+// A (cl): Elaborate Design: addNotify
+dismissDialog("Save Project"); // al (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cl)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: top_tactico 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1534.840 ; gain = 0.688 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'top_tactico' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/top_tactico_machine.sv:23] 
+// Tcl Message: 	Parameter PERIODO bound to: 0.001000 - type: float  	Parameter IN_CONTROL_PMODALS bound to: 11'b00000000100  
+// Tcl Message: ERROR: [Synth 8-439] module 'WCLK' not found [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/top_tactico_machine.sv:55] ERROR: [Synth 8-6156] failed synthesizing module 'top_tactico' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/top_tactico_machine.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1554.262 ; gain = 20.109 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: 1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// 'dR' command handler elapsed time: 13 seconds
+// S (cl): Critical Messages: addNotify
+dismissDialog("Open Elaborated Design"); // by (cl)
+// Elapsed time: 46 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), generate_clock_10Mhz : WCLK (WCLK.xci)]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), generate_clock_10Mhz : WCLK (WCLK.xci)]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), generate_clock_10Mhz : WCLK (WCLK.xci)]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), generate_clock_10Mhz : WCLK (WCLK.xci)]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), generate_clock_10Mhz : WCLK (WCLK.xci)]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv)]", 1); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv), generate_clock_10Mhz : WCLK (WCLK.xci)]", 2, false); // B (F, cl)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_DIRECTORIES, "Add Directories"); // a (E, c)
+// Elapsed time: 58 seconds
+setFolderChooser("C:/TDD/lab03spi-g03/Ejercicios/scr/xci");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 68 seconds
+dismissDialog("Add Sources"); // c (cl)
+// by (cl):  Add Sources  : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects  [get_files  C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci] -lib_map_path [list {modelsim=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/modelsim} {questa=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/questa} {riviera=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/riviera} {activehdl=C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/compile_simlib/activehdl}] -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 155 MB (+328kb) [01:35:41]
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+dismissDialog("Add Sources"); // by (cl)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: current_project vivado_project 
+// Tcl Message: current_project vivado_project(2) 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: current_project vivado_project 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cl): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cl)
+// Tcl Message: current_project vivado_project(2) 
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci] 
+// Tcl Message: INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xci' 
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: top_tactico 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,404 MB. GUI used memory: 96 MB. Current time: 10/4/22, 6:19:51 PM CEST
+// TclEventType: DESIGN_NEW
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1539 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1585.871 ; gain = 0.406 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'top_tactico' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/top_tactico_machine.sv:23] 
+// Tcl Message: 	Parameter PERIODO bound to: 0.001000 - type: float  	Parameter IN_CONTROL_PMODALS bound to: 11'b00000000100  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'WCLK' [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3/realtime/WCLK_stub.v:5] INFO: [Synth 8-6155] done synthesizing module 'WCLK' (1#1) [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-1184-DESKTOP-07VUEC3/realtime/WCLK_stub.v:5] INFO: [Synth 8-6157] synthesizing module 'top_pmodALS' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/top_pmodALS.sv:23] 
+// Tcl Message: 	Parameter PERIODO1S bound to: 1.000000 - type: float  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'module_state_machine_pmodALS' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_state_machine_pmod.sv:23] 
+// Tcl Message: 	Parameter WAIT_PULSO bound to: 2'b00  	Parameter WAIT_SEND bound to: 2'b01  	Parameter PMODALS bound to: 2'b10  	Parameter CTR_WAITP bound to: 3'b000  	Parameter CTR_ENP bound to: 3'b001  	Parameter CTR_WAITS bound to: 3'b010  	Parameter CTR_FINISH bound to: 3'b011  	Parameter CTR_PMODALS bound to: 3'b100  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_state_machine_pmod.sv:79] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'module_state_machine_pmodALS' (2#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_state_machine_pmod.sv:23] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'module_control_pmodALS' [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/new/module_control_pmodALS.sv:22] 
+// Tcl Message: 	Parameter CTR_WAITP bound to: 3'b000  	Parameter CTR_ENP bound to: 3'b001  	Parameter CTR_WAITS bound to: 3'b010  	Parameter CTR_FINISH bound to: 3'b011  	Parameter CTR_PMODALS bound to: 3'b100  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'module_control_pmodALS' (3#1) [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/new/module_control_pmodALS.sv:22] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'module_clk1s' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_clk1s.sv:23] 
+// Tcl Message: 	Parameter PERIODO bound to: 1.000000 - type: float  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'module_clk1s' (4#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_clk1s.sv:23] INFO: [Synth 8-6157] synthesizing module 'module_pmodALS' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_pmodALS.sv:23] INFO: [Synth 8-6155] done synthesizing module 'module_pmodALS' (5#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio3/module_pmodALS.sv:23] 
+// Tcl Message: 	Parameter WAIT_SEND bound to: 2'b00  	Parameter LOAD bound to: 2'b01  	Parameter TRANSMISSION bound to: 2'b10  	Parameter DOWNLOAD bound to: 2'b11  	Parameter CTR_SEND bound to: 3'b000  	Parameter CTR_PRELOAD1 bound to: 3'b001  	Parameter CTR_LOAD bound to: 3'b010  	Parameter CTR_TRANSFER bound to: 3'b011  	Parameter CTR_CHECK bound to: 3'b100  	Parameter CTR_PRELOAD2 bound to: 3'b101  	Parameter CTR_DOWN bound to: 3'b110  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'module_state_machine_spi' (9#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv:23] INFO: [Synth 8-6157] synthesizing module 'module_control_spi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv:2] 
+// Tcl Message: 	Parameter CTR_SEND bound to: 3'b000  	Parameter CTR_PRELOAD1 bound to: 3'b001  	Parameter CTR_LOAD bound to: 3'b010  	Parameter CTR_TRANSFER bound to: 3'b011  	Parameter CTR_CHECK bound to: 3'b100  	Parameter CTR_PRELOAD2 bound to: 3'b101  	Parameter CTR_DOWN bound to: 3'b110  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'module_reg_datos' (16#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:23] INFO: [Synth 8-6157] synthesizing module 'module_mux_salida' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23] INFO: [Synth 8-6155] done synthesizing module 'module_mux_salida' (17#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv:23] INFO: [Synth 8-6155] done synthesizing module 'top_interface_spi' (18#1) [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:23] INFO: [Synth 8-6157] synthesizing module 'module_seg7_control' [C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv:23] 
+// Tcl Message: 	Parameter PERIODO bound to: 0.001000 - type: float  
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1652.770 ; gain = 67.305 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1675.578 ; gain = 90.113 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1675.578 ; gain = 90.113 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.dcp' for cell 'generate_clock_10Mhz' INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers. 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_board.xdc] for cell 'generate_clock_10Mhz/inst' Finished Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_board.xdc] for cell 'generate_clock_10Mhz/inst' Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc] for cell 'generate_clock_10Mhz/inst' Finished Parsing XDC File [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc] for cell 'generate_clock_10Mhz/inst' 
+// Tcl Message: INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_tactico_propImpl.xdc]. Resolution: To avoid this warning, move constraints listed in [.Xil/top_tactico_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis. INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Parsing XDC File [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_pmodALS.xdc] 
+// Tcl Message: INFO: [Timing 38-2] Deriving generated clocks [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_pmodALS.xdc:696] 
+// Tcl Message: INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_pmodALS.xdc:696] 
+// Tcl Message: Finished Parsing XDC File [C:/TDD/lab03spi-g03/Ejercicios/Constraints/contraints_spi_pmodALS.xdc] 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1847.992 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 2.3s
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1847.992 ; gain = 262.527 
+// Tcl Message: 64 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1847.992 ; gain = 262.527 
+// 'dR' command handler elapsed time: 30 seconds
+// Elapsed time: 28 seconds
+dismissDialog("Open Elaborated Design"); // by (cl)
+// Elapsed time: 15 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK (aH, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico_machine.sv)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_pmodALS.sv", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_tactico_machine.sv", 6); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "module_clk1s.sv", 3); // k (j, cl)
+selectTab((HResource) null, (HResource) null, "Netlist", 1); // aK (aH, cl)
+// PAPropertyPanels.initPanels (top_tactico) elapsed time: 0.2s
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_tactico]", 0, true); // bd (O, cl) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 590, 22, 664, 315, false, false, false, true, false); // f (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SchMenuAndMouse_EXPAND_CONE, "Expand Cone"); // ae (an, cl)
+selectMenu(PAResourceItoN.NetlistSchMenuAndMouse_EXPAND_COLLAPSE, "Expand/Collapse"); // ae (an, cl)
+selectMenu(PAResourceItoN.NetlistSchMenuAndMouse_VIEW, "View"); // ae (an, cl)
+selectMenuItem(PAResourceQtoS.SchMenuAndMouse_SAVE_AS_PDF_FILE, "Save as PDF File..."); // ah (an, cl)
+// k (cl): Save as PDF File: addNotify
+selectButton(PAResourceQtoS.SaveSchematicDialog_SPECIFY_OUTPUT_PDF_FILE, (String) null); // q (al, k)
+// Elapsed time: 13 seconds
+setFileChooser("C:/Users/rjesu/Desktop/schematic3.pdf");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// Tcl Command: 'write_schematic -format pdf -orientation portrait C:/Users/rjesu/Desktop/schematic3.pdf'
+// TclEventType: WRITE_SCHEMATIC
+// Tcl Message: write_schematic -format pdf -orientation portrait C:/Users/rjesu/Desktop/schematic3.pdf 
+// Tcl Message: C:/Users/rjesu/Desktop/schematic3.pdf 
+dismissDialog("Save as PDF File"); // k (cl)
+// [GUI Memory]: 164 MB (+732kb) [01:38:39]

@@ -524,56 +524,94 @@ El módulo no posee parámetros.
 #### 3.2.3 Módulo module_debounce_timer
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
+module module_debounce_timer #(parameter real PERIODO = 1)(
+
+    input   logic   clk_10Mhz_i,
+                    reset_i,
+                    btn_send_i,
+    output  logic   send_pulso_i 
+    
     );
+    
 ```
 ##### Parámetros
-- Lista de parámetros
+- `PERIODO`: Establece el periodo de refresco para el contador
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk_10Mhz_i`: Clock de entrada
+- `reset_i`: Señal de reset
+- `btn_send_i`: Botón de señal de send
+- `send_pulso_i`: Señal de send enviada al registro de control
+
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+Se basa en un contador que habilitará la señal de send que habilitará el registro control del SPI cuando el botón se habilita y está 
 
 
 
 #### 3.2.4 Módulo top_interface_spi
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
+module top_interface_spi(
+
+    input   logic               clk_i,
+                                rst_i,
+                                miso_i,
+                                btn_send_i,
+                                sw_we_i,
+                                reg_sel_i,
+    pkg_global::bits_n          sw_addr_in_i,
+                     [10 : 0]   sw_entrada_i,                   
+    
+    output logic                mosi_o,
+                                cs_ctrl_o,
+                                proccess_o,
+                                sck_o,
+    pkg_global::bits_width      salida_o                    
+);
     );
 ```
 ##### Parámetros
 - Lista de parámetros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+-    `clk_i`: Señal de clock
+-    `rst_i`: Señal de reset
+-    `miso_i`: Señal de MISO
+-    `btn_send_i`: 
+-    `sw_we_i`: 
+-    `reg_sel_i`: 
+-    `sw_addr_in_i`: 
+-    `sw_entrada_i`:                 
+-    `mosi_o`: Señal de MOSI
+-    `cs_ctrl_o`: Señal de Chip Select
+-    `proccess_o`: 
+-    `sck_o`: 
+-    `salida_o`:  
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+Sirve como una especie de sub top module el cual se encarga propiamente del control del SPI Maestro.
 
 
 #### 3.2.5 Módulo module_mux_we
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
-    );
+module module_mux_we (
+    input logic         we_i,
+                        reg_sel_i,
+    output  logic       wr1_o,
+                        wr2_o
+        
+);
 ```
 ##### Parámetros
-- Lista de parámetros
+Este módulo no posee parámetros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `we_i`: 
+- `reg_sel_i`: 
+- `wr1_o`: 
+- `wr2_o`: 
 
 ##### Criterios de diseño
 Diagramas, texto explicativo...
@@ -583,18 +621,47 @@ Diagramas, texto explicativo...
 #### 3.2.6 Módulo top_master_race_spi
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
-    );
+module top_master_race_spi(
+
+    input   logic                       clk_i,
+                                        rst_i,
+                                        miso_i,                                            
+                    [7 : 0]             dato_in,
+    pkg_global:: struct_reg_control     cntr_str_i,
+     
+    output logic                        mosi_o,
+                                        we_rx_o,                                      
+                                        proccess_o,
+                                        hold_ctrl_o,
+                                        we_ram2_o,
+                                        cs_ctrl_o,
+                                        sck_o,      
+                    [7 : 0]             dato_recibido_r,
+                    [9 : 0]             rx_o,
+    pkg_global::bits_n                  addr2_o
+                    
+    ); 
 ```
 ##### Parámetros
-- Lista de parámetros
+- Este módulo no posee parámetros.
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
-
+- `clk_i`:
+- `rst_i`:
+- `miso_i`:                                           
+- `dato_in`:
+- `cntr_str_i`:
+- `mosi_o`:
+- `we_rx_o`:                                      
+- `proccess_o`:
+- `hold_ctrl_o`:
+- `we_ram2_o`:
+- `cs_ctrl_o`:
+- `sck_o`:      
+- `dato_recibido_r`:
+- `rx_o`:
+- `addr2_o`:            
+    ); 
 ##### Criterios de diseño
 Diagramas, texto explicativo...
 
@@ -603,17 +670,34 @@ Diagramas, texto explicativo...
 #### 3.2.7 Módulo module_reg_control
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
+module module_reg_control(
+
+    input   logic                               clk_i,
+                                                rst_i,
+                                                send_i,
+                                                proccess_i,
+                                                we_rx_i,
+                                                we_ex_i,
+                     [9 : 0]                    in_rx_i,
+                     [10 : 0]                   in_ex_i,
+    output  pkg_global:: struct_reg_control     cntr_str_o   
+    
     );
 ```
 ##### Parámetros
 - Lista de parámetros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk_i`: 
+- `rst_i`: 
+- `send_i`: 
+- `proccess_i`: 
+- `we_rx_i`: 
+- `we_ex_i`: 
+- `in_rx_i`: 
+- `in_ex_i`: 
+- `cntr_str_o`:   
+
 
 ##### Criterios de diseño
 Diagramas, texto explicativo...
@@ -622,17 +706,35 @@ Diagramas, texto explicativo...
 #### 3.2.8 Módulo module_reg_datos
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
+module module_reg_datos(
+    input  logic                        clk_i,  
+    input  logic                        rst_i, 
+    input  logic                        hold_ctrl_i,
+    input  pkg_global::bits_n           addr1_i,//temporal
+    input  pkg_global::bits_n           addr2_i,
+    input  [10 : 0]                     in1_i,
+    input  [7 : 0]                      in2_i,
+    input  logic                        wr1_i,
+    input  logic                        wr2_i,
+    output pkg_global::bits_width       data_o
     );
 ```
 ##### Parámetros
 - Lista de parámetros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+
+
+- `clk_i`:   
+- `rst_i`:  
+- `hold_ctrl_i`: 
+- `addr1_i`: 
+- `addr2_i`: 
+- `in1_i`: 
+- `in2_i`: 
+- `wr1_i`: 
+- `wr2_i`: 
+- `data_o`: 
 
 ##### Criterios de diseño
 Diagramas, texto explicativo...
@@ -641,17 +743,25 @@ Diagramas, texto explicativo...
 #### 3.2.9 Módulo module_mux_salida
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
+module module_mux_salida(
+    input   logic                       selec_salida_i,
+    input   logic   [31 : 0]            salida_datos_o,
+                                        salidas_control_o,
+    output  logic   [31 : 0]            salida_i            
     );
+    
 ```
 ##### Parámetros
 - Lista de parámetros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+
+- `selec_salida_i`: 
+- `salida_datos_o`: 
+- `salidas_control_o`: 
+- `salida_i`:            
+
+    
 
 ##### Criterios de diseño
 Diagramas, texto explicativo...
@@ -910,6 +1020,9 @@ set_output_delay -clock [get_clocks pllclk] 0.000 [get_ports -filter { NAME =~  
 
 
 ### 3.3 Ejercicio 3. Lectura de un sensor de luminosidad
+
+
+
 #### 3.3.1 Módulo top
 ##### Encabezado del módulo
 ```SystemVerilog
@@ -929,23 +1042,113 @@ module mi_modulo(
 Diagramas, texto explicativo...
 
 
-#### 3.3.2 Módulo _____
+#### 3.3.2 Módulo WCLK.xci
+El archivo WCLL.xci crea un archivo verilog que contiene un circuito de reloj personalizado según los requisitos del reloj del usuario.
+
 ##### Encabezado del módulo
+
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
-    );
+
+module WCLK (
+  // Clock out ports
+  output        CLK_10MHZ,
+  // Status and control signals
+  output        locked,
+  // Clock in ports
+  input         CLK_100MHZ
+ );
+	
 ```
+
 ##### Parámetros
-- Lista de parámetros
+El módulo no posee parámetros.
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `CLK_100MHZ`: Entrada de reloj del módulo
+- `locked`: Salida del módulo. Presenta un pulso una vez que el bloque WCLK se estabiliza.
+- `CLK_10MHZ`: Salida del módulo. Genera un reloj con un periodo de 100ns.
+
+
+
+#### 3.3.3 Módulo top_pmodALS
+El archivo WCLL.xci crea un archivo verilog que contiene un circuito de reloj personalizado según los requisitos del reloj del usuario.
+
+##### Encabezado del módulo
+
+```SystemVerilog
+
+
+module top_pmodALS(
+    input    logic              clk_i,
+                                rst_i,
+                                proccess_i,
+     pkg_global::bits_width     in_datos_i,                              
+     output  logic              we_reg_control_o,
+                                send_o,
+                                selec_out_o,
+     pkg_global::bits_n         addr_pmod_o,
+     pkg_global::bits_width     entrada_display_o                
+    );
+    
+	
+```
+
+##### Parámetros
+El módulo no posee parámetros.
+
+##### Entradas y salidas:
+
+
+- `clk_i` : 
+- `rst_i` : 
+- `proccess_i` : 
+- `in_datos_i` :                               
+- `we_reg_control_o` : 
+- `send_o` : 
+- `selec_out_o` : 
+- `addr_pmod_o` : 
+- `entrada_display_o` :    
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+
+
+
+
+#### 3.3.4 Módulo module_seg7_control 
+
+Este módulo es el encargando de recibir los datos de los registros y pintar los datos en los displayse seleccionando de manera adecuada los cátodos y los ánodos.
+
+##### Encabezado del módulo
+```SystemVerilog
+
+module module_seg7_control #(parameter real PERIODO = 1e-3)(
+    
+    input   logic               clk_10Mhz_i,
+                                reset_i,
+                    [31 : 0]    display_i,
+    output  logic   [6 : 0]     display_o,
+                    [7 : 0]     display_select_o
+    
+    );
+
+```
+##### Parámetros
+
+- `PERIODO`: Define el periodo para la frecuecncia de refresco de los los displays.
+
+##### Entradas y salidas:
+
+- `clk_10MHz_i`: Clock de 10 MHz.
+- `reset_i`: Botón de reset.
+- `display_i`: Entrada de datos a pintar en los displays.
+- `display_o`: Ánodos del display.
+- `display_select_o`: Cátodos de los displays.
+
+
+##### Criterios de diseño
+
+Este módulo toma como entrada un dato de 32 bits que es el que se pintaría en los displays. Según se requiera, se activan los cátodos y ánodos correspondientes.
+
 
 
 #### 3.3.X Testbench

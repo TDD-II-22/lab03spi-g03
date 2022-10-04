@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv,1664831419,systemVerilog,,D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/top_simulate_7seg_v3.sv,,module_seg7_control,,,../../../../../../scr/xci/WCLK,,,,,
+D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/module_register_pp.sv,1664830696,systemVerilog,,D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/module_registros.sv,,module_register_pp,,,../../../../../../scr/xci/WCLK,,,,,
+D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/module_registros.sv,1664830696,systemVerilog,,D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv,,module_registros,,,../../../../../../scr/xci/WCLK,,,,,
+D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/prueba.sv,1664831033,systemVerilog,,,,prueba,,,../../../../../../scr/xci/WCLK,,,,,
+D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/top_simulate_7seg_v3.sv,1664831034,systemVerilog,,D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/prueba.sv,,top_simulate_7seg_v3,,,../../../../../../scr/xci/WCLK,,,,,
+D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.sim/sim_1/behav/xsim/glbl.v,1664830696,verilog,,,,glbl,,,,,,,,
+D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_sim_netlist.v,1664830698,verilog,,,,WCLK;WCLK_WCLK_clk_wiz,,,../../../../../../scr/xci/WCLK,,,,,

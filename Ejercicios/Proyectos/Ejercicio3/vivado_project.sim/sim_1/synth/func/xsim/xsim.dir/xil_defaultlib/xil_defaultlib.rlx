@@ -1,0 +1,6 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Ejercicio3/tb_spi_pmodALS.sv,1664044991,systemVerilog,,,,tb_spi_pmodALS,,,../../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK,,,,,
+C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio3/vivado_project.sim/sim_1/synth/func/xsim/tb_spi_pmodALS_func_synth.v,1664050609,verilog,,,,WCLK;WCLK__WCLK_clk_wiz;glbl;module_clk1s;module_clk_divider_spi;module_control_pmodALS;module_control_spi;module_memoria;module_pmodALS;module_reg_control;module_reg_datos;module_reg_miso;module_reg_mosi;module_seg7_control;module_state_machine_pmodALS;module_state_machine_spi;top_interface_spi;top_master_race_spi;top_pmodALS;top_tactico,,,../../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK,,,,,

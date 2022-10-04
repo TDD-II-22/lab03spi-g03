@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
+"../../../../../../scr/xci/WCLK/WCLK_sim_netlist.v" \
+
+sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
+"../../../../../../Ejercicio1/module_register_pp.sv" \
+"../../../../../../Ejercicio1/module_registros.sv" \
+"../../../../../../Compartido/module_seg7_control.sv" \
+"../../../../../../Ejercicio1/top_simulate_7seg_v3.sv" \
+"../../../../../../Ejercicio1/prueba.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

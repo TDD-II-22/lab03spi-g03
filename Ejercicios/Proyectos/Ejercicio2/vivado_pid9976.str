@@ -1,0 +1,215 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 9976
+License: Customer
+
+Current time: 	Tue Oct 04 00:27:13 CEST 2022
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 168 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rjesu
+User home directory: C:/Users/rjesu
+User working directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2
+User country: 	US
+User language: 	es
+User locale: 	es_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+Vivado journal file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.jou
+Engine tmp dir: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-9976-DESKTOP-07VUEC3
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 597 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 95 MB (+97518kb) [00:00:17]
+// [Engine Memory]: 635 MB (+514431kb) [00:00:17]
+// [GUI Memory]: 112 MB (+12277kb) [00:00:19]
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1674 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  5342 ms.
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// [Engine Memory]: 669 MB (+2534kb) [00:00:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 50 MB. Current time: 10/4/22, 12:27:27 AM CEST
+// Project name: vivado_project; location: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 691.078 ; gain = 64.273 
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// WARNING: HTimer (StateMonitor Timer) is taking 674ms to process. Increasing delay to 4000 ms.
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// Elapsed time: 126 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv)]", 1); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv)]", 1); // B (F, cl)
+// PAPropertyPanels.initPanels (top_tactico.sv) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("top_tactico.sv", 95, 345); // cl (w, cl)
+selectCodeEditor("top_tactico.sv", 88, 107, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+// Elapsed time: 164 seconds
+selectCodeEditor("top_tactico.sv", 109, 182); // cl (w, cl)
+selectCodeEditor("top_tactico.sv", 101, 187); // cl (w, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, contraints_spi_master_race.xdc]", 8, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, contraints_spi_master_race.xdc]", 8, false, false, false, false, false, true); // B (F, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 53 MB. Current time: 10/4/22, 12:57:26 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 53 MB. Current time: 10/4/22, 2:55:30 AM CEST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6747857 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6748020 ms. Increasing delay to 20244060 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 48 MB. Current time: 10/4/22, 3:25:35 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 47 MB. Current time: 10/4/22, 3:55:35 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 48 MB. Current time: 10/4/22, 4:25:36 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 47 MB. Current time: 10/4/22, 4:55:39 AM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  21418 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 47 MB. Current time: 10/4/22, 5:25:44 AM CEST
+// Elapsed time: 18489 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 400, 286); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 339, 204); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 355, 175); // cl (w, cl)
+// Elapsed time: 58 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 203, 214); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 189, 211); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 190, 160); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 186, 212); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 280, 262); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 280, 262, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("contraints_spi_master_race.xdc", 380, 275); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 277, 261); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 372, 313); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 412, 331); // cl (w, cl)
+// Elapsed time: 709 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 314, 468); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 186, 32, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 47, 170); // cl (w, cl)
+// Elapsed time: 29 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 49, 178); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 0, 227); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 47 MB. Current time: 10/4/22, 5:55:44 AM CEST
+selectCodeEditor("contraints_spi_master_race.xdc", 2, 282); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 458, 347); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 444, 62); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 0, 89); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 76, 205); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 2, 212); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 11, 201); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 1, 92); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 4, 193); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 2, 196); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 58, 60); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 4, 282); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 95, 290); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 399, 314); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 409, 193); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 1, 67); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 433, 352, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 231, 196); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 491, 415); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 6, 200, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 65, 228); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 67, 139); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 1, 218); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 383, 287); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 116, 332); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_master_race.xdc", 435, 260); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("contraints_spi_master_race.xdc", 29, 464); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_master_race.xdc", 'c'); // cl (w, cl)

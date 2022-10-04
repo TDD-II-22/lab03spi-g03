@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../scr/xci/WCLK" \
+"tb_master_race_spi_func_impl.v" \
+
+sv xil_defaultlib  --include "../../../../../../../scr/xci/WCLK" \
+"../../../../../../../Ejercicio2/pkg_global.sv" \
+"../../../../../../../Ejercicio2/tb_master_race_spi.sv" \
+
+# Do not sort compile order
+nosort

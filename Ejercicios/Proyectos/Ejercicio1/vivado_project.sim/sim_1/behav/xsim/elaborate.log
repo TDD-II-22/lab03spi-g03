@@ -1,0 +1,15 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 138f69d74fe1419f9b5513a152237c88 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_behav xil_defaultlib.prueba xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'clk_10Mhz' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/prueba.sv:76]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'clk_en1' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/prueba.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'clk_en2' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/prueba.sv:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'clk_en' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/prueba.sv:79]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 1 for port 'CLK_10MHZ' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/top_simulate_7seg_v3.sv:53]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 1 for port 'clk_i' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/top_simulate_7seg_v3.sv:66]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 1 for port 'clk_en_i' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/top_simulate_7seg_v3.sv:69]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 1 for port 'clk_10Mhz_i' [D:/VIVADO/PROY3/lab03spi-g03/Ejercicios/Ejercicio1/top_simulate_7seg_v3.sv:79]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

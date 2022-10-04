@@ -321,7 +321,7 @@ Es observable como en los displays se va cambiando los datos que se pintan tal q
 #### 3.1.10 Puertos Utilizados
 
 | Señal         		| Pin   | En tarjeta    |
-| :----------------------:|:-----:| :-------------:|
+| :--------------------:|:-----:| :------------:|
 | clk_100Mhz_pi        	| E3    | CLK100MHZ     |
 | reset_pi        		| E16   | BTNC          |
 | periodos_pi[0]        | U9    | SW0           |
@@ -492,7 +492,7 @@ La imagen a continuación muestra el diagrama de bloques del módulo SPI.
 <img src = "https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/TOP_TOP_SPI.png" >
 
 
-#### 3.1.2 Módulo WCLK.xci
+#### 3.2.2 Módulo WCLK.xci
 El archivo WCLL.xci crea un archivo verilog que contiene un circuito de reloj personalizado según los requisitos del reloj del usuario.
 
 ##### Encabezado del módulo
@@ -521,7 +521,7 @@ El módulo no posee parámetros.
 
 
 
-#### 3.2.2 Módulo ______
+#### 3.2.3 Módulo module_debounce_timer
 ##### Encabezado del módulo
 ```SystemVerilog
 module mi_modulo(
@@ -540,7 +540,124 @@ module mi_modulo(
 Diagramas, texto explicativo...
 
 
-#### 3.1.6 Módulo module_seg7_control 
+
+#### 3.2.4 Módulo top_interface_spi
+##### Encabezado del módulo
+```SystemVerilog
+module mi_modulo(
+    input logic     entrada_i,      
+    output logic    salida_i 
+    );
+```
+##### Parámetros
+- Lista de parámetros
+
+##### Entradas y salidas:
+- `entrada_i`: descripción de la entrada
+- `salida_i`: descripción de la salida
+
+##### Criterios de diseño
+Diagramas, texto explicativo...
+
+
+#### 3.2.5 Módulo module_mux_we
+##### Encabezado del módulo
+```SystemVerilog
+module mi_modulo(
+    input logic     entrada_i,      
+    output logic    salida_i 
+    );
+```
+##### Parámetros
+- Lista de parámetros
+
+##### Entradas y salidas:
+- `entrada_i`: descripción de la entrada
+- `salida_i`: descripción de la salida
+
+##### Criterios de diseño
+Diagramas, texto explicativo...
+
+
+
+#### 3.2.6 Módulo top_master_race_spi
+##### Encabezado del módulo
+```SystemVerilog
+module mi_modulo(
+    input logic     entrada_i,      
+    output logic    salida_i 
+    );
+```
+##### Parámetros
+- Lista de parámetros
+
+##### Entradas y salidas:
+- `entrada_i`: descripción de la entrada
+- `salida_i`: descripción de la salida
+
+##### Criterios de diseño
+Diagramas, texto explicativo...
+
+
+
+#### 3.2.7 Módulo module_reg_control
+##### Encabezado del módulo
+```SystemVerilog
+module mi_modulo(
+    input logic     entrada_i,      
+    output logic    salida_i 
+    );
+```
+##### Parámetros
+- Lista de parámetros
+
+##### Entradas y salidas:
+- `entrada_i`: descripción de la entrada
+- `salida_i`: descripción de la salida
+
+##### Criterios de diseño
+Diagramas, texto explicativo...
+
+
+#### 3.2.8 Módulo module_reg_datos
+##### Encabezado del módulo
+```SystemVerilog
+module mi_modulo(
+    input logic     entrada_i,      
+    output logic    salida_i 
+    );
+```
+##### Parámetros
+- Lista de parámetros
+
+##### Entradas y salidas:
+- `entrada_i`: descripción de la entrada
+- `salida_i`: descripción de la salida
+
+##### Criterios de diseño
+Diagramas, texto explicativo...
+
+
+#### 3.2.9 Módulo module_mux_salida
+##### Encabezado del módulo
+```SystemVerilog
+module mi_modulo(
+    input logic     entrada_i,      
+    output logic    salida_i 
+    );
+```
+##### Parámetros
+- Lista de parámetros
+
+##### Entradas y salidas:
+- `entrada_i`: descripción de la entrada
+- `salida_i`: descripción de la salida
+
+##### Criterios de diseño
+Diagramas, texto explicativo...
+
+
+#### 3.2.10 Módulo module_seg7_control 
 
 Este módulo es el encargando de recibir los datos de los registros y pintar los datos en los displayse seleccionando de manera adecuada los cátodos y los ánodos.
 
@@ -575,11 +692,11 @@ module module_seg7_control #(parameter real PERIODO = 1e-3)(
 
 Este módulo toma como entrada un dato de 32 bits que es el que se pintaría en los displays. Según se requiera, se activan los cátodos y ánodos correspondientes.
 
-#### 3.2.X Testbench
+#### 3.2.11 Testbench
 Descripción y resultados de las pruebas hechas
 
 
-#### 3.2.X Puertos Utilizados
+#### 3.2.12 Puertos Utilizados
 
 | Señal         		| Pin   | En tarjeta    |
 | :--------------------:|:-----:| :------------:|
@@ -624,7 +741,7 @@ Descripción y resultados de las pruebas hechas
 
 
 
-#### 3.2.X Constraints
+#### 3.2.13 Constraints
 
 ```sdc
 ## Clock signal

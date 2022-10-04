@@ -1021,9 +1021,11 @@ set_output_delay -clock [get_clocks pllclk] 0.000 [get_ports -filter { NAME =~  
 
 ### 3.3 Ejercicio 3. Lectura de un sensor de luminosidad
 
-
+Este ejercicio se basa en poder leer un sensor de luminosidad y sus resultados poder pintarlos en los displays de la FPGA.
 
 #### 3.3.1 Módulo top
+Módulo más general del ejercicio el cual contiene e interconecta a todos los submódulos necesarios para el funcionamiento de la implementación requerida
+
 ##### Encabezado del módulo
 ```SystemVerilog
 module mi_modulo(
@@ -1039,7 +1041,11 @@ module mi_modulo(
 - `salida_i`: descripción de la salida
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+
+Este módulo top sigue el siguiente diagrama de bloques:
+
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/TOP3.png" >
+
 
 
 #### 3.3.2 Módulo WCLK.xci

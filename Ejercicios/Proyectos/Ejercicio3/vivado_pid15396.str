@@ -1,0 +1,231 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 15396
+License: Customer
+
+Current time: 	Tue Oct 04 07:57:43 CEST 2022
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 166 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rjesu
+User home directory: C:/Users/rjesu
+User working directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3
+User country: 	US
+User language: 	es
+User locale: 	es_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado.log
+Vivado journal file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado.jou
+Engine tmp dir: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/.Xil/Vivado-15396-DESKTOP-07VUEC3
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 601 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio3\vivado_project.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio3' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'WCLK'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 97 MB (+99008kb) [00:00:16]
+// [Engine Memory]: 632 MB (+511740kb) [00:00:16]
+// [GUI Memory]: 103 MB (+999kb) [00:00:19]
+// WARNING: HEventQueue.dispatchEvent() is taking  5366 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 707 MB. GUI used memory: 50 MB. Current time: 10/4/22, 7:57:50 AM CEST
+// [Engine Memory]: 707 MB (+44534kb) [00:00:20]
+// WARNING: HEventQueue.dispatchEvent() is taking  1079 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:11 . Memory (MB): peak = 730.891 ; gain = 106.832 
+// Tcl Message: ERROR: [Common 17-39] 'open_project' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'open_project' failed due to earlier errors.  
+dismissDialog("Open Project"); // by (cl)
+// a (cl): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 13 seconds
+dismissDialog("Critical Messages"); // a (cl)
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (F, cl)
+// PAPropertyPanels.initPanels (contraints_spi_pmodALS.xdc) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, contraints_spi_pmodALS.xdc]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, contraints_spi_pmodALS.xdc]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 50 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ae (cl)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // ah (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// Elapsed time: 16 seconds
+setFileChooser("C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr");
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr. Version: Vivado v2019.1 
+selectButton("OptionPane.button", "No"); // JButton (A, G)
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  4337 ms.
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 730.891 ; gain = 0.000 
+// Project name: vivado_project(2); location: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2; part: xc7a100tcsg324-1
+// 'i' command handler elapsed time: 27 seconds
+dismissDialog("Open Project"); // by (cl)
+// [GUI Memory]: 116 MB (+8545kb) [00:02:10]
+// Tcl Message: update_compile_order -fileset sources_1 
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// HMemoryUtils.trashcanNow. Engine heap size: 736 MB. GUI used memory: 66 MB. Current time: 10/4/22, 7:59:55 AM CEST
+// [Engine Memory]: 744 MB (+2305kb) [00:02:48]
+// Elapsed time: 47 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, contraints_spi_master_race.xdc]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, contraints_spi_master_race.xdc]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("contraints_spi_master_race.xdc", 321, 50, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+// [GUI Memory]: 124 MB (+2798kb) [00:05:50]
+// Elapsed time: 249 seconds
+closeMainWindow("vivado_project(2) - [C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr] - Vivado 2019.1"); // cl
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// al (cl): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_DONT_SAVE, "Don't Save"); // a (al)
+// A (cl): Close Project: addNotify
+dismissDialog("Save Project"); // al (cl)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// by (cl):  Close Project : addNotify
+dismissDialog("Close Project"); // A (cl)
+// TclEventType: PROJECT_CLOSE
+// 'b' command handler elapsed time: 4 seconds
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // by (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 60 MB. Current time: 10/4/22, 8:04:42 AM CEST
+// Elapsed time: 19 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 247, 191); // cl (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 266, 285); // cl (w, cl)
+// Elapsed time: 364 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 470, 96); // cl (w, cl)
+// Elapsed time: 36 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 292, 295); // cl (w, cl)
+selectCodeEditor("contraints_spi_pmodALS.xdc", 125, 176); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_pmodALS.xdc", 472, 284); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_pmodALS.xdc", 415, 367); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 440, 436); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 490, 415); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 63, 144); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_pmodALS.xdc", 357, 451); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_pmodALS.xdc", 419, 213); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+selectCodeEditor("contraints_spi_pmodALS.xdc", 386, 316); // cl (w, cl)
+selectCodeEditor("contraints_spi_pmodALS.xdc", 407, 361); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("contraints_spi_pmodALS.xdc", 29, 468); // cl (w, cl)
+typeControlKey((HResource) null, "contraints_spi_pmodALS.xdc", 'c'); // cl (w, cl)

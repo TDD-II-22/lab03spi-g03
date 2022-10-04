@@ -494,6 +494,12 @@ Descripción y resultados de las pruebas hechas
 | clk_100Mhz_pi        	| E3    | CLK100MHZ     |
 | sw_we_pi              | U9    | SW0           |
 | reg_sel_pi            | U8    | SW1           |
+| locked_po             | T5    | LED4          |
+| cs_ctrl_po            | P2    | LED15         |
+| btn_send_pi           | E16	| BTNC          |
+| rst_pi                | V10	| BTND          |
+| mosi_po               | B13	| JA1           |
+| mosi_pi               | F14	| JA2           |
 | sw_addr_in_pi[0]      | R7    | SW2           |
 | sw_addr_in_pi[1]      | R6    | SW3           |
 | sw_entrada_pi[0]      | R5    | SW4           |
@@ -507,8 +513,6 @@ Descripción y resultados de las pruebas hechas
 | sw_entrada_pi[8]      | T1    | SW12          |
 | sw_entrada_pi[9]      | R3    | SW13          |
 | sw_entrada_pi[10]     | P3    | SW14          |
-| locked_po             | T5    | LED4          |
-| cs_ctrl_po            | P2    | LED15         |
 | display_po[0]     	| L3	| CA            |
 | display_po[1]     	| N1	| CB            |
 | display_po[2]     	| L5	| CC            |
@@ -516,10 +520,15 @@ Descripción y resultados de las pruebas hechas
 | display_po[4]     	| K3	| CE            |
 | display_po[5]     	| M2	| CF            |
 | display_po[6]     	| L6	| CG            |
-| btn_send_pi           | E16	| BTNC          |
-| rst_pi                | V10	| BTND          |
-| mosi_po               | B13	| JA1           |
-| mosi_pi               | F14	| JA2           |
+| display_select_po[0]  | N6	| AN0           |
+| display_select_po[1]  | M6	| AN1           |
+| display_select_po[2]  | M3	| AN2           |
+| display_select_po[3]  | N5	| AN3           |
+| display_select_po[4]  | N2	| AN4           |
+| display_select_po[5]  | N4	| AN5           |
+| display_select_po[6]  | L1	| AN6           |
+| display_select_po[7]  | M1	| AN7           |
+
 
 
 

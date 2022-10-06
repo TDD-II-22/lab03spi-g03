@@ -42,12 +42,9 @@ module tb_master_race_spi;
     
     matriz_2alaN_x_W_t  tb_matriz;
                         
-    //DATOS TEMPORALES                            
-                               
+    //DATOS TEMPORALES                                                     
     
-    logic   [31 : 0 ]   salida_po;
-   
-
+    logic   [31 : 0]   salida_po;
 
  top_tactico top_tactico1(
 
@@ -96,7 +93,7 @@ module tb_master_race_spi;
         #200;
         sw_addr_in_pi    = 2'b10;
         sw_entrada_pi    = tb_matriz[2][7:0];
-        #500; 
+        #500;
         sw_we_pi         = 0;
         reg_sel_pi       = 0; 
         sw_entrada_pi    = 12'b0000_0010_001; 

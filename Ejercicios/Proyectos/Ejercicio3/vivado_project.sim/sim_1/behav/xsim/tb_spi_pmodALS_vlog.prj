@@ -1,9 +1,9 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK" \
-"../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_clk_wiz.v" \
-"../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.v" \
+verilog xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
+"../../../../../../scr/xci/WCLK/WCLK_clk_wiz.v" \
+"../../../../../../scr/xci/WCLK/WCLK.v" \
 
-sv xil_defaultlib  --include "../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK" \
+sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 "../../../../../../Ejercicio3/module_clk1s.sv" \
 "../../../../../../Ejercicio2/module_clk_divider_spi.sv" \
 "../../../../../../Ejercicio2/pkg_global.sv" \
@@ -20,10 +20,10 @@ sv xil_defaultlib  --include "../../../../../../../../Repo/lab03spi-g03/Ejercici
 "../../../../../../Compartido/module_seg7_control.sv" \
 "../../../../../../Ejercicio3/module_state_machine_pmod.sv" \
 "../../../../../../Ejercicio2/module_state_machine_spi.sv" \
+"../../../../../../Ejercicio3/sim_top.sv" \
 "../../../../../../Ejercicio2/top_interface_spi.sv" \
 "../../../../../../Ejercicio2/top_master_race_spi.sv" \
 "../../../../../../Ejercicio3/top_pmodALS.sv" \
-"../../../../../../Ejercicio3/top_tactico_machine.sv" \
 "../../../../../../Ejercicio3/tb_spi_pmodALS.sv" \
 
 # compile glbl module

@@ -13,6 +13,7 @@ module top_master_race_spi(
                                         hold_ctrl_o,
                                         we_ram2_o,
                                         cs_ctrl_o,
+                                        clk_fn,
                                         sck_o,      
                     [7 : 0]             dato_recibido_r,
                     [9 : 0]             rx_o,
@@ -30,7 +31,7 @@ module top_master_race_spi(
     
     logic                       clk,
                                 clk_fp,
-                                clk_fn,
+                          //      clk_fn,
                                 contador,
                                 send,
                                 progress,

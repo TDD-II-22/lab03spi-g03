@@ -12,18 +12,26 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="664152471133fs"></ZoomStartTime>
-      <ZoomEndTime time="665065949313fs"></ZoomEndTime>
-      <Cursor1Time time="664495000000fs"></Cursor1Time>
+      <ZoomStartTime time="255761258333fs"></ZoomStartTime>
+      <ZoomEndTime time="440277614291fs"></ZoomEndTime>
+      <Cursor1Time time="545378550000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="260"></NameColumnWidth>
-      <ValueColumnWidth column_width="148"></ValueColumnWidth>
+      <ValueColumnWidth column_width="124"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb_spi_pmodALS/clk_100Mhz_pi" type="logic">
+      <obj_property name="ElementShortName">clk_100Mhz_pi</obj_property>
+      <obj_property name="ObjectShortName">clk_100Mhz_pi</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_spi_pmodALS/miso" type="logic">
       <obj_property name="ElementShortName">miso</obj_property>
       <obj_property name="ObjectShortName">miso</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spi_pmodALS/mosi" type="logic">
+      <obj_property name="ElementShortName">mosi</obj_property>
+      <obj_property name="ObjectShortName">mosi</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_spi_pmodALS/cs_ctrl_po" type="logic">
       <obj_property name="ElementShortName">cs_ctrl_po</obj_property>
@@ -33,60 +41,39 @@
       <obj_property name="ElementShortName">sck_po</obj_property>
       <obj_property name="ObjectShortName">sck_po</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_spi_pmodALS/cs_ctrl_po" type="logic">
+      <obj_property name="ElementShortName">cs_ctrl_po</obj_property>
+      <obj_property name="ObjectShortName">cs_ctrl_po</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_spi_pmodALS/display_po" type="array">
       <obj_property name="ElementShortName">display_po[6:0]</obj_property>
       <obj_property name="ObjectShortName">display_po[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_spi_pmodALS/display_select_po" type="array">
       <obj_property name="ElementShortName">display_select_po[7:0]</obj_property>
       <obj_property name="ObjectShortName">display_select_po[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/salida" type="array">
-      <obj_property name="ElementShortName">salida[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida[31:0]</obj_property>
+   <wvobject fp_name="/tb_spi_pmodALS/DUT/interface_spi/master_race_spi/clk_divider_spi/clk_fn" type="logic">
+      <obj_property name="ElementShortName">clk_fn</obj_property>
+      <obj_property name="ObjectShortName">clk_fn</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/salida" type="array">
-      <obj_property name="ElementShortName">salida[31:0]</obj_property>
-      <obj_property name="ObjectShortName">salida[31:0]</obj_property>
+   <wvobject fp_name="/tb_spi_pmodALS/DUT/interface_spi/master_race_spi/control_spi/progress_o" type="logic">
+      <obj_property name="ElementShortName">progress_o</obj_property>
+      <obj_property name="ObjectShortName">progress_o</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/pmodALS/entrada_display_o" type="array">
-      <obj_property name="ElementShortName">entrada_display_o[31:0]</obj_property>
-      <obj_property name="ObjectShortName">entrada_display_o[31:0]</obj_property>
+   <wvobject fp_name="/tb_spi_pmodALS/DUT/clk_sim_o" type="logic">
+      <obj_property name="ElementShortName">clk_sim_o</obj_property>
+      <obj_property name="ObjectShortName">clk_sim_o</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/interface_spi/master_race_spi/state_machine/state" type="array">
-      <obj_property name="ElementShortName">state[1:0]</obj_property>
-      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   <wvobject fp_name="/tb_spi_pmodALS/dato" type="array">
+      <obj_property name="ElementShortName">dato[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/pmodALS/we_addr" type="logic">
-      <obj_property name="ElementShortName">we_addr</obj_property>
-      <obj_property name="ObjectShortName">we_addr</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/pmodALS/addr_pmod" type="array">
-      <obj_property name="ElementShortName">addr_pmod[6:0]</obj_property>
-      <obj_property name="ObjectShortName">addr_pmod[6:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/pmodALS/module_pmodALS1/dato_ram_i" type="array">
-      <obj_property name="ElementShortName">dato_ram_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dato_ram_i[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/interface_spi/memoria_ram/memoria_1/addr_rs1_i" type="array">
-      <obj_property name="ElementShortName">addr_rs1_i[9:0]</obj_property>
-      <obj_property name="ObjectShortName">addr_rs1_i[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/interface_spi/memoria_ram/addr2_i" type="array">
-      <obj_property name="ElementShortName">addr2_i[6:0]</obj_property>
-      <obj_property name="ObjectShortName">addr2_i[6:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/interface_spi/memoria_ram/addr1_i" type="array">
-      <obj_property name="ElementShortName">addr1_i[6:0]</obj_property>
-      <obj_property name="ObjectShortName">addr1_i[6:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/interface_spi/memoria_ram/hold_ctrl_i" type="logic">
-      <obj_property name="ElementShortName">hold_ctrl_i</obj_property>
-      <obj_property name="ObjectShortName">hold_ctrl_i</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_pmodALS/joder_encima_tactico/interface_spi/master_race_spi/proccess_o" type="logic">
-      <obj_property name="ElementShortName">proccess_o</obj_property>
-      <obj_property name="ObjectShortName">proccess_o</obj_property>
+   <wvobject fp_name="/tb_spi_pmodALS/autoverificacion" type="array">
+      <obj_property name="ElementShortName">autoverificacion[7:0]</obj_property>
+      <obj_property name="ObjectShortName">autoverificacion[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>

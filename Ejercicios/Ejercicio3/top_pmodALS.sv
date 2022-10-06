@@ -32,7 +32,7 @@ module top_pmodALS(
      pkg_global::bits_width     entrada_display_o                
     );
     
-    parameter real              PERIODO1S    = 1; //cambiar
+    parameter real              PERIODO1S    = 1e-06; //cambiar
                      
     import pkg_global::*;
     

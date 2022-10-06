@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_spi_pmodALS_behav/xsimk.exe -simmode gui -wdb tb_spi_pmodALS_behav.wdb -simrunnum 0 -socket 63434
+Running: xsim.dir/tb_spi_pmodALS_behav/xsimk.exe -simmode gui -wdb tb_spi_pmodALS_behav.wdb -simrunnum 0 -socket 62885
 Design successfully loaded
-Design Loading Memory Usage: 6180 KB (Peak: 6180 KB)
+Design Loading Memory Usage: 6188 KB (Peak: 6188 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 9208 KB (Peak: 9208 KB)
-Simulation CPU Usage: 10389 ms
+Simulation Memory Usage: 9788 KB (Peak: 9788 KB)
+Simulation CPU Usage: 11780 ms

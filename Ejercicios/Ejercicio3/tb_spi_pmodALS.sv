@@ -32,12 +32,15 @@ module tb_spi_pmodALS;
                         cntr,
                         miso,
                         cs_ctrl_po,
-                        sck_po;
+                        sck_po,
+                        flag;
     logic   [15 : 0]    var_reg;
     logic   [6 : 0]     display_po;
     logic   [7 : 0]     display_select_po;
     logic   [7 : 0]     dato;
+    logic   [31:0]      ver;
     logic   [7 : 0]     autoverificacion;
+    logic   [31: 0]     entrada_display; 
                         
    
     //instancia
@@ -46,7 +49,8 @@ module tb_spi_pmodALS;
         .clk_100Mhz_pi      (clk_100Mhz_pi),
         .rst_pi             (rst_i),
         .clk_sim_o          (clk_sim),
-        .miso_pi            (miso),  
+        .miso_pi            (miso), 
+        .entrada_display    (entrada_display), 
         .dato               (dato),               
         .mosi_po            (mosi), //puede ser un led, no se ocupa
         .locked_po          (locked),
@@ -60,6 +64,8 @@ module tb_spi_pmodALS;
         rst_i            = 1;
         miso             = 0;
         autoverificacion = 0;
+        ver              = 0;
+        flag             = 0;
         cntr             = 0;
         clk_100Mhz_pi    = 0;
         forever #5 clk_100Mhz_pi = ~clk_100Mhz_pi;   
@@ -150,6 +156,16 @@ module tb_spi_pmodALS;
  
     #10000;
     end
+    always @(*)begin 
+    ver  <=     {24'b0, autoverificacion};
+    if (ver == entrada_display)begin
+        flag = 1;
+    end else begin 
+        flag = 0;
+    end
+    
+ end
+    
     
     
 //    always @(posedge clk_sim)begin 

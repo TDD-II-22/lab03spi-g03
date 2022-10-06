@@ -32,8 +32,8 @@ module sim_top(
                                 sck_po,
                     [6 : 0]     display_po,
                     [7 : 0]     display_select_po,   
-                    [7 : 0]     dato   
-             //       [32: 0]     entrada_display          
+                    [7 : 0]     dato,   
+                    [32: 0]     entrada_display          
     );
     
     parameter real              PERIODO      = 1e-3;
@@ -42,8 +42,8 @@ module sim_top(
     
     import pkg_global::*;
     
-    bits_width              salida,
-                            entrada_display; 
+    bits_width              salida;
+                        //    entrada_display; 
      
    logic                    clk, 
                             send,

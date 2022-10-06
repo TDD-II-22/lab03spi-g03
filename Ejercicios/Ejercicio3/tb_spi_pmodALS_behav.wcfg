@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="255761258333fs"></ZoomStartTime>
-      <ZoomEndTime time="440277614291fs"></ZoomEndTime>
-      <Cursor1Time time="545378550000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="645810860001fs"></ZoomEndTime>
+      <Cursor1Time time="645810860000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="260"></NameColumnWidth>
-      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="16" />
    <wvobject fp_name="/tb_spi_pmodALS/clk_100Mhz_pi" type="logic">
       <obj_property name="ElementShortName">clk_100Mhz_pi</obj_property>
       <obj_property name="ObjectShortName">clk_100Mhz_pi</obj_property>
@@ -75,5 +75,18 @@
       <obj_property name="ElementShortName">autoverificacion[7:0]</obj_property>
       <obj_property name="ObjectShortName">autoverificacion[7:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spi_pmodALS/ver" type="array">
+      <obj_property name="ElementShortName">ver[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ver[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spi_pmodALS/flag" type="logic">
+      <obj_property name="ElementShortName">flag</obj_property>
+      <obj_property name="ObjectShortName">flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spi_pmodALS/entrada_display" type="array">
+      <obj_property name="ElementShortName">entrada_display[31:0]</obj_property>
+      <obj_property name="ObjectShortName">entrada_display[31:0]</obj_property>
    </wvobject>
 </wave_config>

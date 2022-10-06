@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK" \
+"tb_spi_pmodALS_func_synth.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK" \
+"../../../../../../../Ejercicio4/tb_ejc4.sv" \
+
+# Do not sort compile order
+nosort

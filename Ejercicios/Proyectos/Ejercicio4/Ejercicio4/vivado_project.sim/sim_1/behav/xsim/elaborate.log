@@ -1,0 +1,65 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a9d15ee8a6084ca0b38595b14eb35717 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_spi_pmodALS_behav xil_defaultlib.tb_spi_pmodALS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'datos_sensor_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v8/Ejercicio3/top_tactico_machine.sv:101]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_micro.sv:94]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_in_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_buffer_sensor.sv:62]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'rs1_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_buffer_sensor.sv:63]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 1 for port 'addr_pmod_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:58]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 9 for port 'send_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:70]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 1 for port 'addr_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:87]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dato_ram_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:89]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 33 for port 'dato_pmod_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:90]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dato_in' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/top_interface_spi.sv:83]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 11 for port 'in1_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/top_interface_spi.sv:118]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 10 for port 'addr2_sd_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_memoria_SD.sv:75]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_in_i' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_datos.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'rs1_o' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_datos.sv:78]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pkg_global
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.WCLK_clk_wiz
+Compiling module xil_defaultlib.WCLK
+Compiling module xil_defaultlib.module_debounce_timer(PERIODO=1....
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_gen_0
+Compiling module xil_defaultlib.module_counter_with_load(ANCHO=4...
+Compiling module xil_defaultlib.module_mux_condiciones
+Compiling module xil_defaultlib.modulo_controlador_micro_default
+Compiling module xil_defaultlib.module_control_micro
+Compiling module xil_defaultlib.module_memoria
+Compiling module xil_defaultlib.module_buffer_sensor
+Compiling module xil_defaultlib.top_micro
+Compiling module xil_defaultlib.module_state_machine_pmodALS
+Compiling module xil_defaultlib.module_control_pmodALS
+Compiling module xil_defaultlib.module_clk1s(PERIODO=0.5)
+Compiling module xil_defaultlib.module_pmodALS
+Compiling module xil_defaultlib.top_pmodALS
+Compiling module xil_defaultlib.module_mux_we
+Compiling module xil_defaultlib.module_clk_divider_spi
+Compiling module xil_defaultlib.module_state_machine_spi
+Compiling module xil_defaultlib.module_control_spi
+Compiling module xil_defaultlib.module_reg_mosi
+Compiling module xil_defaultlib.module_reg_miso
+Compiling module xil_defaultlib.top_master_race_spi
+Compiling module xil_defaultlib.module_reg_control
+Compiling module xil_defaultlib.module_reg_datos
+Compiling module xil_defaultlib.module_mux_salida
+Compiling module xil_defaultlib.top_interface_spi
+Compiling module xil_defaultlib.top_sensor_luz
+Compiling module xil_defaultlib.module_seg7_control
+Compiling module xil_defaultlib.module_inicializar_SD
+Compiling module xil_defaultlib.module_flags_sd
+Compiling module xil_defaultlib.top_memoria_SD
+Compiling module xil_defaultlib.module_leds_rgb
+Compiling module xil_defaultlib.top_tactico
+Compiling module xil_defaultlib.tb_spi_pmodALS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_spi_pmodALS_behav

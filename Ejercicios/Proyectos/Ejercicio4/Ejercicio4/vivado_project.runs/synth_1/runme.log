@@ -1,0 +1,907 @@
+
+*** Running vivado
+    with args -log top_tactico.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_tactico.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/carlo/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source top_tactico.tcl -notrace
+Command: synth_design -top top_tactico -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6524 
+WARNING: [Synth 8-2507] parameter declaration becomes local in module_leds_rgb with formal parameter declaration list [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:39]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 705.891 ; gain = 182.598
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_tactico' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v8/Ejercicio3/top_tactico_machine.sv:23]
+	Parameter PERIODO bound to: 0.001000 - type: float 
+	Parameter PERIODO_GUARDAR bound to: 1.000000 - type: float 
+INFO: [Synth 8-6157] synthesizing module 'WCLK' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.runs/synth_1/.Xil/Vivado-26664-Andrey-PC/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'WCLK' (1#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.runs/synth_1/.Xil/Vivado-26664-Andrey-PC/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'module_debounce_timer' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_debounce_timer.sv:23]
+	Parameter PERIODO bound to: 1.000000 - type: float 
+INFO: [Synth 8-6155] done synthesizing module 'module_debounce_timer' (2#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_debounce_timer.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'top_micro' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_micro.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'modulo_controlador_micro' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/modulo_controlador_micro.sv:23]
+	Parameter ANCHO_CONTADOR bound to: 4 - type: integer 
+	Parameter BITS_SELECCION_SALTO bound to: 3 - type: integer 
+	Parameter ANCHO_MEMORIA bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_0' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.runs/synth_1/.Xil/Vivado-26664-Andrey-PC/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_0' (3#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.runs/synth_1/.Xil/Vivado-26664-Andrey-PC/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'module_counter_with_load' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_counter_with_load.sv:23]
+	Parameter ANCHO bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'module_counter_with_load' (4#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_counter_with_load.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_mux_condiciones' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.srcs/sources_1/new/module_mux_condiciones.sv:23]
+	Parameter SEL_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'module_mux_condiciones' (5#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.srcs/sources_1/new/module_mux_condiciones.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'modulo_controlador_micro' (6#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/modulo_controlador_micro.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_control_micro' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_control_micro.sv:23]
+	Parameter INICIA_SD bound to: 8'b00000000 
+	Parameter CAPTURA bound to: 8'b00000011 
+	Parameter GUARDAR_SD bound to: 8'b00000100 
+	Parameter LEER_SD bound to: 8'b00000101 
+INFO: [Synth 8-6155] done synthesizing module 'module_control_micro' (7#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_control_micro.sv:23]
+WARNING: [Synth 8-6104] Input port 'led_rgb_o' has an internal driver [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_micro.sv:84]
+INFO: [Synth 8-6157] synthesizing module 'module_buffer_sensor' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_buffer_sensor.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_memoria' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_memoria.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_memoria' (8#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_memoria.sv:23]
+WARNING: [Synth 8-689] width (8) of port connection 'rs1_o' does not match port width (32) of module 'module_memoria' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_buffer_sensor.sv:63]
+INFO: [Synth 8-6155] done synthesizing module 'module_buffer_sensor' (9#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_buffer_sensor.sv:23]
+WARNING: [Synth 8-689] width (8) of port connection 'data_o' does not match port width (32) of module 'module_buffer_sensor' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_micro.sv:94]
+INFO: [Synth 8-6155] done synthesizing module 'top_micro' (10#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_micro.sv:23]
+WARNING: [Synth 8-689] width (32) of port connection 'datos_sensor_i' does not match port width (8) of module 'top_micro' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v8/Ejercicio3/top_tactico_machine.sv:101]
+INFO: [Synth 8-6157] synthesizing module 'top_sensor_luz' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_sensor_luz.sv:23]
+	Parameter IN_CONTROL_PMODALS bound to: 12'b000000001001 
+INFO: [Synth 8-6157] synthesizing module 'top_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:23]
+	Parameter PERIODO1S bound to: 0.500000 - type: float 
+INFO: [Synth 8-6157] synthesizing module 'module_state_machine_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_state_machine_pmod.sv:23]
+	Parameter WAIT_PULSO bound to: 2'b00 
+	Parameter WAIT_SEND bound to: 2'b01 
+	Parameter PMODALS bound to: 2'b10 
+	Parameter CTR_WAITP bound to: 3'b000 
+	Parameter CTR_ENP bound to: 3'b001 
+	Parameter CTR_WAITS bound to: 3'b010 
+	Parameter CTR_FINISH bound to: 3'b011 
+	Parameter CTR_PMODALS bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_state_machine_pmod.sv:79]
+WARNING: [Synth 8-87] always_comb on 'next_state_reg' did not result in combinational logic [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_state_machine_pmod.sv:85]
+INFO: [Synth 8-6155] done synthesizing module 'module_state_machine_pmodALS' (11#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_state_machine_pmod.sv:23]
+WARNING: [Synth 8-689] width (9) of port connection 'addr_pmod_i' does not match port width (1) of module 'module_state_machine_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'module_control_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_control_pmodALS.sv:22]
+	Parameter CTR_WAITP bound to: 3'b000 
+	Parameter CTR_ENP bound to: 3'b001 
+	Parameter CTR_WAITS bound to: 3'b010 
+	Parameter CTR_FINISH bound to: 3'b011 
+	Parameter CTR_PMODALS bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'module_control_pmodALS' (12#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_control_pmodALS.sv:22]
+WARNING: [Synth 8-689] width (1) of port connection 'send_o' does not match port width (9) of module 'module_control_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:70]
+INFO: [Synth 8-6157] synthesizing module 'module_clk1s' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_clk1s.sv:23]
+	Parameter PERIODO bound to: 0.500000 - type: float 
+INFO: [Synth 8-6155] done synthesizing module 'module_clk1s' (13#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_clk1s.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_pmodALS.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_pmodALS' (14#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_pmodALS.sv:23]
+WARNING: [Synth 8-689] width (9) of port connection 'addr_i' does not match port width (1) of module 'module_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:87]
+WARNING: [Synth 8-689] width (32) of port connection 'dato_ram_i' does not match port width (8) of module 'module_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:89]
+WARNING: [Synth 8-689] width (32) of port connection 'dato_pmod_o' does not match port width (33) of module 'module_pmodALS' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:90]
+INFO: [Synth 8-6155] done synthesizing module 'top_pmodALS' (15#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/top_pmodALS.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'top_interface_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/top_interface_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_mux_we' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_mux_we.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'module_mux_we' (16#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_mux_we.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'top_master_race_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/top_master_race_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_clk_divider_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_clk_divider_spi.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_clk_divider_spi' (17#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_clk_divider_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_state_machine_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_state_machine_spi.sv:23]
+	Parameter WAIT_SEND bound to: 2'b00 
+	Parameter LOAD bound to: 2'b01 
+	Parameter TRANSMISSION bound to: 2'b10 
+	Parameter DOWNLOAD bound to: 2'b11 
+	Parameter CTR_SEND bound to: 3'b000 
+	Parameter CTR_PRELOAD1 bound to: 3'b001 
+	Parameter CTR_LOAD bound to: 3'b010 
+	Parameter CTR_TRANSFER bound to: 3'b011 
+	Parameter CTR_CHECK bound to: 3'b100 
+	Parameter CTR_PRELOAD2 bound to: 3'b101 
+	Parameter CTR_DOWN bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'module_state_machine_spi' (18#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_state_machine_spi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_control_spi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_control_spi.sv:2]
+	Parameter CTR_SEND bound to: 3'b000 
+	Parameter CTR_PRELOAD1 bound to: 3'b001 
+	Parameter CTR_LOAD bound to: 3'b010 
+	Parameter CTR_TRANSFER bound to: 3'b011 
+	Parameter CTR_CHECK bound to: 3'b100 
+	Parameter CTR_PRELOAD2 bound to: 3'b101 
+	Parameter CTR_DOWN bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'module_control_spi' (19#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_control_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_mosi' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_mosi.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_mosi.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_mosi' (20#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_mosi.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_miso' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_miso.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_miso' (21#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_miso.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_master_race_spi' (22#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/top_master_race_spi.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_control' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_control' (23#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_control.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_reg_datos' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_datos.sv:23]
+WARNING: [Synth 8-689] width (8) of port connection 'rs1_o' does not match port width (32) of module 'module_memoria' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_datos.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'module_reg_datos' (24#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_datos.sv:23]
+WARNING: [Synth 8-689] width (12) of port connection 'in1_i' does not match port width (11) of module 'module_reg_datos' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/top_interface_spi.sv:118]
+INFO: [Synth 8-6157] synthesizing module 'module_mux_salida' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_mux_salida.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_mux_salida' (25#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_mux_salida.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_interface_spi' (26#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/top_interface_spi.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_sensor_luz' (27#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_sensor_luz.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_seg7_control' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:23]
+	Parameter PERIODO bound to: 0.001000 - type: float 
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:69]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:115]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:88]
+INFO: [Synth 8-6155] done synthesizing module 'module_seg7_control' (28#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Compartido/module_seg7_control.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'top_memoria_SD' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_memoria_SD.sv:23]
+	Parameter IN_CONTROL_PMODALS bound to: 11'b11111111100 
+INFO: [Synth 8-6157] synthesizing module 'module_inicializar_SD' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_inicializar_SD.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_inicializar_SD' (29#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_inicializar_SD.sv:23]
+WARNING: [Synth 8-689] width (9) of port connection 'addr2_sd_o' does not match port width (10) of module 'module_inicializar_SD' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_memoria_SD.sv:75]
+INFO: [Synth 8-6157] synthesizing module 'module_flags_sd' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v9/Ejercicio4/module_flags_sd.sv:45]
+WARNING: [Synth 8-87] always_comb on 'flags_o_reg' did not result in combinational logic [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v9/Ejercicio4/module_flags_sd.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'module_flags_sd' (30#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v9/Ejercicio4/module_flags_sd.sv:45]
+WARNING: [Synth 8-3848] Net proccess_o in module/entity top_memoria_SD does not have driver. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_memoria_SD.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'top_memoria_SD' (31#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/top_memoria_SD.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_leds_rgb' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:23]
+	Parameter PERIODO bound to: 0.001000 - type: float 
+	Parameter OFF bound to: 0 - type: integer 
+	Parameter ROJO bound to: 1 - type: integer 
+	Parameter VERDE bound to: 2 - type: integer 
+	Parameter AZUL bound to: 3 - type: integer 
+	Parameter AMARILLO bound to: 4 - type: integer 
+	Parameter CIAN bound to: 5 - type: integer 
+	Parameter MAGENTA bound to: 6 - type: integer 
+	Parameter BLANCO bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:74]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:77]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:85]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:93]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:101]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:109]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:117]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:125]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:133]
+WARNING: [Synth 8-567] referenced signal 'color_i' should be on the sensitivity list [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:73]
+INFO: [Synth 8-6155] done synthesizing module 'module_leds_rgb' (32#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:23]
+WARNING: [Synth 8-3848] Net led_rgb in module/entity top_tactico does not have driver. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v8/Ejercicio3/top_tactico_machine.sv:64]
+INFO: [Synth 8-6155] done synthesizing module 'top_tactico' (33#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v8/Ejercicio3/top_tactico_machine.sv:23]
+WARNING: [Synth 8-3917] design top_tactico has port dat1_po driven by constant 1
+WARNING: [Synth 8-3917] design top_tactico has port dat2_po driven by constant 1
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[10]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[9]
+WARNING: [Synth 8-3331] design module_reg_datos has unconnected port in1_i[8]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][5]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][4]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][3]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][2]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][1]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used1][0]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][2]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][1]
+WARNING: [Synth 8-3331] design module_control_spi has unconnected port cntr_str_i[not_used2][0]
+WARNING: [Synth 8-3331] design top_memoria_SD has unconnected port proccess_o
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[31]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[30]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[29]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[28]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[27]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[26]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[25]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[24]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[23]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[22]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[21]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[20]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[19]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[18]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[17]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[16]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[15]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[14]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[13]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[12]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[11]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[10]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[9]
+WARNING: [Synth 8-3331] design top_pmodALS has unconnected port in_datos_i[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 827.949 ; gain = 304.656
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 827.949 ; gain = 304.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 827.949 ; gain = 304.656
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc] for cell 'generate_clock_10Mhz'
+Finished Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc] for cell 'generate_clock_10Mhz'
+Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/dist_mem_gen_0/dist_mem_gen_0/dist_mem_gen_0_in_context.xdc] for cell 'maquina_microprogramada/maquina_micro/memoria_room'
+Finished Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/dist_mem_gen_0/dist_mem_gen_0/dist_mem_gen_0_in_context.xdc] for cell 'maquina_microprogramada/maquina_micro/memoria_room'
+Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Constraints/contraints_micro.xdc]
+WARNING: [Vivado 12-508] No pins matched 'generate_clock_10Mhz/clk_10Mhz'. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Constraints/contraints_micro.xdc:695]
+WARNING: [Vivado 12-627] No clocks matched 'pllclk'. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Constraints/contraints_micro.xdc:696]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Constraints/contraints_micro.xdc:696]
+Finished Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Constraints/contraints_micro.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Constraints/contraints_micro.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_tactico_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Constraints/contraints_micro.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_tactico_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_tactico_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1248.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.584 . Memory (MB): peak = 1248.777 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz_pi. (constraint file  c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz_pi. (constraint file  c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK/WCLK_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for generate_clock_10Mhz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for maquina_microprogramada/maquina_micro/memoria_room. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'we_buffer_reg' into 'en_clk_luz_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/module_control_micro.sv:97]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'module_state_machine_pmodALS'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'module_state_machine_spi'
+INFO: [Synth 8-802] inferred FSM for state register 'pasitos_reg' in module 'module_inicializar_SD'
+INFO: [Synth 8-5587] ROM size for "send" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "c1" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_state_machine_pmod.sv:85]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_state_machine_pmod.sv:85]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              WAIT_PULSO |                              001 |                               00
+               WAIT_SEND |                              010 |                               01
+                 PMODALS |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'module_state_machine_pmodALS'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio4/pmodALS/module_state_machine_pmod.sv:85]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               WAIT_SEND |                               00 |                               00
+                    LOAD |                               01 |                               01
+            TRANSMISSION |                               10 |                               10
+                DOWNLOAD |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'module_state_machine_spi'
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_control.sv:56]
+WARNING: [Synth 8-327] inferring latch for variable 'guardar_datos_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio2/module_reg_control.sv:56]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                iSTATE14 |                            00000 |                            00000
+                iSTATE10 |                            00001 |                            00001
+                 iSTATE6 |                            00010 |                            00010
+                 iSTATE4 |                            00011 |                            00011
+                iSTATE25 |                            00100 |                            00100
+                iSTATE24 |                            00101 |                            00101
+                iSTATE20 |                            00110 |                            00110
+                iSTATE18 |                            00111 |                            00111
+                iSTATE23 |                            01000 |                            01000
+                iSTATE22 |                            01001 |                            01001
+                iSTATE15 |                            01010 |                            01010
+                iSTATE13 |                            01011 |                            01011
+                 iSTATE1 |                            01100 |                            01100
+                 iSTATE0 |                            01101 |                            01101
+                  iSTATE |                            01110 |                            01110
+                iSTATE26 |                            01111 |                            01111
+                 iSTATE7 |                            10000 |                            10000
+                 iSTATE5 |                            10001 |                            10001
+                 iSTATE3 |                            10010 |                            10010
+                 iSTATE2 |                            10011 |                            10011
+                iSTATE21 |                            10100 |                            10100
+                iSTATE19 |                            10101 |                            10101
+                iSTATE12 |                            10110 |                            10110
+                iSTATE11 |                            10111 |                            10111
+                iSTATE17 |                            11000 |                            11000
+                iSTATE16 |                            11001 |                            11001
+                 iSTATE9 |                            11010 |                            11010
+                 iSTATE8 |                            11011 |                            11011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pasitos_reg' using encoding 'sequential' in module 'module_inicializar_SD'
+WARNING: [Synth 8-327] inferring latch for variable 'flags_o_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v9/Ejercicio4/module_flags_sd.sv:56]
+WARNING: [Synth 8-327] inferring latch for variable 'rgb_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Ejercicio1/module_leds_rgb.sv:78]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |module_memoria__GBM0   |           1|     34272|
+|2     |module_memoria__GBM1   |           1|      8608|
+|3     |module_memoria__GBM2   |           1|     10755|
+|4     |module_memoria__GBM3   |           1|     13883|
+|5     |module_memoria__GBM4   |           1|     21415|
+|6     |top_micro__GC0         |           1|       167|
+|7     |module_reg_datos__GC0  |           1|        18|
+|8     |top_interface_spi__GC0 |           1|      4271|
+|9     |top_pmodALS            |           1|       260|
+|10    |top_memoria_SD__GC0    |           1|       923|
+|11    |top_tactico__GC0       |           1|      1471|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3081  
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 5     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 40    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 16    
+	  28 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   8 Input     10 Bit        Muxes := 2     
+	  28 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 5     
+	   5 Input      9 Bit        Muxes := 1     
+	   6 Input      9 Bit        Muxes := 1     
+	   8 Input      9 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 12    
+	   4 Input      8 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 2     
+	  14 Input      8 Bit        Muxes := 2     
+	  11 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	  28 Input      6 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 3     
+	   8 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 8     
+	   3 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 6     
+	  28 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 110   
+	   5 Input      1 Bit        Muxes := 14    
+	   3 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 28    
+	  28 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module module_memoria 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 10    
+Module module_counter_with_load 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module module_control_micro 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   5 Input      1 Bit        Muxes := 13    
+Module module_state_machine_pmodALS 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 2     
+Module module_control_pmodALS 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      9 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 1     
+Module module_clk1s 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module module_pmodALS 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+Module module_reg_datos 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module module_mux_we 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module module_clk_divider_spi 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module module_state_machine_spi 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+Module module_control_spi 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   8 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   8 Input      1 Bit        Muxes := 14    
+Module module_reg_mosi 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module module_reg_miso 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module module_reg_control 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+Module module_mux_salida 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module module_inicializar_SD 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  28 Input     32 Bit        Muxes := 1     
+	  28 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   8 Input      8 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 2     
+	  11 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	  28 Input      6 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	  28 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  28 Input      1 Bit        Muxes := 12    
+Module module_flags_sd 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module module_debounce_timer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 8     
+Module module_seg7_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module module_leds_rgb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "initial_SD/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "initial_SD/" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "initial_SD/" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "initial_SD/" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "initial_SD/" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "initial_SD/" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3917] design top_tactico has port dat1_po driven by constant 1
+WARNING: [Synth 8-3917] design top_tactico has port dat2_po driven by constant 1
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (maquina_microprogramadai_6/\micro/c4_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (maquina_microprogramadai_6/\micro/led_rgb_reg[0] )
+INFO: [Synth 8-3886] merging instance 'maquina_microprogramadai_6/micro/led_rgb_reg[1]' (FDRE) to 'maquina_microprogramadai_6/micro/led_rgb_reg[2]'
+INFO: [Synth 8-3886] merging instance 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[1]' (FDRE) to 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[2]' (FDRE) to 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[3]' (FDRE) to 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[4]' (FDRE) to 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[5]' (FDRE) to 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[6]' (FDRE) to 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[7]' (FDRE) to 'sensor_luz1/pmodALS/control_pmodALS/addr_pmod_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sensor_luz1/pmodALS /\control_pmodALS/addr_pmod_reg[8] )
+INFO: [Synth 8-3886] merging instance 'SD_potentei_21/initial_SD/data_sd_reg[8]' (FDRE) to 'SD_potentei_21/initial_SD/data_sd_reg[9]'
+INFO: [Synth 8-3886] merging instance 'spi_SDi_20/registro_control/guardar_datos_reg[8]' (LD) to 'spi_SDi_20/registro_control/guardar_datos_reg[9]'
+INFO: [Synth 8-3886] merging instance 'spi_SDi_20/registro_control/guardar_datos_reg[10]' (LD) to 'spi_SDi_20/registro_control/guardar_datos_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_SDi_20/\registro_control/guardar_datos_reg[11] )
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[7]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[11]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[8]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[11]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[9]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[11]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[10]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[11]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[11]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[6]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[1]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[6]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[2]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[6]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[3]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[0]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[4]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[6]'
+INFO: [Synth 8-3886] merging instance 'spi_pmodALSi_13/registro_control/guardar_datos_reg[5]' (LD) to 'spi_pmodALSi_13/registro_control/guardar_datos_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_pmodALSi_13/\registro_control/guardar_datos_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (spi_pmodALSi_13/\registro_control/guardar_datos_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:26 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------+------------+----------+
+|      |RTL Partition             |Replication |Instances |
++------+--------------------------+------------+----------+
+|1     |module_memoria__GBM0      |           2|      4328|
+|2     |module_memoria__GBM1      |           2|       632|
+|3     |module_memoria__GBM2      |           2|      1667|
+|4     |module_memoria__GBM3      |           2|      1690|
+|5     |module_memoria__GBM4      |           2|       593|
+|6     |top_micro__GC0            |           1|       168|
+|7     |module_reg_datos__GC0     |           1|        49|
+|8     |top_interface_spi__GC0    |           1|       868|
+|9     |top_pmodALS               |           1|       136|
+|10    |top_memoria_SD__GC0       |           1|       466|
+|11    |top_tactico__GC0          |           1|       444|
+|12    |top_interface_spi__GC0__1 |           1|       862|
+|13    |module_reg_datos__GC0__1  |           1|        36|
++------+--------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'generate_clock_10Mhz/CLK_10MHZ' to pin 'generate_clock_10Mhz/bbstub_CLK_10MHZ/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:34 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:01:57 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------+------------+----------+
+|      |RTL Partition        |Replication |Instances |
++------+---------------------+------------+----------+
+|1     |module_memoria__GBM2 |           1|      1667|
+|2     |module_memoria__GBM4 |           2|       593|
+|3     |top_micro__GC0       |           1|       168|
+|4     |top_pmodALS          |           1|       136|
+|5     |top_tactico__GC0     |           1|       444|
+|6     |top_tactico_GT0__2   |           1|      7548|
+|7     |top_tactico_GT0      |           1|      9700|
++------+---------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[12]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[11]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[10]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[9]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[8]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[7]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[6]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[5]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[3]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (sensor_luz1/spi_pmodALS/registro_control/next_state_reg[2]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (SD_potente/spi_SD/registro_control/next_state_reg[12]) is unused and will be removed from module top_tactico.
+WARNING: [Synth 8-3332] Sequential element (SD_potente/spi_SD/registro_control/next_state_reg[11]) is unused and will be removed from module top_tactico.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rgb/rgb_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (rgb/rgb_reg[1]) is unused and will be removed from module top_tactico.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:56 ; elapsed = 00:02:06 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:59 ; elapsed = 00:02:09 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:59 ; elapsed = 00:02:09 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |WCLK           |         1|
+|2     |dist_mem_gen_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |WCLK           |     1|
+|2     |dist_mem_gen_0 |     1|
+|3     |CARRY4         |    84|
+|4     |LUT1           |     8|
+|5     |LUT2           |   296|
+|6     |LUT3           |   156|
+|7     |LUT4           |   174|
+|8     |LUT5           |   309|
+|9     |LUT6           |  3260|
+|10    |MUXF7          |  1094|
+|11    |MUXF8          |   514|
+|12    |FDRE           |  8722|
+|13    |FDSE           |     3|
+|14    |LD             |    48|
+|15    |IBUF           |     5|
+|16    |OBUF           |    27|
++------+---------------+------+
+
+Report Instance Areas: 
++------+--------------------------+-----------------------------+------+
+|      |Instance                  |Module                       |Cells |
++------+--------------------------+-----------------------------+------+
+|1     |top                       |                             | 14718|
+|2     |  SD_potente              |top_memoria_SD               |  7269|
+|3     |    initial_SD            |module_inicializar_SD        |   171|
+|4     |    spi_SD                |top_interface_spi_0          |  7098|
+|5     |      master_race_spi     |top_master_race_spi_1        |  1024|
+|6     |        clk_divider_spi   |module_clk_divider_spi_5     |   270|
+|7     |        control_spi       |module_control_spi_6         |   661|
+|8     |        reg_miso          |module_reg_miso_7            |    72|
+|9     |        reg_mosi          |module_reg_mosi_8            |    12|
+|10    |        state_machine     |module_state_machine_spi_9   |     9|
+|11    |      memoria_ram         |module_reg_datos_2           |  5996|
+|12    |        memoria_1         |module_memoria_4             |  5996|
+|13    |      registro_control    |module_reg_control_3         |    78|
+|14    |  envio_pulso_send        |module_debounce_timer        |    56|
+|15    |  maquina_microprogramada |top_micro                    |    82|
+|16    |    maquina_micro         |modulo_controlador_micro     |    40|
+|17    |      Uconta              |module_counter_with_load     |     8|
+|18    |    micro                 |module_control_micro         |    42|
+|19    |  rgb                     |module_leds_rgb              |    59|
+|20    |  seg7_control            |module_seg7_control          |    72|
+|21    |  sensor_luz1             |top_sensor_luz               |  7146|
+|22    |    pmodALS               |top_pmodALS                  |   103|
+|23    |      control_pmodALS     |module_control_pmodALS       |    11|
+|24    |      machine_pmodALS     |module_state_machine_pmodALS |    15|
+|25    |      module_clk1s        |module_clk1s                 |    44|
+|26    |      module_pmodALS1     |module_pmodALS               |    24|
+|27    |    spi_pmodALS           |top_interface_spi            |  7043|
+|28    |      master_race_spi     |top_master_race_spi          |  1013|
+|29    |        clk_divider_spi   |module_clk_divider_spi       |   270|
+|30    |        control_spi       |module_control_spi           |   660|
+|31    |        reg_miso          |module_reg_miso              |    56|
+|32    |        reg_mosi          |module_reg_mosi              |    18|
+|33    |        state_machine     |module_state_machine_spi     |     9|
+|34    |      memoria_ram         |module_reg_datos             |  5995|
+|35    |        memoria_1         |module_memoria               |  5995|
+|36    |      registro_control    |module_reg_control           |    35|
++------+--------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 1248.777 ; gain = 725.484
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:34 ; elapsed = 00:01:54 . Memory (MB): peak = 1248.777 ; gain = 304.656
+Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:02:12 . Memory (MB): peak = 1248.777 ; gain = 725.484
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1740 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1248.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 48 instances were transformed.
+  LD => LDCE: 48 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+145 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:02:20 . Memory (MB): peak = 1248.777 ; gain = 957.871
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1248.777 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v10/Proyectos/Ejercicio4/vivado_project.runs/synth_1/top_tactico.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_tactico_utilization_synth.rpt -pb top_tactico_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  6 11:02:06 2022...

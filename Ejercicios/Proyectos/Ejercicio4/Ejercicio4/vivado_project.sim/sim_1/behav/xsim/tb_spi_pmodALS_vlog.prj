@@ -1,0 +1,46 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK" \
+"../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/dist_mem_gen_0/sim/dist_mem_gen_0.v" \
+"../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_clk_wiz.v" \
+"../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../Repo/lab03spi-g03/Ejercicios/scr/xci/WCLK" \
+"../../../../../../Ejercicio2/pkg_global.sv" \
+"../../../../../../Ejercicio4/module_buffer_sensor.sv" \
+"../../../../../../Ejercicio4/pmodALS/module_clk1s.sv" \
+"../../../../../../Ejercicio2/module_clk_divider_spi.sv" \
+"../../../../../../Ejercicio4/module_control_micro.sv" \
+"../../../../../../Ejercicio4/pmodALS/module_control_pmodALS.sv" \
+"../../../../../../Ejercicio2/module_control_spi.sv" \
+"../../../../../../Ejercicio4/module_counter_with_load.sv" \
+"../../../../../../Ejercicio4/module_debounce_timer.sv" \
+"../../../../../../../Ejercicios_v9/Ejercicio4/module_flags_sd.sv" \
+"../../../../../../Ejercicio4/module_inicializar_SD.sv" \
+"../../../../../../Ejercicio1/module_leds_rgb.sv" \
+"../../../../../../Ejercicio2/module_memoria.sv" \
+"../../../../vivado_project.srcs/sources_1/new/module_mux_condiciones.sv" \
+"../../../../../../Ejercicio2/module_mux_salida.sv" \
+"../../../../../../Ejercicio2/module_mux_we.sv" \
+"../../../../../../Ejercicio4/pmodALS/module_pmodALS.sv" \
+"../../../../../../Ejercicio2/module_reg_control.sv" \
+"../../../../../../Ejercicio2/module_reg_datos.sv" \
+"../../../../../../Ejercicio2/module_reg_miso.sv" \
+"../../../../../../Ejercicio2/module_reg_mosi.sv" \
+"../../../../../../Compartido/module_seg7_control.sv" \
+"../../../../../../Ejercicio4/pmodALS/module_state_machine_pmod.sv" \
+"../../../../../../Ejercicio2/module_state_machine_spi.sv" \
+"../../../../../../Ejercicio4/modulo_controlador_micro.sv" \
+"../../../../../../Ejercicio2/top_interface_spi.sv" \
+"../../../../../../Ejercicio2/top_master_race_spi.sv" \
+"../../../../../../Ejercicio4/top_memoria_SD.sv" \
+"../../../../../../Ejercicio4/top_micro.sv" \
+"../../../../../../Ejercicio4/pmodALS/top_pmodALS.sv" \
+"../../../../../../Ejercicio4/top_sensor_luz.sv" \
+"../../../../../../../Ejercicios_v8/Ejercicio3/top_tactico_machine.sv" \
+"../../../../../../Ejercicio4/tb_ejc4.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

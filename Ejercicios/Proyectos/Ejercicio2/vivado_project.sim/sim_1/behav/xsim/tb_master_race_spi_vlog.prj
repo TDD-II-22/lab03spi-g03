@@ -5,9 +5,9 @@ verilog xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 
 sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 "../../../../../../Ejercicio2/module_clk_divider_spi.sv" \
-"../../../../../../Compartido/module_clock_divider.sv" \
 "../../../../../../Ejercicio2/pkg_global.sv" \
 "../../../../../../Ejercicio2/module_control_spi.sv" \
+"../../../../../../Ejercicio2/module_debounce_timer.sv" \
 "../../../../../../Ejercicio2/module_memoria.sv" \
 "../../../../../../Ejercicio2/module_mux_salida.sv" \
 "../../../../../../Ejercicio2/module_mux_we.sv" \
@@ -15,11 +15,11 @@ sv xil_defaultlib  --include "../../../../../../scr/xci/WCLK" \
 "../../../../../../Ejercicio2/module_reg_datos.sv" \
 "../../../../../../Ejercicio2/module_reg_miso.sv" \
 "../../../../../../Ejercicio2/module_reg_mosi.sv" \
-"../../../../../../Ejercicio1/module_seg7_control.sv" \
+"../../../../../../Compartido/module_seg7_control.sv" \
 "../../../../../../Ejercicio2/module_state_machine_spi.sv" \
 "../../../../../../Ejercicio2/top_interface_spi.sv" \
 "../../../../../../Ejercicio2/top_master_race_spi.sv" \
-"../../../../vivado_project.srcs/sources_1/new/top_tactico.sv" \
+"../../../../../../Ejercicio2/top_tactico.sv" \
 "../../../../../../Ejercicio2/tb_master_race_spi.sv" \
 
 # compile glbl module

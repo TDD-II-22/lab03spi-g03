@@ -1,0 +1,126 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 300
+License: Customer
+
+Current time: 	Thu Oct 06 18:44:20 CEST 2022
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 165 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rjesu
+User home directory: C:/Users/rjesu
+User working directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2
+User country: 	US
+User language: 	es
+User locale: 	es_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/rjesu/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+Vivado journal file location: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.jou
+Engine tmp dir: 	C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/.Xil/Vivado-300-DESKTOP-07VUEC3
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 608 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 82 MB (+83478kb) [00:00:15]
+// [Engine Memory]: 620 MB (+498698kb) [00:00:15]
+// [GUI Memory]: 100 MB (+14556kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  4120 ms.
+// Tcl Message: open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 652 MB. GUI used memory: 48 MB. Current time: 10/6/22, 6:44:26 PM CEST
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 670.785 ; gain = 38.816 
+// Project name: vivado_project; location: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2; part: xc7a100tcsg324-1
+// [Engine Memory]: 652 MB (+810kb) [00:00:18]
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (top_tactico.sv) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_tactico (top_tactico.sv)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 7); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 8); // B (F, cl)
+// [Engine Memory]: 685 MB (+97kb) [00:00:37]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Waveform Configuration File]", 10, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_master_race_spi (tb_master_race_spi.sv)]", 9, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_master_race_spi (tb_master_race_spi.sv)]", 9, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// [GUI Memory]: 108 MB (+2767kb) [00:00:38]
+// Elapsed time: 179 seconds
+selectCodeEditor("tb_master_race_spi.sv", 363, 159); // cl (w, cl)
+selectCodeEditor("tb_master_race_spi.sv", 363, 159, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 128 seconds
+selectCodeEditor("tb_master_race_spi.sv", 253, 330); // cl (w, cl)
+selectCodeEditor("tb_master_race_spi.sv", 376, 334, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ah (an, cl)
+// Elapsed time: 394 seconds
+selectCodeEditor("tb_master_race_spi.sv", 385, 172); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 690 MB. GUI used memory: 51 MB. Current time: 10/6/22, 7:14:28 PM CEST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 574 ms to process. Increasing delay to 2000 ms.

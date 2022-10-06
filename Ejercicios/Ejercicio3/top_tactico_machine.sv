@@ -34,14 +34,14 @@ module top_tactico(
     );
     
     parameter real              PERIODO      = 1e-3;
-
+    
     parameter      [10 : 0]     IN_CONTROL_PMODALS = 11'b000_0000_01_00;
     
     import pkg_global::*;
     
     bits_width              salida,
                             entrada_display; 
-    
+     
     logic                   clk, 
                             send,
                             we_reg_control,

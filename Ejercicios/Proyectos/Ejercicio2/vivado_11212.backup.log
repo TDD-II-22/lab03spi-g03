@@ -1,0 +1,391 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct  4 21:12:59 2022
+# Process ID: 11212
+# Current directory: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5424 C:\TDD\lab03spi-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr
+# Log file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+# Journal file: C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Lab3/Respaldo/Ejercicios_v7/Proyectos/Ejercicio2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 702.566 ; gain = 71.066
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_master_race_spi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_master_race_spi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WCLK_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/TDD/lab03spi-g03/Ejercicios/scr/xci/WCLK/WCLK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WCLK
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_clk_divider_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/pkg_global.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_control_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_debounce_timer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_debounce_timer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_memoria
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_mux_salida
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_mux_we
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_datos
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_miso
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_mosi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_seg7_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_state_machine_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_interface_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_master_race_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tactico
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_master_race_spi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xelab -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 11 for port 'sw_entrada_pi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv:61]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 7 for port 'sw_addr_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dato_in' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:83]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'rs1_o' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:78]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pkg_global
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.WCLK_clk_wiz
+Compiling module xil_defaultlib.WCLK
+Compiling module xil_defaultlib.module_debounce_timer(PERIODO=1....
+Compiling module xil_defaultlib.module_mux_we
+Compiling module xil_defaultlib.module_clk_divider_spi
+Compiling module xil_defaultlib.module_state_machine_spi
+Compiling module xil_defaultlib.module_control_spi
+Compiling module xil_defaultlib.module_reg_mosi
+Compiling module xil_defaultlib.module_reg_miso
+Compiling module xil_defaultlib.top_master_race_spi
+Compiling module xil_defaultlib.module_reg_control
+Compiling module xil_defaultlib.module_memoria
+Compiling module xil_defaultlib.module_reg_datos
+Compiling module xil_defaultlib.module_mux_salida
+Compiling module xil_defaultlib.top_interface_spi
+Compiling module xil_defaultlib.module_seg7_control
+Compiling module xil_defaultlib.top_tactico
+Compiling module xil_defaultlib.tb_master_race_spi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_master_race_spi_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim/xsim.dir/tb_master_race_spi_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim/xsim.dir/tb_master_race_spi_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Oct  4 21:16:50 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct  4 21:16:50 2022...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 736.109 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_master_race_spi_behav -key {Behavioral:sim_1:Functional:tb_master_race_spi} -tclbatch {tb_master_race_spi.tcl} -view {C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg
+source tb_master_race_spi.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+$finish called at time : 660565100 ps : File "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv" Line 128
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 739.770 ; gain = 3.660
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 739.770 ; gain = 3.660
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_master_race_spi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 739.770 ; gain = 3.660
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 755.820 ; gain = 9.828
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_master_race_spi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_master_race_spi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_clk_divider_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_clk_divider_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/pkg_global.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_control_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_control_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_debounce_timer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_debounce_timer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_memoria.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_memoria
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_salida.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_mux_salida
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_mux_we.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_mux_we
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_datos
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_miso.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_miso
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_mosi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_reg_mosi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Compartido/module_seg7_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_seg7_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_state_machine_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_state_machine_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_interface_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_master_race_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_master_race_spi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tactico
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_master_race_spi
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xelab -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 11 for port 'sw_entrada_pi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv:58]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 7 for port 'sw_addr_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dato_in' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:83]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'rs1_o' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:78]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pkg_global
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.WCLK_clk_wiz
+Compiling module xil_defaultlib.WCLK
+Compiling module xil_defaultlib.module_debounce_timer(PERIODO=1....
+Compiling module xil_defaultlib.module_mux_we
+Compiling module xil_defaultlib.module_clk_divider_spi
+Compiling module xil_defaultlib.module_state_machine_spi
+Compiling module xil_defaultlib.module_control_spi
+Compiling module xil_defaultlib.module_reg_mosi
+Compiling module xil_defaultlib.module_reg_miso
+Compiling module xil_defaultlib.top_master_race_spi
+Compiling module xil_defaultlib.module_reg_control
+Compiling module xil_defaultlib.module_memoria
+Compiling module xil_defaultlib.module_reg_datos
+Compiling module xil_defaultlib.module_mux_salida
+Compiling module xil_defaultlib.top_interface_spi
+Compiling module xil_defaultlib.module_seg7_control
+Compiling module xil_defaultlib.top_tactico
+Compiling module xil_defaultlib.tb_master_race_spi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_master_race_spi_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 755.820 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_master_race_spi_behav -key {Behavioral:sim_1:Functional:tb_master_race_spi} -tclbatch {tb_master_race_spi.tcl} -view {C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg
+source tb_master_race_spi.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+$finish called at time : 660565100 ps : File "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv" Line 125
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:26 . Memory (MB): peak = 755.820 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 755.820 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_master_race_spi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:37 . Memory (MB): peak = 755.820 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_master_race_spi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_master_race_spi_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xelab -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 11 for port 'sw_entrada_pi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv:58]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 7 for port 'sw_addr_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dato_in' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:83]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'rs1_o' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:78]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_master_race_spi_behav -key {Behavioral:sim_1:Functional:tb_master_race_spi} -tclbatch {tb_master_race_spi.tcl} -view {C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg
+source tb_master_race_spi.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+$finish called at time : 660565100 ps : File "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv" Line 125
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 838.145 ; gain = 2.164
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 838.145 ; gain = 44.551
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_master_race_spi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 838.145 ; gain = 44.551
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_master_race_spi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_master_race_spi_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+"xelab -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 3213181789b34683a40c4a4d1327afb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_master_race_spi_behav xil_defaultlib.tb_master_race_spi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 11 for port 'sw_entrada_pi' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv:58]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 7 for port 'sw_addr_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_tactico.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dato_in' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/top_interface_spi.sv:83]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'data_in_i' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:77]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'rs1_o' [C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/module_reg_datos.sv:78]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/TDD/lab03spi-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_master_race_spi_behav -key {Behavioral:sim_1:Functional:tb_master_race_spi} -tclbatch {tb_master_race_spi.tcl} -view {C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi_behav.wcfg
+source tb_master_race_spi.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+$finish called at time : 660565100 ps : File "C:/TDD/lab03spi-g03/Ejercicios/Ejercicio2/tb_master_race_spi.sv" Line 125
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 841.797 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 841.797 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_master_race_spi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 841.797 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  4 22:35:55 2022...

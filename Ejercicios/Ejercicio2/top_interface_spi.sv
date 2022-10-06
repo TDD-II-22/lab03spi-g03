@@ -30,9 +30,11 @@ module top_interface_spi(
                                 reg_sel_i,
     pkg_global::bits_n          sw_addr_in_i,
                      [10 : 0]   sw_entrada_i,                   
-    
+    output logic       [7 : 0]         dato_recibido, 
     output logic                mosi_o,
                                 cs_ctrl_o,
+                                
+                                clk_sim,
                                 proccess_o,
                                 sck_o,
     pkg_global::bits_width      salida_o                    
@@ -49,7 +51,7 @@ module top_interface_spi(
                                 hold_ctrl,
                                 we_ram2;
      
-    logic       [7 : 0]         dato_recibido; 
+
      
     logic       [9 : 0]         rx_o;   
     
@@ -81,6 +83,7 @@ module top_interface_spi(
         .rst_i                  (rst_i),
         .miso_i                 (miso_i),                     
         .dato_in                (dato_ram),
+        .clk_fn                 (clk_sim),
         .cntr_str_i             (cntr_str),  
         .mosi_o                 (mosi_o),
         .we_rx_o                (we_rx),

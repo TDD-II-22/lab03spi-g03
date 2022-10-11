@@ -578,16 +578,16 @@ module top_interface_spi(
 -    `clk_i`: Señal de clock
 -    `rst_i`: Señal de reset
 -    `miso_i`: Señal de MISO
--    `btn_send_i`: 
--    `sw_we_i`: 
--    `reg_sel_i`: 
--    `sw_addr_in_i`: 
--    `sw_entrada_i`:                 
+-    `btn_send_i`: Señal de boton para enviar datos
+-    `sw_we_i`: Señal de Write Enable
+-    `reg_sel_i`: Señal para controlar los demux salida y we
+-    `sw_addr_in_i`: Señal de 2 bits para seleccionar la dirección
+-    `sw_entrada_i`: Señal de 11 bits para la entrada                
 -    `mosi_o`: Señal de MOSI
 -    `cs_ctrl_o`: Señal de Chip Select
--    `proccess_o`: 
--    `sck_o`: 
--    `salida_o`:  
+-    `proccess_o`: Senal para los procesos
+-    `sck_o`: Señal de un divisor de reloj
+-    `salida_o`: Señal de salida 
 
 ##### Criterios de diseño
 Sirve como una especie de sub top module el cual se encarga propiamente del control del SPI Maestro. Sigue el siguiente diagrama de bloques:
@@ -610,13 +610,13 @@ module module_mux_we (
 Este módulo no posee parámetros
 
 ##### Entradas y salidas:
-- `we_i`: 
-- `reg_sel_i`: 
-- `wr1_o`: 
-- `wr2_o`: 
+- `we_i`: Señal de Write Ensblr
+- `reg_sel_i`: Señal para controlar los demux salida y we
+- `wr1_o`: Señal para escritura 1
+- `wr2_o`: Señal para escritura 2
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+Este modulo indica que Write Enable se activa
 
 
 
@@ -648,25 +648,24 @@ module top_master_race_spi(
 - Este módulo no posee parámetros.
 
 ##### Entradas y salidas:
-- `clk_i`:
-- `rst_i`:
-- `miso_i`:                                           
-- `dato_in`:
-- `cntr_str_i`:
-- `mosi_o`:
-- `we_rx_o`:                                      
-- `proccess_o`:
-- `hold_ctrl_o`:
-- `we_ram2_o`:
-- `cs_ctrl_o`:
-- `sck_o`:      
-- `dato_recibido_r`:
-- `rx_o`:
-- `addr2_o`:            
-    ); 
-##### Criterios de diseño
-Diagramas, texto explicativo...
+- `clk_i`: Señal de reloj
+- `rst_i`: Señal para reset
+- `miso_i`: Señal de datos de entarda MISO                                        
+- `dato_in`: Señal de entrada de datos de ram
+- `cntr_str_i`: Señal de entrada control
+- `mosi_o`: Señal de datos de salida MOSI
+- `we_rx_o`: Señal para Write Enable                                     
+- `proccess_o`: Señal de salida del progreso de la maquina de estados
+- `hold_ctrl_o`: Señal de salida control del SPI
+- `we_ram2_o`: Señal de salida Write Enable de la ram
+- `cs_ctrl_o`: Señal de control
+- `sck_o`: Señal de un divisor de reloj     
+- `dato_recibido_r`: Señal de que el dato fue recibido
+- `addr2_o`: Datos de salida de el addres
 
+##### Criterios de diseño
+
+Modulo que contiene la maquina de estados para el control de los wr_en de la ram 2 y de las direcciones de esta misma
 
 
 #### 3.2.7 Módulo module_reg_control
@@ -690,19 +689,19 @@ module module_reg_control(
 - Lista de parámetros
 
 ##### Entradas y salidas:
-- `clk_i`: 
-- `rst_i`: 
-- `send_i`: 
-- `proccess_i`: 
-- `we_rx_i`: 
-- `we_ex_i`: 
-- `in_rx_i`: 
-- `in_ex_i`: 
-- `cntr_str_o`:   
+- `clk_i`: Entrada de reloj
+- `rst_i`: Señal de reset
+- `send_i`: Señal de entrada de enviar datos
+- `proccess_i`: Señal de entrada de el proceso de la maquina de estados
+- `we_rx_i`: Señal de entrada Write Enable
+- `we_ex_i`: Señal de entrada Write Enable
+- `in_rx_i`: Datos de entrada de registro 1
+- `in_ex_i`: Datos de entrada de registro 2
+- `cntr_str_o`: Registro de los estados
 
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+Este modulo se encarga de el correcto control de los registros que se necesitan
 
 
 #### 3.2.8 Módulo module_reg_datos
@@ -727,19 +726,20 @@ module module_reg_datos(
 ##### Entradas y salidas:
 
 
-- `clk_i`:   
-- `rst_i`:  
-- `hold_ctrl_i`: 
-- `addr1_i`: 
-- `addr2_i`: 
-- `in1_i`: 
-- `in2_i`: 
-- `wr1_i`: 
-- `wr2_i`: 
-- `data_o`: 
+- `clk_i`: Entrada de reloj
+- `rst_i`: Señal de reset
+- `hold_ctrl_i`: Etradad de control
+- `addr1_i`: Datos de direccion 1
+- `addr2_i`: Datos de direccion 2
+- `in1_i`: Entrada de datos 1
+- `in2_i`: Entrada de datos 2
+- `wr1_i`: Señal de Write Enable 1
+- `wr2_i`: Señal de Write Enable 2
+- `data_o`: Datos de salida
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+
+Modulo que crea los registros a utiizar de forma de memoria ram
 
 
 #### 3.2.9 Módulo module_mux_salida
@@ -753,21 +753,18 @@ module module_mux_salida(
     );
     
 ```
-##### Parámetros
-- Lista de parámetros
 
 ##### Entradas y salidas:
 
-- `selec_salida_i`: 
-- `salida_datos_o`: 
-- `salidas_control_o`: 
-- `salida_i`:            
+- `selec_salida_i`: Señal para seleccionar la salida
+- `salida_datos_o`: Salida de datos del mux
+- `salidas_control_o`: Salidas de datos de control
+- `salida_i`: Datos para la salida seleccionada           
 
     
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
-
+Este modulo seleciona la salida de datos a necesitar.
 
 #### 3.2.10 Módulo module_seg7_control 
 

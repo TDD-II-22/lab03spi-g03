@@ -739,7 +739,7 @@ module module_reg_datos(
 
 ##### Criterios de diseño
 
-Modulo que crea los registros a utiizar de forma de memoria ram
+Este modulo que crea los registros a utiizar en forma de memoria ram
 
 
 #### 3.2.9 Módulo module_mux_salida
@@ -1297,7 +1297,113 @@ set_output_delay -clock [get_clocks pllclk] 0.000 [get_ports -filter { NAME =~  
 ```
 
 
+### 3.4 Ejercicio 4. Sistema Integrado de Monitoreo
 
+Esta parte integra el sensor de luminosidad del eejercicio anterior y se combina con una targeta SD por lo cual se va a explicar el funcionamiento e inicializacion de la SD junto con los modos de uso que se añaden.
+
+#### 3.4.1 Módulo top_mis_cojones
+##### Encabezado del módulo
+```SystemVerilog
+module top_mis_cojones(
+   input logic  enable_inicializar_sd_i,
+                clk_100Mhz_pi,
+                rst_pi,
+                miso_pi,
+   output logic mosi_po,
+                locked_po,
+                cs_ctrl_po,
+                [6 : 0]display_po,
+                [7 : 0]display_select_po
+    );
+```
+##### Parámetros
+- No posee parametros
+
+##### Entradas y salidas:
+- `enable_inicializar_sd_i`: Señal para inicializar  la SD
+- `clk_100Mhz_pi`: Entrada de reloj
+- `rst_pi`: Señal de reset
+- `miso_pi`: Señal de entrada de MISO
+- `mosi_po`: Señal de salida MOSI
+- `locked_po`: Señal de salida de locked
+- `cs_ctrl_po`: Señal de salida de control
+- `display_po`: Señal de 7 bits del display 
+- `display_select_po`: Salida de 8 bits del display
+
+##### Criterios de diseño
+Este top controla la inicializacion de la SD
+
+
+#### 3.4.2 Módulo top_tactico
+
+Este es un pseudo top que contiene los modulos top_interface_spi y module_seg7_control vistos anteriormente en su funcionamiento.
+
+#### 3.4.3 Módulo module_inicializar_sd
+
+##### Encabezado del módulo
+```SystemVerilog
+module module_inicializar_sd(
+
+    input  logic               	clk_i,
+                               	rst_i,
+				process_sd_i,
+				enable_inicializar_sd_i,
+				flags_i,
+    output logic		we_sd_o,
+				send_o,
+				slc_mux_sd_o,
+				c1_o,
+	[4  : 0]		pasitos_o,
+	[1  : 0]		comando_o,
+	[9  : 0] 		addr2_sd_o,
+	[30 : 0] 		data_sd_o                                            
+    );
+```
+##### Parámetros
+- No posee parametros
+
+##### Entradas y salidas:
+- `clk_i`: Entrada de reloj
+- `rst_i`: Entrada de señal de reset
+- `process_sd_i`: Entradad de el proceso de la SD
+- `enable_inicializar_sd_i`: Señal para inicializar la SD
+- `flags_i`: Señal de entrada del flag
+- `we_sd_o`: Señal de salida para wr de la SD
+- `send_o`: Señal de salida de send
+- `slc_mux_sd_o`: Señal de salida del selector de mux de la SD
+- `c1_o`: Señal de salida que indica la finalizacion de la inicialización
+- `pasitos_o`: Señal de 5 bits que muestra el paso que se esta ejecutando
+- `comando_o`: Señal de 2 bits que muestra el comando en ejecución
+- `addr2_sd_o`: Señal de 10 bits que muestar el addres en la SD
+- `data_sd_o`: Datos de 31 bits de la SD
+
+##### Criterios de diseño
+Este modulo genera toda la inicializacion de la SD con varios case de los comando que se deben ejecutar en su orden respectivo
+
+#### 3.4.4 Módulo module_flags_sd
+
+##### Encabezado del módulo
+```SystemVerilog
+module module_flags_sd(
+    input  logic        [1  : 0]		comando_i,
+			[31 : 0]		salida_spi_sd_i,
+    output logic				flags_o                   
+    );
+```
+##### Parámetros
+- No posee parametros
+
+##### Entradas y salidas:
+- `salida_spi_sd_i`: Entrada de 32 bits de la SPI
+- `flags_o`: Salida de el flag
+- `comando_i`: Señal de 2 bits para el comando de la SD
+
+##### Criterios de diseño
+Este modulo genera la señal de salida de flag
+
+
+#### 3.4.X Testbench
+Pruebas de la inicializacion de la SD
 
 
 

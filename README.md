@@ -1050,7 +1050,7 @@ module top_tactico(
 - `mosi_po` : Señal MOSI
 - `locked_po` : LED de locked
 - `cs_ctrl_po` : Chip Select
-- `sck_po` : 
+- `sck_po` : SCK del sensor
 - `display_po` : Ánodos del diplay
 - `display_select_po` : Cátodos de los display                    
 

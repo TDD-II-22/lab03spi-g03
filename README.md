@@ -477,7 +477,7 @@ module top_tactico(
 - `sw_we_pi`:  Habilita el WE
 - `reg_sel_pi`: Controla los demux salida y WE
 - `sw_addr_in_pi`: Selecciona la direcccion
-- `sw_entrada_pi`:                    
+- `sw_entrada_pi`: Datos de entrada.                  
 - `mosi_po`: Salida señal MOSI
 - `locked_po`: LED de locked
 - `cs_ctrl_po`: LED de Chip Select
@@ -1092,7 +1092,7 @@ El módulo no posee parámetros.
 
 
 #### 3.3.3 Módulo top_pmodALS
-El archivo WCLL.xci crea un archivo verilog que contiene un circuito de reloj personalizado según los requisitos del reloj del usuario.
+
 
 ##### Encabezado del módulo
 
@@ -1120,19 +1120,20 @@ El módulo no posee parámetros.
 ##### Entradas y salidas:
 
 
-- `clk_i` : 
-- `rst_i` : 
-- `proccess_i` : 
-- `in_datos_i` :                               
-- `we_reg_control_o` : 
-- `send_o` : 
-- `selec_out_o` : 
-- `addr_pmod_o` : 
-- `entrada_display_o` :    
+- `clk_i` : Señal de clock
+- `rst_i` : Señal de reset
+- `proccess_i` : Señal de transacción completada
+- `in_datos_i` : Dato entrenta a la memoria                             
+- `we_reg_control_o` : Write Enable del registro
+- `send_o` : Señal de send
+- `selec_out_o` : Dato de salida de seleccion.
+- `addr_pmod_o` : Address
+- `entrada_display_o` : Datos del display.
 
 ##### Criterios de diseño
 
 
+Para este ejercicio se utilizó el módulo top de la interfaz SPI construida previamente, para la cual se conecta un sensor de luminosidad el cual envia los datos por medio del MISO con la finalidad de pintar en los displays el valor de la cantidad de luz medida.
 
 
 #### 3.3.4 Módulo module_seg7_control 

@@ -1402,63 +1402,139 @@ module module_flags_sd(
 Este modulo genera la señal de salida de flag
 
 
-#### 3.4.X Testbench
+#### 3.4.5 Testbench
 Pruebas de la inicializacion de la SD
 
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/inicializarsd1.png" >
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/inicializarsd2.png" >
 
+#### 3.4.6 Modo de captura
 
+#### 3.4.7 Módulo top_mis_cojones
 
+Se usa el mismo top que en la incializacion de la sd jumto con los modulos top_tactico y module_flags_sd los cuales ya se explicaron anteriormente, se incorpora el siguiente modulo.
 
+#### 3.4.8 Módulo module_guardar_sd
 
-
-
-
-
-
-
-
-
-### 3.4 Ejercicio 4. Sistema Integrado de Monitoreo
-#### 3.4.1 Módulo top
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
-    );
+module module_guardar_sd(
+  input  logic                      	clk_i,
+                                    	rst_i,
+					process_sd_i,
+	                		enable_guardar_sd_i,
+					flags_i,
+                    	[7 :  0]        data_memoria_micro_i,
+  output logic				we_sd_o,
+					we_micro_o,
+					send_o,
+					slc_mux_sd_o,
+					c4_o, 		
+			[4 :  0]	pasitos_envio_o,
+			[1 :  0]	comando_o,				
+			[9  : 0]       	addr2_micro_o,
+			[9  : 0]       	addr2_sd_o,
+			[31 : 0] 	data_sd_o
 ```
 ##### Parámetros
-- Lista de parámetros
+- No posee parametros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk_i`: Entrada de reloj
+- `rst_i`: Entrada de señal de reset
+- `process_sd_i`: Entrada de proceso de SD
+- `enable_guardar_sd_i`: Señal para habilitar el guardado en la SD
+- `flags_i`: Entrada de señal de flag
+- `data_memoria_micro_i`: Entrada de 8 bits de dato de memoria
+- `we_sd_o`: Señal de salida de wr de la SD
+- `we_micro_o`: Señal de wr de micro intruccion
+- `send_o`: Señal de envio de datos
+- `slc_mux_sd_o`: Señal de selecionde mux de la SD
+- `c4_o`: Señal de indicacion de la finalizacion de el envio de datos a la SD		
+- `pasitos_envio_o`: Señal de 5 bits que muetran el paso en ejecución
+- `comando_o`: Señal de 2 que muestran el comando en ejecución				
+- `addr2_micro_o`: Señal de 10 bits que muesta la Direccion de la microinstrucción
+- `addr2_sd_o`: Señal de 10 bits que muestar la direccion de la SD 
+- `data_sd_o`: Señal de datos de 32 bits
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+Este modulo hace el envio y verificacion de los 512 paquetes de datos a la SD haciendo verificaciones de las respuestas esperadas
 
 
-#### 3.4.2 Módulo _____
+#### 3.4.9 Testbench
+Pruebas de la el envio de datos a la SD
+
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/modocaptura.png" >
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/modocaptura2.png" >
+
+#### 3.4.1.0 Módulo top_mis_cojones
+
+Se usa el mismo top que en la incializacion de la sd jumto con los modulos top_tactico y module_flags_sd los cuales ya se explicaron anteriormente, se incorpora el siguiente modulo.
+
+#### 3.4.1.1 Módulo module_explorar_sd
+
 ##### Encabezado del módulo
 ```SystemVerilog
-module mi_modulo(
-    input logic     entrada_i,      
-    output logic    salida_i 
-    );
+module module_guardar_sd(
+  input  logic                      	clk_i,
+                                    	rst_i,
+					process_sd_i,
+	                		enable_explorador_sd_i,
+					flags_i,
+                    	[31 :  0]        data_sd_i,
+  output logic				we_sd_o,
+					we_micro_o,
+					send_o,
+					slc_mux_sd_o,	
+			[1 :  0]	comando_o,
+			[7 :  0]        data_memoria_micro_o,
+			[9  : 0]       	addr2_micro_o,
+			[9  : 0]       	addr2_sd_o,
+			[31 : 0] 	data_sd_o
 ```
 ##### Parámetros
-- Lista de parámetros
+- No posee parametros
 
 ##### Entradas y salidas:
-- `entrada_i`: descripción de la entrada
-- `salida_i`: descripción de la salida
+- `clk_i`: Entrada de reloj
+- `rst_i`: Entrada de señal de reset
+- `process_sd_i`: Entrada de proceso de SD
+- `enable_explorador_sd_i`: Señal para habilitar el explorador en la SD
+- `flags_i`: Entrada de señal de flag
+- `data_sd_i`: Entrada de 32 bits de dato de SD
+- `we_sd_o`: Señal de salida de wr de la SD
+- `we_micro_o`: Señal de wr de micro intruccion
+- `send_o`: Señal de envio de datos
+- `slc_mux_sd_o`: Señal de selecionde mux de la SD		
+- `comando_o`: Señal de 2 que muestran el comando en ejecución
+- `data_memoria_micro_o`: Señal de 8 bits de los datos de memoria
+- `addr2_micro_o`: Señal de 10 bits que muesta la Direccion de la microinstrucción
+- `addr2_sd_o`: Señal de 10 bits que muestar la direccion de la SD 
+- `data_sd_o`: Señal de datos de 32 bits
 
 ##### Criterios de diseño
-Diagramas, texto explicativo...
+Este modulo hace la lectura y verificacion de los 512 paquetes de datos en la SD con los comandos y respuestas esperadas
 
 
-#### 3.4.X Testbench
-Descripción y resultados de las pruebas hechas
+#### 3.4.1.2 Testbench
+Pruebas de la lectura de datos a la SD
+
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/explorador.png" >
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/exploradorprimero.png" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

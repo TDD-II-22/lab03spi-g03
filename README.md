@@ -1475,11 +1475,11 @@ Pruebas de la el envio de datos a la SD
 <img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/modocaptura.png" >
 <img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/modocaptura2.png" >
 
-#### 3.4.1.0 Módulo top_mis_cojones
+#### 3.4.10 Módulo top_mis_cojones
 
 Se usa el mismo top que en la incializacion de la sd jumto con los modulos top_tactico y module_flags_sd los cuales ya se explicaron anteriormente, se incorpora el siguiente modulo.
 
-#### 3.4.1.1 Módulo module_explorar_sd
+#### 3.4.11 Módulo module_explorar_sd
 
 ##### Encabezado del módulo
 ```SystemVerilog
@@ -1524,13 +1524,174 @@ module module_guardar_sd(
 Este modulo hace la lectura y verificacion de los 512 paquetes de datos en la SD con los comandos y respuestas esperadas
 
 
-#### 3.4.1.2 Testbench
+#### 3.4.12 Testbench
 Pruebas de la lectura de datos a la SD
 
 <img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/explorador.png" >
 <img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/exploradorprimero.png" >
 
+#### 3.4.13 Puertos Utilizados
 
+| Señal         	| Pin   | En tarjeta    |
+| :--------------------:|:-----:| :------------:|
+| clk_100Mhz_pi        	| E3    | CLK100MHZ     |
+| btn_guardar_pi        | E16   | BTNC          |
+| rst_pi		| V10	| BTND		|
+| sw_modo_pi	        | U9    | SW0           |
+| locked_po		| T8	| LED0		|
+| mosi_po    	        | P2    | LED15	        |
+| led_rgb_po[2]		| K5	| LED16_R	|
+| led_rgb_po[1]         | F13   | LED16_G       |
+| led_rgb_po[0]         | F6    | LED16_B       |
+| display_po[0]     	| L3	| CA            |
+| display_po[1]     	| N1	| CB            |
+| display_po[2]     	| L5	| CC            |
+| display_po[3]     	| L4	| CD            |
+| display_po[4]     	| K3	| CE            |
+| display_po[5]     	| M2	| CF            |
+| display_po[6]     	| L6	| CG            |
+| display_select_po[0]  | N6	| AN0           |
+| display_select_po[1]  | M6	| AN1           |
+| display_select_po[2]  | M3	| AN2           |
+| display_select_po[3]  | N5	| AN3           |
+| display_select_po[4]  | N2	| AN4           |
+| display_select_po[5]  | N4	| AN5           |
+| display_select_po[6]  | L1	| AN6           |
+| display_select_po[7]  | M1	| AN7           |
+| cs_ctrl_po		| B13	| JA1		|
+| miso_pi		| D17	| JA3		|
+| sck_po		| E17	| JA4		|
+| cs_ctrl_sd_po		| H4	| JD1		|
+| mosi_sd_po		| H1	| JD2		|
+| miso_sd_pi		| G1	| JD3		|
+| sck_sd_po		| G3	| JD4		|
+| dat1_po		| H2	| JD7		|
+| dat2_po		| G4	| JD8		|
+
+#### 3.4.14 Constraints
+
+```sdc
+
+## Clock signal
+##Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+set_property PACKAGE_PIN E3 [get_ports clk_100Mhz_pi]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_100Mhz_pi]
+create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_100Mhz_pi]
+
+## Switches
+##Bank = 34, Pin name = IO_L21P_T3_DQS_34,					Sch name = SW0
+set_property PACKAGE_PIN U9 [get_ports {sw_modo_pi}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw_modo_pi}]
+
+## LEDs
+##Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
+set_property PACKAGE_PIN T8 [get_ports {locked_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {locked_po}]
+##Bank = 34, Pin name = IO_L15P_T2_DQS_34,					Sch name = LED15
+set_property PACKAGE_PIN P2 [get_ports mosi_po]
+set_property IOSTANDARD LVCMOS33 [get_ports mosi_po]
+##Bank = 34, Pin name = IO_L5P_T0_34,						Sch name = LED16_R
+set_property PACKAGE_PIN K5 [get_ports led_rgb_po[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports led_rgb_po[2]]
+##Bank = 15, Pin name = IO_L5P_T0_AD9P_15,					Sch name = LED16_G
+set_property PACKAGE_PIN F13 [get_ports led_rgb_po[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports led_rgb_po[1]]
+##Bank = 35, Pin name = IO_L19N_T3_VREF_35,					Sch name = LED16_B
+set_property PACKAGE_PIN F6 [get_ports led_rgb_po[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports led_rgb_po[0]]
+
+##7 segment display
+##Bank = 34, Pin name = IO_L2N_T0_34,						Sch name = CA
+set_property PACKAGE_PIN L3 [get_ports {display_po[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_po[0]}]
+##Bank = 34, Pin name = IO_L3N_T0_DQS_34,					Sch name = CB
+set_property PACKAGE_PIN N1 [get_ports {display_po[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_po[1]}]
+##Bank = 34, Pin name = IO_L6N_T0_VREF_34,					Sch name = CC
+set_property PACKAGE_PIN L5 [get_ports {display_po[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_po[2]}]
+##Bank = 34, Pin name = IO_L5N_T0_34,						Sch name = CD
+set_property PACKAGE_PIN L4 [get_ports {display_po[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_po[3]}]
+##Bank = 34, Pin name = IO_L2P_T0_34,						Sch name = CE
+set_property PACKAGE_PIN K3 [get_ports {display_po[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_po[4]}]
+##Bank = 34, Pin name = IO_L4N_T0_34,						Sch name = CF
+set_property PACKAGE_PIN M2 [get_ports {display_po[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_po[5]}]
+##Bank = 34, Pin name = IO_L6P_T0_34,						Sch name = CG
+set_property PACKAGE_PIN L6 [get_ports {display_po[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_po[6]}]
+##Bank = 34, Pin name = IO_L18N_T2_34,						Sch name = AN0
+set_property PACKAGE_PIN N6 [get_ports {display_select_po[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[0]}]
+##Bank = 34, Pin name = IO_L18P_T2_34,						Sch name = AN1
+set_property PACKAGE_PIN M6 [get_ports {display_select_po[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[1]}]
+##Bank = 34, Pin name = IO_L4P_T0_34,						Sch name = AN2
+set_property PACKAGE_PIN M3 [get_ports {display_select_po[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[2]}]
+##Bank = 34, Pin name = IO_L13_T2_MRCC_34,					Sch name = AN3
+set_property PACKAGE_PIN N5 [get_ports {display_select_po[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[3]}]
+##Bank = 34, Pin name = IO_L3P_T0_DQS_34,					Sch name = AN4
+set_property PACKAGE_PIN N2 [get_ports {display_select_po[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[4]}]
+##Bank = 34, Pin name = IO_L16N_T2_34,						Sch name = AN5
+set_property PACKAGE_PIN N4 [get_ports {display_select_po[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[5]}]
+##Bank = 34, Pin name = IO_L1P_T0_34,						Sch name = AN6
+set_property PACKAGE_PIN L1 [get_ports {display_select_po[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[6]}]
+##Bank = 34, Pin name = IO_L1N_T034,							Sch name = AN7
+set_property PACKAGE_PIN M1 [get_ports {display_select_po[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[7]}]
+
+##Buttons
+##Bank = 15, Pin name = IO_L11N_T1_SRCC_15,					Sch name = BTNC
+set_property PACKAGE_PIN E16 [get_ports btn_guardar_pi]
+set_property IOSTANDARD LVCMOS33 [get_ports btn_guardar_pi]
+##Bank = 14, Pin name = IO_L21P_T3_DQS_14,					Sch name = BTND
+set_property PACKAGE_PIN V10 [get_ports rst_pi]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_pi]
+
+##Pmod Header JA
+##Bank = 15, Pin name = IO_L1N_T0_AD0N_15,					Sch name = JA1
+set_property PACKAGE_PIN B13 [get_ports {cs_ctrl_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cs_ctrl_po}]
+##Bank = 15, Pin name = IO_L16N_T2_A27_15,					Sch name = JA3
+set_property PACKAGE_PIN D17 [get_ports {miso_pi}]
+set_property IOSTANDARD LVCMOS33 [get_ports {miso_pi}]
+##Bank = 15, Pin name = IO_L16P_T2_A28_15,					Sch name = JA4
+set_property PACKAGE_PIN E17 [get_ports {sck_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sck_po}]
+
+##Pmod Header JD
+##Bank = 35, Pin name = IO_L21N_T2_DQS_35,					Sch name = JD1
+set_property PACKAGE_PIN H4 [get_ports {cs_ctrl_sd_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cs_ctrl_sd_po}]
+##Bank = 35, Pin name = IO_L17P_T2_35,						Sch name = JD2
+set_property PACKAGE_PIN H1 [get_ports {mosi_sd_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {mosi_sd_po}]
+##Bank = 35, Pin name = IO_L17N_T2_35,						Sch name = JD3
+set_property PACKAGE_PIN G1 [get_ports {miso_sd_pi}]
+set_property IOSTANDARD LVCMOS33 [get_ports {miso_sd_pi}]
+##Bank = 35, Pin name = IO_L20N_T3_35,						Sch name = JD4
+set_property PACKAGE_PIN G3 [get_ports {sck_sd_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sck_sd_po}]
+##Bank = 35, Pin name = IO_L15P_T2_DQS_35,					Sch name = JD7
+set_property PACKAGE_PIN H2 [get_ports {dat1_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dat1_po}]
+##Bank = 35, Pin name = IO_L20P_T3_35,						Sch name = JD8
+set_property PACKAGE_PIN G4 [get_ports {dat2_po}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dat2_po}]
+
+create_generated_clock -name pllclk -source [get_ports clk_100Mhz_pi] -divide_by 10 [get_pins generate_clock_10Mhz/clk_10Mhz]
+set_output_delay -clock [get_clocks pllclk] 0.000 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+
+
+
+```
 
 
 

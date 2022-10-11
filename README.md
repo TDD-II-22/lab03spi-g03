@@ -1173,7 +1173,15 @@ Este módulo toma como entrada un dato de 32 bits que es el que se pintaría en 
 
 
 #### 3.3.X Testbench
-Descripción y resultados de las pruebas hechas
+Se simula el comportamiento del sensor haciendo que el MISO mande ceros en los primeros cuatro pulsos, informacion en los siguientes ocho pulsos y ceros en los ultimos cuatro pulsosos, para la autoverificacion se creo una variable llamada "autoverificación" que contiene solamente la informacion del MISO y la compara con la información que entra al display, si coincide se activa la variable "flag".
+
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/sim3-1.jpeg" >
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/sim3-2.jpeg" >
+
+##### Postsintesis
+
+<img src="https://github.com/TDD-II-22/lab03spi-g03/blob/main/Imagenes/sim3-post.jpeg" >
+
 
 
 #### 3.3.X Puertos Utilizados
